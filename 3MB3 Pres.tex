@@ -1,7 +1,7 @@
 \documentclass[11pt]{beamer}
 
 % Theme (choose one)
-\usetheme{Madrid} % e.g., Madrid, AnnArbor, CambridgeUS, etc.
+\usetheme{McMasterU} % e.g., Madrid, AnnArbor, CambridgeUS, etc.
 
 % Packages
 \usepackage[utf8]{inputenc}
@@ -18,55 +18,52 @@
 \begin{document}
 
 % Title Frame
-\begin{frame}
-    \titlepage
-\end{frame}
+\maketitle
 
 % Outline Frame
-\begin{frame}{Outline}
-    \tableofcontents
-\end{frame}
 
 % Section
 \section{Arms Race Model}
 
 \begin{frame}{Arms Race Model}
-    \begin{align*}
-        \frac{\partial p}{\partial t} &= \alpha g(t) - \beta p(t) + r \\\\
-        \frac{\partial g}{\partial t} &= \gamma p(t) - \delta g(t) + s
+    \begin{block}{Model Equations}
+        \begin{align*}
+        \frac{\partial p}{\partial t} &= a g(t) - b p(t) + r \\\\
+        \frac{\partial g}{\partial t} &= c p(t) - d g(t) + s
     \end{align*}
-    \begin{itemize}
-        \item First principal point
-        \item Second principal point
-        \item Third principal point
-    \end{itemize}
-\end{frame}
-
-% Section
-\section{Main Results}
-
-\begin{frame}{A Theorem}
-    \begin{block}{Theorem}
-        Let $x \in \mathbb{R}$. Then $x^2 \geq 0$.
     \end{block}
-\end{frame}
-
-\begin{frame}{Including a Figure}
-    \begin{figure}
-        \centering
-        \includegraphics[width=0.6\textwidth]{example-image}
-        \caption{An example figure.}
-    \end{figure}
+    \begin{itemize}
+        \item a and c: Mutual Fear Factor (\(a,c>0\))
+        \item b and d: Expenditure Factor (\(b,d>0\))
+        \item r and s: Goodwill/Grievance Factor ((\(r,s<0\)) for goodwill, 
+        (\(r,s>0\)) for grievance)
+    \end{itemize}
 \end{frame}
 
 % Section
-\section{Conclusion}
+\section{Stability Analysis}
+\begin{frame}{Stability Analysis}
+    \begin{block}{Stability Equilibria}
+        \[p^*(t) = \frac{as+rd}{bd-ac}\]
+        \[g^*(t) = \frac{cr+sb}{bd-ac}\]
+    \end{block}
+    \textbf{Stability Condition:} $bd>ac$
+\end{frame}
 
-\begin{frame}{Conclusion}
-    \begin{itemize}
-        \item Summary of findings
-        \item Directions for future inquiry
-    \end{itemize}
+% Section 
+\section{Long Term Behavior}
+\begin{frame}{Long Term Behavior}
+    
+\end{frame}
+
+% Section 
+\section{Mutual Logistic Fear}
+\begin{frame}{Mutual Logistic Fear}
+    
+\end{frame}
+\begin{frame}{End}
+    Thank you for listening
+    \footnotetext{Presentation theme by Ricardo B Lourenco}
 \end{frame}
 
 \end{document}
