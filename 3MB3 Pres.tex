@@ -1,4 +1,4 @@
-\documentclass[11pt]{beamer}
+\documentclass[11pt]{beamer} 
 
 % Theme (choose one)
 \usetheme{McMasterU} % e.g., Madrid, AnnArbor, CambridgeUS, etc.
@@ -21,54 +21,141 @@
 \maketitle
 
 % Outline Frame
-
+\section{Overview}
+\begin{frame}{Overview}
+    \textbf{Scenario}: Countries p and g are locked in an arms race where each is:
+    \begin{itemize}
+        \item Encouraged to increase military spending based on each other's spending
+        \item Discouraged to increase spending based on their own their own spending
+    \end{itemize}
+    \textbf{Model Overview}:
+    \begin{itemize}
+        \item $\Delta$spending = x(other country's spending) - y(own spending)
+        \item x and y measure the severity of encouragement or discouragement to spend
+    \end{itemize}
+    \textbf{Research Question}: What happens to the long-term spending of each country?
+\end{frame}
 % Section
-\section{Arms Race Model}
-
-\begin{frame}{Arms Race Model}
+\section{Base Model}
+\begin{frame}{Arms Race Base Model}
     \begin{block}{Model Equations}
         \begin{align*}
-        \frac{\partial p}{\partial t} &= a g(t) - b p(t) + r \\\\
-        \frac{\partial g}{\partial t} &= c p(t) - d g(t) + s
-    \end{align*}
+        \frac{\partial p}{\partial t} &= a g(t) - b p(t) \\
+        \frac{\partial g}{\partial t} &= c p(t) - d g(t)
+        \end{align*}
     \end{block}
     \begin{itemize}
-        \item a and c: Mutual Fear Factor (\(a,c>0\))
-        \item b and d: Expenditure Factor (\(b,d>0\))
-        \item r and s: Goodwill/Grievance Factor ((\(r,s<0\)) for goodwill, 
-        (\(r,s>0\)) for grievance)
+        \item Feasibility Condition: \((p(t),g(t) \ge 0)\)
+        \item \(a,c\): Mutual Fear Factor (\(a,c>0\))
+        \item \(b,d\): Expenditure Factor (\(b,d>0\))
     \end{itemize}
 \end{frame}
 
 % Section
+\iffalse %tentatively removed
 \section{Stability Analysis}
-\begin{frame}{Stability Analysis}
-    \begin{block}{Stability Equilibria}
-        \[p^*(t) = \frac{as+rd}{bd-ac}\]
-        \[g^*(t) = \frac{cr+sb}{bd-ac}\]
+\begin{frame}{Stability Analysis}    
+    \begin{block}{In the long run, we expect either:}
+     \begin{enumerate}
+        \item Military spending of both countries to stabilize around 
+        \[(p^*(t),g^*(t)) = \bigg(\frac{as+rd}{bd-ac},\frac{cr+sb}{bd-ac}\bigg)\]
+        \begin{enumerate}
+        \item Entails mutual disarmament given the right \(r,s\) values
+        \end{enumerate}
+        \item Military spending of both countries to prepetually increase
+    \end{enumerate}
     \end{block}
-    \textbf{Stability Condition:} $bd>ac$
+    \textbf{Case 1 happens if:} $bd>ac$ (i.e. the product of expenditure factors are greater than 
+    mutual fear factors)
+\end{frame}
+\fi
+
+\begin{frame}{Long Term Behavior}
+    In the long run, we predict:
+
+    \begin{columns}
+        \column{0.33\textwidth}
+        If: \textbf{$bd>ac$}
+        \column{0.33\textwidth}
+        If: \textbf{$bd=ac$} \textbf{edge case}
+        \column{0.33\textwidth}
+        If: \textbf{$bd<ac$}
+    \end{columns}
+    \begin{columns}
+        \column{0.33\textwidth}
+        \includegraphics[width=1\textwidth]{bdgeac.png}
+        \column{0.33\textwidth}
+        \includegraphics[width=1\textwidth]{bdeqac.png}
+        \column{0.33\textwidth}
+        \includegraphics[width=1\textwidth]{bdleac.png}
+    \end{columns}
+    \begin{columns}
+    \column{0.33\textwidth}
+        \centering
+        Complete mutual disarmament \\
+        \((p^\infty,g^\infty)=(0,0)\)
+    \column{0.33\textwidth}
+        \centering
+        Stabilized spending \\
+        \((p^\infty,g^\infty)=(\frac{cp_0+bg_0}{a+c},\frac{dp_0+ag_0}{a+c})\)
+    \column{0.33\textwidth}
+        \centering
+        Perpetual arms race \\
+        \((p^\infty,g^\infty)=(\infty,\infty)\)
+    \end{columns}
 \end{frame}
 
 % Section 
-\section{Long Term Behavior}
+\section{Grievances and Goodwill}
+\begin{frame}{Grievances and Goodwill}
+    Suppose countries p and g have underlying goodwill/grievances that influence their spending \\
+    The model equations are therefore:
+    \begin{align*}
+        \frac{\partial p}{\partial t} &= a g(t) - b p(t) + r\\
+        \frac{\partial g}{\partial t} &= c p(t) - d g(t) + s
+    \end{align*}
+    \begin{itemize}
+        \item \((r,s)>0\) for goodwill and \((r,s)<0\) for grievance
+        \item Provide further elaborating points
+    \end{itemize}
+\end{frame}
+
 \begin{frame}{Long Term Behavior}
-since our p,g represent the arms of two nations, these values cannot take on negative value so we will restrict 
-them to being $>=0$, with this added restriction the long term behavior will be altered by the fact that we can not diverge to large negative values
-\\ The determination of 
+    \begin{itemize}
+        \item provide plots
+        \item provide stability conditions and convergences
+        \item This model will take on negative values so discuss that by either capping the value or other methods 
+    \end{itemize}
 \end{frame}
 
 % Section 
 \section{Mutual Logistic Fear}
-\begin{frame}{Extension: Mutual Logistic Fear}
-
-        the idea behind this extension is to account for limitations that nations would have surrounding their budget and other spending
+\begin{frame}{Mutual Logistic Fear}
+    \textbf{Limitation of Current Model}: Does not account for the limited resources each country has \\
+    \textbf{Solution}: Introduce logistic growth \\
+   \begin{align*}
+        \frac{\partial p}{\partial t} &= a(1-\frac{p(t)}{K_p})g(t) - b p(t) + r\\
+        \frac{\partial g}{\partial t} &= c(1-\frac{g(t)}{K_g})p(t) - d g(t) + s
+    \end{align*}
+    \begin{itemize}
+        \item Provide further elaborating points
+        \item Provide further elaborating points
+    \end{itemize}
 \end{frame}
 
-\section{Conclusion and Thanks}
-\begin{frame}{End}
-    Thank you for listening
-    \footnotetext{Presentation theme by Ricardo B Lourenco}
+\begin{frame}{Long Term Behavior}
+    \begin{itemize}
+        \item provide plots
+        \item provide stability conditions
+        \item provide convergences (if possible)
+    \end{itemize}
 \end{frame}
 
+\section{End}
+{\BackgroundShaded
+\begin{frame}
+    \LARGE \textcolor{white}{Thank you for listening}
+    \footnotetext{\textcolor{white}{Presentation theme by Ricardo B. Lourenco}}
+\end{frame}
+}
 \end{document}

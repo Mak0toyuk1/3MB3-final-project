@@ -1,5 +1,5 @@
-\beamer@sectionintoc {1}{Arms Race Model}{2}{0}{1}
-\beamer@sectionintoc {2}{Stability Analysis}{3}{0}{2}
-\beamer@sectionintoc {3}{Long Term Behavior}{4}{0}{3}
-\beamer@sectionintoc {4}{Mutual Logistic Fear}{5}{0}{4}
-\beamer@sectionintoc {5}{Conclusion and Thanks}{6}{0}{5}
+\beamer@sectionintoc {1}{Overview}{2}{0}{1}
+\beamer@sectionintoc {2}{Base Model}{3}{0}{2}
+\beamer@sectionintoc {3}{Grievances and Goodwill}{5}{0}{3}
+\beamer@sectionintoc {4}{Mutual Logistic Fear}{7}{0}{4}
+\beamer@sectionintoc {5}{End}{9}{0}{5}
