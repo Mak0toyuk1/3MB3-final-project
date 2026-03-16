@@ -9,10 +9,10 @@
 \usepackage{graphicx}
 
 % Title Information
-\title[Arms Race]{Arms Race}
-\subtitle{MATH 3MB3 Final Project}
+\title[Topic 5: Arms Race]{Topic 5: Arms Race}
+% \subtitle{MATH 3MB3 Final Project}
 \author[Jaswal, Khan, Palin, Reeves, and Xu]{Zeyn Jaswal, Azzaam Khan, Timothy Palin, Meredith Reeves, and Tony Xu}
-\institute[McMaster University]{McMaster University}
+\institute[]{McMaster University}
 %\date{\today}
 
 \begin{document}
@@ -29,25 +29,45 @@
     %     \item Discouraged to increase defence spending based on their own spending
     % \end{itemize}
     
-    \textbf{Scenario}: Purple (p) and Green (g) are two countries competing in an arms race. Each is:
+    \textbf{Scenario:} Purple (p) and Green (g) are two countries competing in an arms race. Each is:
     \begin{itemize}
-        \item More inclined to increase defence spending as the other country's spending rises
+        \item More inclined to increase defence spending as the other's rises
         \item Less inclined to increase spending as its own spending rises
     \end{itemize}
 
-    \textbf{Research Question}: What happens to the long-term spending of each country? 
+   \vspace{0.3cm} 
 
-    \textbf{Key Factors}:
-    \begin{itemize}
-        \item How do goodwill and fear between countries affect defence spending?
-        \item How do spending caps affect a country's position in the arms race?
-    \end{itemize}
+    \textbf{Research Question:} What happens to the long-term spending of each country? 
+
+\vspace{0.3cm}
+
+    % \textbf{Key Factors:}
+    % \begin{itemize}
+    %     \item How do goodwill and fear between countries affect defence spending?
+    %     \item How do spending caps affect a country's position in the arms race?
+    % \end{itemize}
 
     % \textbf{Model Overview}:
     % \begin{itemize}
     %     \item $\Delta$spending = x(other country's spending) - y(own spending)
     %     \item x and y measure the severity of encouragement or discouragement to spend
     % \end{itemize}
+    \textbf{Model}
+
+% \[
+% \Delta s = x (s_{enemy}) - y (s_{own})
+% \]
+
+% \begin{itemize}
+% \item $x$: how much enemy spending increases ours
+% \item $y$: how much our own spending slows increases
+% \end{itemize}
+
+% \begin{itemize}
+%     \item $x$: response to the enemy's spending
+%     \item $y$: restraint from own spending
+% \end{itemize}
+
 \end{frame}
 % Section
 \section{Base Model}
@@ -86,14 +106,23 @@
 
 \begin{frame}{Long Term Behavior (Base Model)}
 %    In the long run, we predict:
+    If:
+
+% \vspace{0.3cm}
 
     \begin{columns}
         \column{0.33\textwidth}
-        If: \textbf{$bd>ac$}
+        \begin{center}
+        \textbf{$bd>ac$}
+        \end{center}
         \column{0.33\textwidth}
-        If: \textbf{$bd=ac$} \textbf{edge case}
+        \begin{center}
+        \textbf{$bd=ac$}
+        \end{center}
         \column{0.33\textwidth}
-        If: \textbf{$bd<ac$}
+        \begin{center}
+         \textbf{$bd<ac$}
+        \end{center}
     \end{columns}
     \begin{columns}
         \column{0.33\textwidth}
@@ -103,6 +132,10 @@
         \column{0.33\textwidth}
         \includegraphics[width=1\textwidth]{bdleac.png}
     \end{columns}
+    
+    
+\vspace{0.3cm}
+
     \begin{columns}
     \column{0.33\textwidth}
         \centering
