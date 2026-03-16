@@ -9,11 +9,11 @@
 \usepackage{graphicx}
 
 % Title Information
-\title[3MB3 Final Project]{3MB3 Final Project}
-\subtitle{Arms Race}
+\title[Arms Race]{Arms Race}
+\subtitle{MATH 3MB3 Final Project}
 \author[Jaswal, Khan, Palin, Reeves, and Xu]{Zeyn Jaswal, Azzaam Khan, Timothy Palin, Meredith Reeves, and Tony Xu}
-\institute[]{McMaster University}
-\date{\today}
+\institute[McMaster University]{McMaster University}
+%\date{\today}
 
 \begin{document}
 
@@ -23,17 +23,26 @@
 % Outline Frame
 \section{Overview}
 \begin{frame}{Overview}
-    \textbf{Scenario}: Countries p and g are locked in an arms race where each is:
+	\textbf{Scenario}: Purple (p) and Green (g) are 2 countries competing in an arms race where each one is:
     \begin{itemize}
-        \item Encouraged to increase military spending based on each other's spending
-        \item Discouraged to increase spending based on their own spending
+        \item Encouraged to increase defence spending based on the other's spending
+        \item Discouraged to increase defence spending based on their own spending
     \end{itemize}
-    \textbf{Model Overview}:
+
+    \textbf{Key Factors}:
     \begin{itemize}
-        \item $\Delta$spending = x(other country's spending) - y(own spending)
-        \item x and y measure the severity of encouragement or discouragement to spend
+        \item How does goodwill between countries affect defence spending?
+        \item How does fear between countries impact defence spending?
+        \item How do spending caps affect a country's position in the arms race?
     \end{itemize}
-    \textbf{Research Question}: What happens to the long-term spending of each country?
+
+    % \textbf{Model Overview}:
+    % \begin{itemize}
+    %     \item $\Delta$spending = x(other country's spending) - y(own spending)
+    %     \item x and y measure the severity of encouragement or discouragement to spend
+    % \end{itemize}
+
+    \textbf{Research Question}: What happens to the long-term spending of each country? 
 \end{frame}
 % Section
 \section{Base Model}
@@ -71,7 +80,7 @@
 \fi
 
 \begin{frame}{Long Term Behavior}
-    In the long run, we predict:
+%    In the long run, we predict:
 
     \begin{columns}
         \column{0.33\textwidth}
@@ -132,6 +141,7 @@
 \section{Mutual Logistic Fear}
 \begin{frame}{Mutual Logistic Fear}
     \textbf{Limitation of Current Model}: Does not account for the limited resources each country has \\
+
     \textbf{Solution}: Introduce logistic growth \\
    \begin{align*}
         \frac{\partial p}{\partial t} &= a(1-\frac{p(t)}{K_p})g(t) - b p(t) + r\\
@@ -154,7 +164,7 @@
 \section{End}
 {\BackgroundShaded
 \begin{frame}
-    \LARGE \textcolor{white}{Thank you for listening}
+    \LARGE \textcolor{white}{Thank you for listening!}
     \footnotetext{\textcolor{white}{Presentation theme by Ricardo B. Lourenco}}
 \end{frame}
 }
