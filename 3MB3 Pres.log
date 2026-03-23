@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.3.6)  15 MAR 2026 23:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.3.8)  23 MAR 2026 15:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"/home/z/3MB3-final-project/3MB3 Pres.tex"
-(/home/z/3MB3-final-project/3MB3 Pres.tex
+**"/home/evo/3MB3-final-project/3MB3 Pres.tex"
+(/home/evo/3MB3-final-project/3MB3 Pres.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
 (/usr/share/texmf-dist/tex/latex/beamer/beamer.cls
@@ -908,7 +908,7 @@ Package pdftex.def Info: graphics/mcmaster-shield-only-title.png  used on input 
 (pdftex.def)             Requested size: 12.44882pt x 15.81pt.
  [4
 
- <./bdgeac.png> <./bdeqac.png> <./bdleac.png>]
+ <./bdgeac.png (PNG copy)> <./bdeqac.png (PNG copy)> <./bdleac.png (PNG copy)>]
 File: graphics/mcmaster-shield-only-title.png Graphic file (type png)
 <use graphics/mcmaster-shield-only-title.png>
 Package pdftex.def Info: graphics/mcmaster-shield-only-title.png  used on input line 168.
@@ -967,16 +967,16 @@ Package rerunfilecheck Info: File `"3MB3 Pres".out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  26505 strings out of 469515
- 522921 string characters out of 5470808
+ 522927 string characters out of 5470808
  902432 words of memory out of 5000000
  54566 multiletter control sequences out of 15000+600000
  682514 words of font info for 79 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 128i,19n,123p,413b,982s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 128i,19n,123p,415b,982s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/tex-gyre/qhvb.pfb></usr/share/texmf-dist/fonts/type1/public/tex-gyre/qhvr.pfb></usr/share/texmf-dist/fonts/type1/public/tex-gyre/qhvri.pfb>
-Output written on "3MB3 Pres.pdf" (9 pages, 810867 bytes).
+Output written on "3MB3 Pres.pdf" (9 pages, 842380 bytes).
 PDF statistics:
- 406 PDF objects out of 1000 (max. 8388607)
+ 403 PDF objects out of 1000 (max. 8388607)
  222 compressed objects within 3 object streams
  24 named destinations out of 1000 (max. 500000)
  120 words of extra memory for PDF output out of 10000 (max. 10000000)
