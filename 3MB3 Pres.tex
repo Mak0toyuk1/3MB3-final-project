@@ -7,6 +7,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath, amssymb}
 \usepackage{graphicx}
+\usepackage{tikz}
 
 % Title Information
 \title[Topic 5: Arms Race]{Topic 5: Arms Race}
@@ -52,26 +53,27 @@
     %     \item $\Delta$spending = x(other country's spending) - y(own spending)
     %     \item x and y measure the severity of encouragement or discouragement to spend
     % \end{itemize}
-    \textbf{Model}
+    % \textbf{Model}
 
-% \[
-% \Delta s = x (s_{enemy}) - y (s_{own})
-% \]
+\begin{tikzpicture}[>=stealth, scale=0.75, every node/.style={transform shape}]
 
-% \begin{itemize}
-% \item $x$: how much enemy spending increases ours
-% \item $y$: how much our own spending slows increases
-% \end{itemize}
+\node[draw, circle, minimum size=1cm] (B) at (-5,0) {B};
+\node[draw, circle, minimum size=1cm] (P) at (0,0) {P};
+\node[draw, circle, minimum size=1cm] (G) at (5,0) {G};
+\node[draw, circle, minimum size=1cm] (D) at (10,0) {D};
 
-% \begin{itemize}
-%     \item $x$: response to the enemy's spending
-%     \item $y$: restraint from own spending
-% \end{itemize}
+\draw[->] (P) -- node[above] {Arms Spending} (B);
+\draw[->] (G) -- node[above] {Arms Spending} (D);
+
+\draw[->] (P) .. controls (2.5,1) .. node[above] {$-GD$ (Fear Factor)} (G);
+\draw[->] (G) .. controls (2.5,-1) .. node[below] {$PC$ (Fear Factor)} (P);
+
+\end{tikzpicture}
 
 \end{frame}
 % Section
 \section{Base Model}
-\begin{frame}{Arms Race Base Model}
+\begin{frame}{Base Model}
     \begin{block}{Model Equations}
         \begin{align*}
         \frac{\partial p}{\partial t} &= a g(t) - b p(t) \\
@@ -106,7 +108,7 @@
 
 \begin{frame}{Long Term Behavior (Base Model)}
 %    In the long run, we predict:
-    If:
+    % If:
 
 % \vspace{0.3cm}
 

@@ -1,7 +1,7 @@
-PWD /home/evo/3MB3-final-project
+PWD /home/z/3MB3-final-project
 INPUT /usr/share/texmf-dist/web2c/texmf.cnf
 INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
-INPUT /home/evo/3MB3-final-project/3MB3 Pres.tex
+INPUT /home/z/3MB3-final-project/3MB3 Pres.tex
 OUTPUT 3MB3 Pres.log
 INPUT /usr/share/texmf-dist/tex/latex/beamer/beamer.cls
 INPUT /usr/share/texmf-dist/tex/latex/beamer/beamer.cls
@@ -58,6 +58,7 @@ INPUT /usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
 INPUT /usr/share/texmf-dist/tex/latex/base/size11.clo
 INPUT /usr/share/texmf-dist/tex/latex/base/size11.clo
 INPUT /usr/share/texmf-dist/tex/latex/base/size11.clo
+INPUT /usr/share/texmf-dist/fonts/map/fontname/texfonts.map
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
 INPUT /usr/share/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
 INPUT /usr/share/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
@@ -402,13 +403,6 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/tex-gyre/rm-qhvr.tfm
 INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
 INPUT /usr/share/texmf-dist/fonts/enc/dvips/tex-gyre/q-rm.enc
 INPUT /usr/share/texmf-dist/fonts/tfm/public/tex-gyre/rm-qhvb.tfm
-INPUT /usr/share/texmf-dist/fonts/tfm/public/tex-gyre/rm-qhvr.tfm
-INPUT ./graphics/mcmaster-shield-only-title.png
-INPUT ./graphics/mcmaster-shield-only-title.png
-INPUT ./graphics/mcmaster-shield-only-title.png
-INPUT ./graphics/mcmaster-shield-only-title.png
-INPUT ./graphics/mcmaster-shield-only-title.png
-INPUT /usr/share/texmf-dist/fonts/tfm/public/tex-gyre/rm-qhvr.tfm
 INPUT /usr/share/texmf-dist/tex/latex/lm/omllmm.fd
 INPUT /usr/share/texmf-dist/tex/latex/lm/omllmm.fd
 INPUT /usr/share/texmf-dist/tex/latex/lm/omllmm.fd
@@ -440,12 +434,19 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/tex-gyre/rm-qhvri.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/tex-gyre/rm-qhvri.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/tex-gyre/rm-qhvri.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/tex-gyre/rm-qhvr.tfm
+INPUT ./graphics/mcmaster-shield-only-title.png
+INPUT ./graphics/mcmaster-shield-only-title.png
+INPUT ./graphics/mcmaster-shield-only-title.png
+INPUT ./graphics/mcmaster-shield-only-title.png
+INPUT ./graphics/mcmaster-shield-only-title.png
+INPUT /usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc
+INPUT /usr/share/texmf-dist/fonts/tfm/public/tex-gyre/rm-qhvr.tfm
 INPUT ./graphics/mcmaster-shield-only-title.png
 INPUT ./graphics/mcmaster-shield-only-title.png
 INPUT ./graphics/mcmaster-shield-only-title.png
 INPUT ./graphics/mcmaster-shield-only-title.png
 INPUT /usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc
-INPUT /usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc
 INPUT ./bdgeac.png
 INPUT ./bdgeac.png
 INPUT ./bdgeac.png

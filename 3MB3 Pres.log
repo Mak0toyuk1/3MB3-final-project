@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.3.8)  23 MAR 2026 15:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.3.6)  24 MAR 2026 10:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"/home/evo/3MB3-final-project/3MB3 Pres.tex"
-(/home/evo/3MB3-final-project/3MB3 Pres.tex
+**"/home/z/3MB3-final-project/3MB3 Pres.tex"
+(/home/z/3MB3-final-project/3MB3 Pres.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
 (/usr/share/texmf-dist/tex/latex/beamer/beamer.cls
@@ -687,7 +687,7 @@ Package: inputenc 2024/02/08 v1.3d Input encoding file
 \inpenc@prehook=\toks52
 \inpenc@posthook=\toks53
 )
-LaTeX Font Info:    Trying to load font information for OT1+qhv on input line 18.
+LaTeX Font Info:    Trying to load font information for OT1+qhv on input line 19.
  (/usr/share/texmf-dist/tex/latex/tex-gyre/ot1qhv.fd
 File: ot1qhv.fd 2009/09/25 v1.2 font definition file for OT1/qhv
 ) (/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
@@ -696,24 +696,24 @@ File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
 ) (./3MB3 Pres.aux)
 \openout1 = `"3MB3 Pres.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -774,57 +774,57 @@ Package grfext Info: Graphics extension search list:
  (/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package hyperref Info: Link coloring OFF on input line 18.
+Package hyperref Info: Link coloring OFF on input line 19.
  (./3MB3 Pres.out) (./3MB3 Pres.out)
 \@outlinefile=\write5
 \openout5 = `"3MB3 Pres.out"'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/lmr/m/n --> OT1/cmss/m/n on input line 18.
+(Font)                  OT1/lmr/m/n --> OT1/cmss/m/n on input line 19.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/lmr/bx/n --> OT1/cmss/b/n on input line 18.
+(Font)                  OT1/lmr/bx/n --> OT1/cmss/b/n on input line 19.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/qhv/m/n on input line 18.
+(Font)                  OT1/cmss/m/n --> OT1/qhv/m/n on input line 19.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmss/b/n --> OT1/qhv/b/n on input line 18.
+(Font)                  OT1/cmss/b/n --> OT1/qhv/b/n on input line 19.
 \symnumbers=\mathgroup6
 \sympureletters=\mathgroup7
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/qhv/m/n --> OT1/lmr/m/n on input line 18.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 18.
+(Font)                  OT1/qhv/m/n --> OT1/lmr/m/n on input line 19.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 19.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/lmr/bx/n --> OT1/qhv/b/n on input line 18.
+(Font)                  OT1/lmr/bx/n --> OT1/qhv/b/n on input line 19.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/lmr/bx/n --> OT1/qhv/b/n on input line 18.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 18.
+(Font)                  OT1/lmr/bx/n --> OT1/qhv/b/n on input line 19.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 19.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/lmss/m/n --> OT1/qhv/m/n on input line 18.
+(Font)                  OT1/lmss/m/n --> OT1/qhv/m/n on input line 19.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/lmss/bx/n --> OT1/qhv/m/n on input line 18.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 18.
+(Font)                  OT1/lmss/bx/n --> OT1/qhv/m/n on input line 19.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 19.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/lmr/m/it --> OT1/qhv/m/it on input line 18.
+(Font)                  OT1/lmr/m/it --> OT1/qhv/m/it on input line 19.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/lmr/bx/it --> OT1/qhv/m/it on input line 18.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 18.
+(Font)                  OT1/lmr/bx/it --> OT1/qhv/m/it on input line 19.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 19.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/lmtt/m/n --> OT1/lmtt/m/n on input line 18.
+(Font)                  OT1/lmtt/m/n --> OT1/lmtt/m/n on input line 19.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/lmtt/m/n --> OT1/lmtt/m/n on input line 18.
+(Font)                  OT1/lmtt/m/n --> OT1/lmtt/m/n on input line 19.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  OT1/qhv/m/n --> OT1/qhv/b/n on input line 18.
+(Font)                  OT1/qhv/m/n --> OT1/qhv/b/n on input line 19.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  OT1/qhv/m/it --> OT1/qhv/b/it on input line 18.
+(Font)                  OT1/qhv/m/it --> OT1/qhv/b/it on input line 19.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/qhv/b/n --> OT1/lmr/b/n on input line 18.
+(Font)                  OT1/qhv/b/n --> OT1/lmr/b/n on input line 19.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/qhv/b/n --> OT1/qhv/b/n on input line 18.
+(Font)                  OT1/qhv/b/n --> OT1/qhv/b/n on input line 19.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/qhv/m/n --> OT1/qhv/b/n on input line 18.
+(Font)                  OT1/qhv/m/n --> OT1/qhv/b/n on input line 19.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/qhv/m/it --> OT1/qhv/b/it on input line 18.
+(Font)                  OT1/qhv/m/it --> OT1/qhv/b/it on input line 19.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/lmtt/m/n --> OT1/lmtt/b/n on input line 18.
+(Font)                  OT1/lmtt/m/n --> OT1/lmtt/b/n on input line 19.
  (/usr/share/texmf-dist/tex/latex/translator/translator-basic-dictionary-English.dict
 Dictionary: translator-basic-dictionary, Language: English 
 ) (/usr/share/texmf-dist/tex/latex/translator/translator-bibliography-dictionary-English.dict
@@ -841,109 +841,109 @@ Dictionary: translator-theorem-dictionary, Language: English
 <graphics/mcmaster-shield-only-background.png, id=63, 1606.0pt x 2039.62pt>
 File: graphics/mcmaster-shield-only-background.png Graphic file (type png)
 <use graphics/mcmaster-shield-only-background.png>
-Package pdftex.def Info: graphics/mcmaster-shield-only-background.png  used on input line 21.
+Package pdftex.def Info: graphics/mcmaster-shield-only-background.png  used on input line 22.
 (pdftex.def)             Requested size: 172.0535pt x 218.51813pt.
  [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf-dist/fonts/enc/dvips/tex-gyre/q-rm.enc}
 
  <./graphics/mcmaster-shield-only-background.png>]
-<graphics/mcmaster-shield-only-title.png, id=111, 1606.0pt x 2039.62pt>
-File: graphics/mcmaster-shield-only-title.png Graphic file (type png)
-<use graphics/mcmaster-shield-only-title.png>
-Package pdftex.def Info: graphics/mcmaster-shield-only-title.png  used on input line 71.
-(pdftex.def)             Requested size: 12.44882pt x 15.81pt.
- [2
-
- <./graphics/mcmaster-shield-only-title.png>]
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 86.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 73.
  (/usr/share/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 86.
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 73.
  (/usr/share/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 86.
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 73.
  (/usr/share/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 86.
+(Font)              <10.95> on input line 73.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 86.
+(Font)              <8> on input line 73.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 86.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 86.
+(Font)              <6> on input line 73.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 73.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 86.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 73.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
+<graphics/mcmaster-shield-only-title.png, id=111, 1606.0pt x 2039.62pt>
 File: graphics/mcmaster-shield-only-title.png Graphic file (type png)
 <use graphics/mcmaster-shield-only-title.png>
-Package pdftex.def Info: graphics/mcmaster-shield-only-title.png  used on input line 86.
+Package pdftex.def Info: graphics/mcmaster-shield-only-title.png  used on input line 73.
+(pdftex.def)             Requested size: 12.44882pt x 15.81pt.
+ [2
+
+{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc} <./graphics/mcmaster-shield-only-title.png>]
+File: graphics/mcmaster-shield-only-title.png Graphic file (type png)
+<use graphics/mcmaster-shield-only-title.png>
+Package pdftex.def Info: graphics/mcmaster-shield-only-title.png  used on input line 88.
 (pdftex.def)             Requested size: 12.44882pt x 15.81pt.
  [3
 
-{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}]
+{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}]
 <bdgeac.png, id=181, 1003.75pt x 1003.75pt>
 File: bdgeac.png Graphic file (type png)
 <use bdgeac.png>
-Package pdftex.def Info: bdgeac.png  used on input line 153.
+Package pdftex.def Info: bdgeac.png  used on input line 155.
 (pdftex.def)             Requested size: 112.95807pt x 112.95529pt.
 <bdeqac.png, id=182, 1003.75pt x 1003.75pt>
 File: bdeqac.png Graphic file (type png)
 <use bdeqac.png>
-Package pdftex.def Info: bdeqac.png  used on input line 153.
+Package pdftex.def Info: bdeqac.png  used on input line 155.
 (pdftex.def)             Requested size: 112.95807pt x 112.95529pt.
 <bdleac.png, id=183, 1003.75pt x 1003.75pt>
 File: bdleac.png Graphic file (type png)
 <use bdleac.png>
-Package pdftex.def Info: bdleac.png  used on input line 153.
+Package pdftex.def Info: bdleac.png  used on input line 155.
 (pdftex.def)             Requested size: 112.95807pt x 112.95529pt.
 File: graphics/mcmaster-shield-only-title.png Graphic file (type png)
 <use graphics/mcmaster-shield-only-title.png>
-Package pdftex.def Info: graphics/mcmaster-shield-only-title.png  used on input line 153.
+Package pdftex.def Info: graphics/mcmaster-shield-only-title.png  used on input line 155.
 (pdftex.def)             Requested size: 12.44882pt x 15.81pt.
  [4
 
  <./bdgeac.png (PNG copy)> <./bdeqac.png (PNG copy)> <./bdleac.png (PNG copy)>]
 File: graphics/mcmaster-shield-only-title.png Graphic file (type png)
 <use graphics/mcmaster-shield-only-title.png>
-Package pdftex.def Info: graphics/mcmaster-shield-only-title.png  used on input line 168.
+Package pdftex.def Info: graphics/mcmaster-shield-only-title.png  used on input line 170.
 (pdftex.def)             Requested size: 12.44882pt x 15.81pt.
  [5
 
 ]
 File: graphics/mcmaster-shield-only-title.png Graphic file (type png)
 <use graphics/mcmaster-shield-only-title.png>
-Package pdftex.def Info: graphics/mcmaster-shield-only-title.png  used on input line 176.
+Package pdftex.def Info: graphics/mcmaster-shield-only-title.png  used on input line 178.
 (pdftex.def)             Requested size: 12.44882pt x 15.81pt.
  [6
 
 ]
 File: graphics/mcmaster-shield-only-title.png Graphic file (type png)
 <use graphics/mcmaster-shield-only-title.png>
-Package pdftex.def Info: graphics/mcmaster-shield-only-title.png  used on input line 192.
+Package pdftex.def Info: graphics/mcmaster-shield-only-title.png  used on input line 194.
 (pdftex.def)             Requested size: 12.44882pt x 15.81pt.
  [7
 
 ]
 File: graphics/mcmaster-shield-only-title.png Graphic file (type png)
 <use graphics/mcmaster-shield-only-title.png>
-Package pdftex.def Info: graphics/mcmaster-shield-only-title.png  used on input line 200.
+Package pdftex.def Info: graphics/mcmaster-shield-only-title.png  used on input line 202.
 (pdftex.def)             Requested size: 12.44882pt x 15.81pt.
  [8
 
 ]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 207.
+(Font)              <9> on input line 209.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 207.
+(Font)              <5> on input line 209.
 File: graphics/mcmaster-shield-only-background.png Graphic file (type png)
 <use graphics/mcmaster-shield-only-background.png>
-Package pdftex.def Info: graphics/mcmaster-shield-only-background.png  used on input line 207.
+Package pdftex.def Info: graphics/mcmaster-shield-only-background.png  used on input line 209.
 (pdftex.def)             Requested size: 172.0535pt x 218.51813pt.
  [9
 
@@ -966,15 +966,15 @@ Package rerunfilecheck Info: File `"3MB3 Pres".out' has not changed.
 (rerunfilecheck)             Checksum: E7ED31EACD0D16BEB0C51484B7E29923;550.
  ) 
 Here is how much of TeX's memory you used:
- 26505 strings out of 469515
- 522927 string characters out of 5470808
+ 26567 strings out of 469515
+ 523977 string characters out of 5470808
  902432 words of memory out of 5000000
- 54566 multiletter control sequences out of 15000+600000
+ 54628 multiletter control sequences out of 15000+600000
  682514 words of font info for 79 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 128i,19n,123p,415b,982s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 128i,19n,123p,413b,982s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/tex-gyre/qhvb.pfb></usr/share/texmf-dist/fonts/type1/public/tex-gyre/qhvr.pfb></usr/share/texmf-dist/fonts/type1/public/tex-gyre/qhvri.pfb>
-Output written on "3MB3 Pres.pdf" (9 pages, 842380 bytes).
+Output written on "3MB3 Pres.pdf" (9 pages, 843637 bytes).
 PDF statistics:
  403 PDF objects out of 1000 (max. 8388607)
  222 compressed objects within 3 object streams
