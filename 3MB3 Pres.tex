@@ -59,12 +59,12 @@
 % Section
 \section{Base Model}
 \begin{frame}{Base Model}
-    \begin{block}{Model Equations}
+    % \begin{block}{Model Equations}
         \begin{align*}
         \frac{\partial p}{\partial t} &= a g(t) - b p(t) \\
         \frac{\partial g}{\partial t} &= c p(t) - d g(t)
         \end{align*}
-    \end{block}
+    % \end{block}
     % \begin{itemize}
     %     \item Feasibility Condition: \((p(t),g(t) \ge 0)\)
     %     \item \(a,c\): Mutual Fear Factor (\(a,c>0\))
@@ -73,7 +73,10 @@
 
 \vspace{0.3cm} 
 
-\begin{tikzpicture}[>=stealth, scale=0.85, every node/.style={transform shape}]
+\begin{figure}
+\centering
+
+\begin{tikzpicture}[>=stealth, scale=0.75, every node/.style={transform shape}]
 
 \node (B) at (-4,0) {B};
 \node[draw, circle, minimum size=1cm] (P) at (0,0) {P};
@@ -87,6 +90,10 @@
 \draw[->] (G) .. controls (2.5,-1) .. node[midway, below] {$AG$ (Fear Factor)} (P);
 
 \end{tikzpicture}
+
+\caption{DAG Diagram for the Base Model}
+\label{fig:base-model}
+\end{figure}
     
     \end{frame}
 
@@ -157,14 +164,16 @@
 \end{frame}
 
 % Section 
-\section{Grievances and Goodwill}
-\begin{frame}{Grievances and Goodwill}
+\section{Public Sentiment (Trust and Hostility)}
+\begin{frame}{Public Sentiment (Trust and Hostility)}
     % If P and G have underlying goodwill/grievances that influence their spending \\
     % The model equations are therefore:
+    % \begin{block}{Model Equations}
     \begin{align*}
         \frac{\partial p}{\partial t} &= a g(t) - b p(t) + r\\
         \frac{\partial g}{\partial t} &= c p(t) - d g(t) + s
     \end{align*}
+    % \end{block}
     % \begin{itemize}
     %     \item \((r,s)>0\) for goodwill and \((r,s)<0\) for grievance
     %     \item Provide further elaborating points
@@ -172,7 +181,10 @@
   
 \vspace{0.3cm}
     
-\begin{tikzpicture}[>=stealth, scale=0.85, every node/.style={transform shape}]
+\begin{figure}
+\centering   
+
+\begin{tikzpicture}[>=stealth, scale=0.75, every node/.style={transform shape}]
 
 \node (B) at (-4,-1.5) {B};
 \node (R) at (-4,1.5) {R};
@@ -191,9 +203,13 @@
 
 \end{tikzpicture}
 
+\caption{DAG Diagram for the Base Model Including Public Sentiment}
+\label{fig:publicsentiment-model}
+\end{figure}
+
 \end{frame}
 
-\begin{frame}{Long Term Behavior (Grievances and Goodwill)}
+\begin{frame}{Long Term Behavior (Public Sentiment)}
     \begin{itemize}
         \item provide plots
         \item provide stability conditions and convergences
@@ -211,10 +227,12 @@
     % \textbf{Solution}: Introduce logistic growth
      
 % \vspace{0.3cm}
+    % \begin{block}{Model Equations}
    \begin{align*}
         \frac{\partial p}{\partial t} &= a(1-\frac{p(t)}{K_p})g(t) - b p(t) + r\\
         \frac{\partial g}{\partial t} &= c(1-\frac{g(t)}{K_g})p(t) - d g(t) + s
     \end{align*}
+    % \end{block}
     % \begin{itemize}
     %     \item Provide further elaborating points
     %     \item Provide further elaborating points
@@ -222,7 +240,10 @@
 
 \vspace{0.3cm}
 
-\begin{tikzpicture}[>=stealth, scale=0.85, every node/.style={transform shape}]
+\begin{figure}
+\centering   
+
+\begin{tikzpicture}[>=stealth, scale=0.75, every node/.style={transform shape}]
 
 \node (B) at (-4,-1.5) {B};
 \node (R) at (-4,1.5) {R};
@@ -242,6 +263,10 @@
 \draw[->] (G) to[out=130,in=60,loop, looseness=7] node[above] {Mutual Fear} (G);
 
 \end{tikzpicture}
+
+\caption{DAG Diagram for the Base Model Including Mutual Fear}
+\label{fig:mutualfear-model}
+\end{figure}
 
 \end{frame}
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.3.6)  25 MAR 2026 14:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.3.6)  25 MAR 2026 14:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -864,96 +864,100 @@ Package pdftex.def Info: graphics/mcmaster-shield-only-title.png  used on input 
  [2
 
  <./graphics/mcmaster-shield-only-title.png>]
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 91.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 98.
  (/usr/share/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 91.
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 98.
  (/usr/share/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 91.
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 98.
  (/usr/share/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 91.
+(Font)              <10.95> on input line 98.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 91.
+(Font)              <8> on input line 98.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 91.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 91.
+(Font)              <6> on input line 98.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 98.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 91.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 98.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 File: graphics/mcmaster-shield-only-title.png Graphic file (type png)
 <use graphics/mcmaster-shield-only-title.png>
-Package pdftex.def Info: graphics/mcmaster-shield-only-title.png  used on input line 91.
+Package pdftex.def Info: graphics/mcmaster-shield-only-title.png  used on input line 98.
 (pdftex.def)             Requested size: 12.44882pt x 15.81pt.
  [3
 
 {/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}]
-<bdgeac.png, id=181, 1003.75pt x 1003.75pt>
+<bdgeac.png, id=182, 1003.75pt x 1003.75pt>
 File: bdgeac.png Graphic file (type png)
 <use bdgeac.png>
-Package pdftex.def Info: bdgeac.png  used on input line 157.
+Package pdftex.def Info: bdgeac.png  used on input line 164.
 (pdftex.def)             Requested size: 112.95807pt x 112.95529pt.
-<bdeqac.png, id=182, 1003.75pt x 1003.75pt>
+<bdeqac.png, id=183, 1003.75pt x 1003.75pt>
 File: bdeqac.png Graphic file (type png)
 <use bdeqac.png>
-Package pdftex.def Info: bdeqac.png  used on input line 157.
+Package pdftex.def Info: bdeqac.png  used on input line 164.
 (pdftex.def)             Requested size: 112.95807pt x 112.95529pt.
-<bdleac.png, id=183, 1003.75pt x 1003.75pt>
+<bdleac.png, id=184, 1003.75pt x 1003.75pt>
 File: bdleac.png Graphic file (type png)
 <use bdleac.png>
-Package pdftex.def Info: bdleac.png  used on input line 157.
+Package pdftex.def Info: bdleac.png  used on input line 164.
 (pdftex.def)             Requested size: 112.95807pt x 112.95529pt.
 File: graphics/mcmaster-shield-only-title.png Graphic file (type png)
 <use graphics/mcmaster-shield-only-title.png>
-Package pdftex.def Info: graphics/mcmaster-shield-only-title.png  used on input line 157.
+Package pdftex.def Info: graphics/mcmaster-shield-only-title.png  used on input line 164.
 (pdftex.def)             Requested size: 12.44882pt x 15.81pt.
  [4
 
  <./bdgeac.png (PNG copy)> <./bdeqac.png (PNG copy)> <./bdleac.png (PNG copy)>]
 File: graphics/mcmaster-shield-only-title.png Graphic file (type png)
 <use graphics/mcmaster-shield-only-title.png>
-Package pdftex.def Info: graphics/mcmaster-shield-only-title.png  used on input line 194.
+Package pdftex.def Info: graphics/mcmaster-shield-only-title.png  used on input line 210.
 (pdftex.def)             Requested size: 12.44882pt x 15.81pt.
  [5
 
 ]
 File: graphics/mcmaster-shield-only-title.png Graphic file (type png)
 <use graphics/mcmaster-shield-only-title.png>
-Package pdftex.def Info: graphics/mcmaster-shield-only-title.png  used on input line 202.
+Package pdftex.def Info: graphics/mcmaster-shield-only-title.png  used on input line 218.
 (pdftex.def)             Requested size: 12.44882pt x 15.81pt.
  [6
 
 ]
 File: graphics/mcmaster-shield-only-title.png Graphic file (type png)
 <use graphics/mcmaster-shield-only-title.png>
-Package pdftex.def Info: graphics/mcmaster-shield-only-title.png  used on input line 246.
+Package pdftex.def Info: graphics/mcmaster-shield-only-title.png  used on input line 271.
 (pdftex.def)             Requested size: 12.44882pt x 15.81pt.
- [7
+
+Overfull \vbox (12.34494pt too high) detected at line 271
+ []
+
+[7
 
 ]
 File: graphics/mcmaster-shield-only-title.png Graphic file (type png)
 <use graphics/mcmaster-shield-only-title.png>
-Package pdftex.def Info: graphics/mcmaster-shield-only-title.png  used on input line 254.
+Package pdftex.def Info: graphics/mcmaster-shield-only-title.png  used on input line 279.
 (pdftex.def)             Requested size: 12.44882pt x 15.81pt.
  [8
 
 ]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 261.
+(Font)              <9> on input line 286.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 261.
+(Font)              <5> on input line 286.
 File: graphics/mcmaster-shield-only-background.png Graphic file (type png)
 <use graphics/mcmaster-shield-only-background.png>
-Package pdftex.def Info: graphics/mcmaster-shield-only-background.png  used on input line 261.
+Package pdftex.def Info: graphics/mcmaster-shield-only-background.png  used on input line 286.
 (pdftex.def)             Requested size: 172.0535pt x 218.51813pt.
  [9
 
@@ -973,21 +977,21 @@ LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
 Package rerunfilecheck Info: File `"3MB3 Pres".out' has not changed.
-(rerunfilecheck)             Checksum: E7ED31EACD0D16BEB0C51484B7E29923;550.
+(rerunfilecheck)             Checksum: 6CB60B4D58C87AAABF71F32224315264;637.
  ) 
 Here is how much of TeX's memory you used:
- 27005 strings out of 469515
- 535328 string characters out of 5470808
- 919296 words of memory out of 5000000
- 55056 multiletter control sequences out of 15000+600000
+ 27021 strings out of 469515
+ 535656 string characters out of 5470808
+ 920465 words of memory out of 5000000
+ 55069 multiletter control sequences out of 15000+600000
  682514 words of font info for 79 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  128i,19n,123p,413b,989s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/tex-gyre/qhvb.pfb></usr/share/texmf-dist/fonts/type1/public/tex-gyre/qhvr.pfb></usr/share/texmf-dist/fonts/type1/public/tex-gyre/qhvri.pfb>
-Output written on "3MB3 Pres.pdf" (9 pages, 845314 bytes).
+Output written on "3MB3 Pres.pdf" (9 pages, 845652 bytes).
 PDF statistics:
- 403 PDF objects out of 1000 (max. 8388607)
- 222 compressed objects within 3 object streams
- 24 named destinations out of 1000 (max. 500000)
+ 407 PDF objects out of 1000 (max. 8388607)
+ 226 compressed objects within 3 object streams
+ 27 named destinations out of 1000 (max. 500000)
  120 words of extra memory for PDF output out of 10000 (max. 10000000)
 
