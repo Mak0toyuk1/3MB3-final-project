@@ -31,11 +31,11 @@
     %     \item Discouraged to increase defence spending based on their own spending
     % \end{itemize}
     
-    \textbf{Scenario:} Purple (P) and Green (G) are two countries competing in an arms race. Each is:
-    \begin{itemize}
-        \item More inclined to increase defence spending as the other's rises
-        \item Less inclined to increase spending as its own spending rises
-    \end{itemize}
+    \textbf{Scenario:} Purple (P) and Green (G) are two countries competing in an arms race.
+    % \begin{itemize}
+    %     \item More inclined to increase defence spending as the other's rises
+    %     \item Less inclined to increase spending as its own spending rises
+    % \end{itemize}
 
    \vspace{0.3cm} 
 
@@ -43,14 +43,19 @@
 
 \vspace{0.3cm}
 
-    % \textbf{Key Factors:}
-    % \begin{itemize}
-    %     \item How do goodwill and fear between countries affect defence spending?
-    %     \item How do spending caps affect a country's position in the arms race?
-    % \end{itemize}
+    \textbf{Key Factors:}
+    \begin{itemize}
+        \item More inclined to increase defence spending as the other's rises
+        \item Less inclined to increase spending as its own spending rises
+        \item Does public sentiment affect defence spending?
+        \item Does limiting spending affect a country's position?
+    \end{itemize}
 
+\vspace{0.3cm}
+    \textbf{Motivation:} It helps predict military escalation between countries, which can inform policies to promote peace and prevent conflict.
 
 \end{frame}
+
 % Section
 \section{Base Model}
 \begin{frame}{Base Model}
@@ -133,7 +138,6 @@
         \includegraphics[width=1\textwidth]{bdleac.png}
     \end{columns}
     
-    
 \vspace{0.3cm}
 
     \begin{columns}
@@ -155,7 +159,7 @@
 % Section 
 \section{Grievances and Goodwill}
 \begin{frame}{Grievances and Goodwill}
-    Suppose P and G have underlying goodwill/grievances that influence their spending \\
+    % If P and G have underlying goodwill/grievances that influence their spending \\
     % The model equations are therefore:
     \begin{align*}
         \frac{\partial p}{\partial t} &= a g(t) - b p(t) + r\\
@@ -165,6 +169,8 @@
     %     \item \((r,s)>0\) for goodwill and \((r,s)<0\) for grievance
     %     \item Provide further elaborating points
     % \end{itemize}
+  
+\vspace{0.3cm}
     
 \begin{tikzpicture}[>=stealth, scale=0.85, every node/.style={transform shape}]
 
@@ -198,9 +204,13 @@
 % Section 
 \section{Mutual Logistic Fear}
 \begin{frame}{Mutual Logistic Fear}
-    \textbf{Limitation of Current Model}: Does not account for the limited resources each country has \\
+    \textbf{Limitation of Current Model}: Does not account for the limited resources each country has, so introduce self limiting logistic growth
 
-    \textbf{Solution}: Introduce logistic growth \\
+% \vspace{0.3cm}
+
+    % \textbf{Solution}: Introduce logistic growth
+     
+% \vspace{0.3cm}
    \begin{align*}
         \frac{\partial p}{\partial t} &= a(1-\frac{p(t)}{K_p})g(t) - b p(t) + r\\
         \frac{\partial g}{\partial t} &= c(1-\frac{g(t)}{K_g})p(t) - d g(t) + s
@@ -209,6 +219,8 @@
     %     \item Provide further elaborating points
     %     \item Provide further elaborating points
     % \end{itemize}
+
+\vspace{0.3cm}
 
 \begin{tikzpicture}[>=stealth, scale=0.85, every node/.style={transform shape}]
 
