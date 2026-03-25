@@ -8,6 +8,7 @@
 \usepackage{amsmath, amssymb}
 \usepackage{graphicx}
 \usepackage{tikz}
+\usetikzlibrary{arrows.meta, positioning, calc}
 
 % Title Information
 \title[Topic 5: Arms Race]{Topic 5: Arms Race}
@@ -30,7 +31,7 @@
     %     \item Discouraged to increase defence spending based on their own spending
     % \end{itemize}
     
-    \textbf{Scenario:} Purple (p) and Green (g) are two countries competing in an arms race. Each is:
+    \textbf{Scenario:} Purple (P) and Green (G) are two countries competing in an arms race. Each is:
     \begin{itemize}
         \item More inclined to increase defence spending as the other's rises
         \item Less inclined to increase spending as its own spending rises
@@ -48,27 +49,6 @@
     %     \item How do spending caps affect a country's position in the arms race?
     % \end{itemize}
 
-    % \textbf{Model Overview}:
-    % \begin{itemize}
-    %     \item $\Delta$spending = x(other country's spending) - y(own spending)
-    %     \item x and y measure the severity of encouragement or discouragement to spend
-    % \end{itemize}
-    % \textbf{Model}
-
-\begin{tikzpicture}[>=stealth, scale=0.75, every node/.style={transform shape}]
-
-\node[draw, circle, minimum size=1cm] (B) at (-5,0) {B};
-\node[draw, circle, minimum size=1cm] (P) at (0,0) {P};
-\node[draw, circle, minimum size=1cm] (G) at (5,0) {G};
-\node[draw, circle, minimum size=1cm] (D) at (10,0) {D};
-
-\draw[->] (P) -- node[above] {Arms Spending} (B);
-\draw[->] (G) -- node[above] {Arms Spending} (D);
-
-\draw[->] (P) .. controls (2.5,1) .. node[above] {$-GD$ (Fear Factor)} (G);
-\draw[->] (G) .. controls (2.5,-1) .. node[below] {$PC$ (Fear Factor)} (P);
-
-\end{tikzpicture}
 
 \end{frame}
 % Section
@@ -80,12 +60,30 @@
         \frac{\partial g}{\partial t} &= c p(t) - d g(t)
         \end{align*}
     \end{block}
-    \begin{itemize}
-        \item Feasibility Condition: \((p(t),g(t) \ge 0)\)
-        \item \(a,c\): Mutual Fear Factor (\(a,c>0\))
-        \item \(b,d\): Expenditure Factor (\(b,d>0\))
-    \end{itemize}
-\end{frame}
+    % \begin{itemize}
+    %     \item Feasibility Condition: \((p(t),g(t) \ge 0)\)
+    %     \item \(a,c\): Mutual Fear Factor (\(a,c>0\))
+    %     \item \(b,d\): Expenditure Factor (\(b,d>0\))
+    % \end{itemize}
+
+\vspace{0.3cm} 
+
+\begin{tikzpicture}[>=stealth, scale=0.85, every node/.style={transform shape}]
+
+\node (B) at (-4,0) {B};
+\node[draw, circle, minimum size=1cm] (P) at (0,0) {P};
+\node[draw, circle, minimum size=1cm] (G) at (5,0) {G};
+\node (D) at (9,0) {D};
+
+\draw[->] (P) -- node[above] {Arms Spending} (B);
+\draw[->] (G) -- node[above] {Arms Spending} (D);
+
+\draw[->] (P) .. controls (2.5,1) .. node[midway, above] {$PC$ (Fear Factor)} (G);
+\draw[->] (G) .. controls (2.5,-1) .. node[midway, below] {$AG$ (Fear Factor)} (P);
+
+\end{tikzpicture}
+    
+    \end{frame}
 
 % Section
 \iffalse %tentatively removed
@@ -157,16 +155,36 @@
 % Section 
 \section{Grievances and Goodwill}
 \begin{frame}{Grievances and Goodwill}
-    Suppose countries p and g have underlying goodwill/grievances that influence their spending \\
-    The model equations are therefore:
+    Suppose P and G have underlying goodwill/grievances that influence their spending \\
+    % The model equations are therefore:
     \begin{align*}
         \frac{\partial p}{\partial t} &= a g(t) - b p(t) + r\\
         \frac{\partial g}{\partial t} &= c p(t) - d g(t) + s
     \end{align*}
-    \begin{itemize}
-        \item \((r,s)>0\) for goodwill and \((r,s)<0\) for grievance
-        \item Provide further elaborating points
-    \end{itemize}
+    % \begin{itemize}
+    %     \item \((r,s)>0\) for goodwill and \((r,s)<0\) for grievance
+    %     \item Provide further elaborating points
+    % \end{itemize}
+    
+\begin{tikzpicture}[>=stealth, scale=0.85, every node/.style={transform shape}]
+
+\node (B) at (-4,-1.5) {B};
+\node (R) at (-4,1.5) {R};
+\node[draw, circle, minimum size=1cm] (P) at (0,0) {P};
+\node[draw, circle, minimum size=1cm] (G) at (5,0) {G};
+\node (S) at (9,1.5) {S};
+\node (D) at (9,-1.5) {D};
+
+\draw[<-] (P) -- node[midway, above, sloped] {Public Sentiment} (R);
+\draw[<-] (G) -- node[midway , above, sloped] {Public Sentiment} (S);
+\draw[->] (P) -- node[midway, above, sloped] {Arms Spending} (B);
+\draw[->] (G) -- node[midway, above, sloped] {Arms Spending} (D);
+
+\draw[->] (P) .. controls (2.5,1) .. node[midway, above] {$GD$ (Fear Factor)} (G);
+\draw[->] (G) .. controls (2.5,-1) .. node[midway, below] {$PC$ (Fear Factor)} (P);
+
+\end{tikzpicture}
+
 \end{frame}
 
 \begin{frame}{Long Term Behavior (Grievances and Goodwill)}
@@ -187,10 +205,32 @@
         \frac{\partial p}{\partial t} &= a(1-\frac{p(t)}{K_p})g(t) - b p(t) + r\\
         \frac{\partial g}{\partial t} &= c(1-\frac{g(t)}{K_g})p(t) - d g(t) + s
     \end{align*}
-    \begin{itemize}
-        \item Provide further elaborating points
-        \item Provide further elaborating points
-    \end{itemize}
+    % \begin{itemize}
+    %     \item Provide further elaborating points
+    %     \item Provide further elaborating points
+    % \end{itemize}
+
+\begin{tikzpicture}[>=stealth, scale=0.85, every node/.style={transform shape}]
+
+\node (B) at (-4,-1.5) {B};
+\node (R) at (-4,1.5) {R};
+\node[draw, circle, minimum size=1cm] (P) at (0,0) {P};
+\node[draw, circle, minimum size=1cm] (G) at (5,0) {G};
+\node (S) at (9,1.5) {S};
+\node (D) at (9,-1.5) {D};
+
+\draw[<-] (P) -- node[midway, above, sloped] {Public Sentiment} (R);
+\draw[<-] (G) -- node[midway , above, sloped] {Public Sentiment} (S);
+\draw[->] (P) -- node[midway, above, sloped] {Arms Spending} (B);
+\draw[->] (G) -- node[midway, above, sloped] {Arms Spending} (D);
+
+\draw[->] (P) .. controls (2.5,1) .. node[midway, above] {$GD$ (Fear Factor)} (G);
+\draw[->] (G) .. controls (2.5,-1) .. node[midway, below] {$PC$ (Fear Factor)} (P);
+\draw[->] (P) to[out=130,in=60,loop, looseness=7] node[above] {Mutual Fear} (P);
+\draw[->] (G) to[out=130,in=60,loop, looseness=7] node[above] {Mutual Fear} (G);
+
+\end{tikzpicture}
+
 \end{frame}
 
 \begin{frame}{Long Term Behavior (Mutual Logistic Fear)}
