@@ -50,12 +50,16 @@
 % Section
 \section{Base Model}
 \begin{frame}{Base Model}
-    % \begin{block}{Model Equations}
+    \begin{block}{Model Equations}
+        
+        The equations for the base model are:
         \begin{align*}
-        \frac{\partial p}{\partial t} &= a g(t) - b p(t) \\
-        \frac{\partial g}{\partial t} &= c p(t) - d g(t)
+        \dfrac{\partial p}{\partial t} &= a g(t) - b p(t) \\
+        % \Delta p &= a g(t) - b p(t) \\
+        \dfrac{\partial g}{\partial t} &= c p(t) - d g(t)
+        % \Delta g &= c p(t) - d g(t)
         \end{align*}
-    % \end{block}
+    \end{block}
     % \begin{itemize}
     %     \item Feasibility Condition: \((p(t),g(t) \ge 0)\)
     %     \item \(a,c\): Mutual Fear Factor (\(a,c>0\))
@@ -89,23 +93,23 @@
     \end{frame}
 
 % Section
-\iffalse %tentatively removed
-\section{Stability Analysis}
-\begin{frame}{Stability Analysis}    
-    \begin{block}{In the long run, we expect either:}
-     \begin{enumerate}
-        \item Military spending of both countries to stabilize around 
-        \[(p^*(t),g^*(t)) = \bigg(\frac{as+rd}{bd-ac},\frac{cr+sb}{bd-ac}\bigg)\]
-        \begin{enumerate}
-        \item Entails mutual disarmament given the right \(r,s\) values
-        \end{enumerate}
-        \item Military spending of both countries to prepetually increase
-    \end{enumerate}
-    \end{block}
-    \textbf{Case 1 happens if:} $bd>ac$ (i.e. the product of expenditure factors are greater than 
-    mutual fear factors)
-\end{frame}
-\fi
+% \iffalse %tentatively removed
+% \section{Stability Analysis}
+% \begin{frame}{Stability Analysis}    
+%     \begin{block}{In the long run, we expect either:}
+%      \begin{enumerate}
+%         \item Military spending of both countries to stabilize around 
+%         \[(p^*(t),g^*(t)) = \bigg(\frac{as+rd}{bd-ac},\frac{cr+sb}{bd-ac}\bigg)\]
+%         \begin{enumerate}
+%         \item Entails mutual disarmament given the right \(r,s\) values
+%         \end{enumerate}
+%         \item Military spending of both countries to prepetually increase
+%     \end{enumerate}
+%     \end{block}
+%     \textbf{Case 1 happens if:} $bd>ac$ (i.e. the product of expenditure factors are greater than 
+%     mutual fear factors)
+% \end{frame}
+% \fi
 
 \begin{frame}{Long Term Behavior (Base Model)}
     \begin{columns}
@@ -154,18 +158,20 @@
 \begin{frame}{Public Sentiment (Trust and Hostility)}
     % If P and G have underlying goodwill/grievances that influence their spending \\
     % The model equations are therefore:
-    % \begin{block}{Model Equations}
+    \begin{block}{Model Equations}
+        
+        The equations after including public sentiment are:
     \begin{align*}
-        \frac{\partial p}{\partial t} &= a g(t) - b p(t) + r\\
-        \frac{\partial g}{\partial t} &= c p(t) - d g(t) + s
+        \dfrac{\partial p}{\partial t} &= a g(t) - b p(t) + r\\
+        \dfrac{\partial g}{\partial t} &= c p(t) - d g(t) + s
     \end{align*}
-    % \end{block}
+    \end{block}
     % \begin{itemize}
     %     \item \((r,s)>0\) for goodwill and \((r,s)<0\) for grievance
     %     \item Provide further elaborating points
     % \end{itemize}
   
-\vspace{0.3cm}
+% \vspace{0.3cm}
     
 \begin{figure}
 \centering   
@@ -184,8 +190,8 @@
 \draw[->] (P) -- node[midway, above, sloped] {Arms Spending} (B);
 \draw[->] (G) -- node[midway, above, sloped] {Arms Spending} (D);
 
-\draw[->] (P) .. controls (2.5,1) .. node[midway, above] {$GD$ (Fear Factor)} (G);
-\draw[->] (G) .. controls (2.5,-1) .. node[midway, below] {$PC$ (Fear Factor)} (P);
+\draw[->] (P) .. controls (2.5,1) .. node[midway, above] {$PC$ (Fear Factor)} (G);
+\draw[->] (G) .. controls (2.5,-1) .. node[midway, below] {$AG$ (Fear Factor)} (P);
 
 \end{tikzpicture}
 
@@ -206,29 +212,26 @@
 % Section 
 \section{Mutual Logistic Fear}
 \begin{frame}{Mutual Logistic Fear}
-    \textbf{Limitation}: Add logistic growth to account for limited resources.
+    % \textbf{Limitation}: Add logistic growth to account for limited resources.
 % \vspace{0.3cm}
 
     % \textbf{Solution}: Introduce logistic growth
      
 % \vspace{0.3cm}
-    % \begin{block}{Model Equations}
+    \begin{block}{Model Equations}
+        The equations after adding logistic growth to account of limited resources are:
    \begin{align*}
-        \frac{\partial p}{\partial t} &= a(1-\frac{p(t)}{K_p})g(t) - b p(t) + r\\
-        \frac{\partial g}{\partial t} &= c(1-\frac{g(t)}{K_g})p(t) - d g(t) + s
+        \dfrac{\partial p}{\partial t} &= a(1-\frac{p(t)}{K_p})g(t) - b p(t) + r\\
+        \dfrac{\partial g}{\partial t} &= c(1-\frac{g(t)}{K_g})p(t) - d g(t) + s
     \end{align*}
-    % \end{block}
-    % \begin{itemize}
-    %     \item Provide further elaborating points
-    %     \item Provide further elaborating points
-    % \end{itemize}
+    \end{block}
 
-\vspace{0.3cm}
+% \vspace{0.3cm}
 
 \begin{figure}
 \centering   
 
-\begin{tikzpicture}[>=stealth, scale=0.75, every node/.style={transform shape}]
+\begin{tikzpicture}[>=stealth, scale=0.55, every node/.style={transform shape}]
 
 \node (B) at (-4,-1.5) {B};
 \node (R) at (-4,1.5) {R};
@@ -242,8 +245,8 @@
 \draw[->] (P) -- node[midway, above, sloped] {Arms Spending} (B);
 \draw[->] (G) -- node[midway, above, sloped] {Arms Spending} (D);
 
-\draw[->] (P) .. controls (2.5,1) .. node[midway, above] {$GD$ (Fear Factor)} (G);
-\draw[->] (G) .. controls (2.5,-1) .. node[midway, below] {$PC$ (Fear Factor)} (P);
+\draw[->] (P) .. controls (2.5,1) .. node[midway, above] {$PC$ (Fear Factor)} (G);
+\draw[->] (G) .. controls (2.5,-1) .. node[midway, below] {$AG$ (Fear Factor)} (P);
 \draw[->] (P) to[out=130,in=60,loop, looseness=7] node[above] {Mutual Fear} (P);
 \draw[->] (G) to[out=130,in=60,loop, looseness=7] node[above] {Mutual Fear} (G);
 

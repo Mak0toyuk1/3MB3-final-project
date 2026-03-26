@@ -416,6 +416,7 @@ INPUT ./graphics/mcmaster-shield-only-title.png
 INPUT ./graphics/mcmaster-shield-only-title.png
 INPUT ./graphics/mcmaster-shield-only-title.png
 INPUT ./graphics/mcmaster-shield-only-title.png
+INPUT /usr/share/texmf-dist/fonts/tfm/public/tex-gyre/rm-qhvr.tfm
 INPUT /usr/share/texmf-dist/tex/latex/lm/omllmm.fd
 INPUT /usr/share/texmf-dist/tex/latex/lm/omllmm.fd
 INPUT /usr/share/texmf-dist/tex/latex/lm/omllmm.fd
