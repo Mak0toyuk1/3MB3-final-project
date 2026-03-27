@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1774581111.36593 "/home/evo/3MB3-final-project/3MB3 Pres.tex" "3MB3 Pres.pdf" "3MB3 Pres" 1774581114.36087 0
-  "/home/evo/3MB3-final-project/3MB3 Pres.tex" 1774581111.1712 9219 192d84e688b030815694000aa7888785 ""
+["pdflatex"] 1774581156.69265 "/home/evo/3MB3-final-project/3MB3 Pres.tex" "3MB3 Pres.pdf" "3MB3 Pres" 1774581160.14256 0
+  "/home/evo/3MB3-final-project/3MB3 Pres.tex" 1774581156.24863 9400 cfa85bc67f048076fc04a504c82e556b ""
   "/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1772820570 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
   "/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc" 1772820570 2840 216e6e45ad352e2456e1149f28885bee ""
   "/usr/share/texmf-dist/fonts/enc/dvips/tex-gyre/q-rm.enc" 1772820570 2409 c64dab22331c83731e970f6020b4448b ""
@@ -230,10 +230,10 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1772820570 43569 fd570f2fa160877d211e859f687312ba ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1772998635 5381098 9f966685d344a3d34adbc94f52661a01 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1772998598 2328184 c54571dac8af781048f5847505268aa7 ""
-  "3MB3 Pres.aux" 1774581114.27659 3498 d2c0a354a89ad34960aef7d137f3a774 "pdflatex"
-  "3MB3 Pres.nav" 1774581114.27782 1829 f54270471e4b23706fbe86f1d6537b49 "pdflatex"
-  "3MB3 Pres.out" 1774581114.27708 637 6cb60b4d58c87aaabf71f32224315264 "pdflatex"
-  "3MB3 Pres.tex" 1774581111.1712 9219 192d84e688b030815694000aa7888785 ""
+  "3MB3 Pres.aux" 1774581160.06251 3498 d2c0a354a89ad34960aef7d137f3a774 "pdflatex"
+  "3MB3 Pres.nav" 1774581160.06341 1829 f54270471e4b23706fbe86f1d6537b49 "pdflatex"
+  "3MB3 Pres.out" 1774581160.06285 637 6cb60b4d58c87aaabf71f32224315264 "pdflatex"
+  "3MB3 Pres.tex" 1774581156.24863 9400 cfa85bc67f048076fc04a504c82e556b ""
   "bdeqac.png" 1774581046.81854 50869 faa8c78010eb1be6aaa3e44e4fefd435 ""
   "bdgeac.png" 1774581046.72854 61273 d7723c9a95cf2f21c8814241d2931a9e ""
   "bdleac.png" 1774581046.77654 57566 c395b551866821cb18fb28be32142017 ""
