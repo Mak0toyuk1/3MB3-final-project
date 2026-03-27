@@ -256,11 +256,39 @@
 \end{frame}
 
 \begin{frame}{Long Term Behavior (Mutual Logistic Fear)}
-    \begin{itemize}
-        \item provide plots
-        \item provide stability conditions
-        \item provide convergences (if possible)
-    \end{itemize}
+
+\begin{columns}[T]
+    \column{0.33\textwidth}
+    \centering
+    \textbf{$bd > ac$}\\
+    \includegraphics[width=\linewidth]{logistic_case1.png}\\
+    \small Complete mutual disarmament
+
+    \column{0.33\textwidth}
+    \centering
+    \textbf{$bd = ac$}\\
+    \includegraphics[width=\linewidth]{logistic_case2.png}\\
+    \small Stabilized spending
+
+    \column{0.33\textwidth}
+    \centering
+    \textbf{$bd < ac$}\\
+    \includegraphics[width=\linewidth]{logistic_case3.png}\\
+    \small Perpetual arms race
+\end{columns}
+
+\vspace{0.4cm}
+
+% \begin{itemize}
+%     \item Stability depends on relative strength of fear ($b,d$) vs restraint ($a,c$)
+%     \item Convergence:
+%     \begin{itemize}
+%         \item $bd > ac$ $\rightarrow$ decay to zero (disarmament)
+%         \item $bd = ac$ $\rightarrow$ steady-state equilibrium
+%         \item $bd < ac$ $\rightarrow$ unbounded growth (arms race)
+%     \end{itemize}
+% \end{itemize}
+
 \end{frame}
 
 \section{End}

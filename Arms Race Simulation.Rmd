@@ -139,7 +139,7 @@ png("logistic_case1.png", width = 1000, height = 1000)
 par(cex = 3.5)
 plot(ArmsRace[1, ], ArmsRace[2, ], type = "l", col = "blue",
      xlab = "Time", ylab = "National Arms",
-     main = "Logistic fear: a=0.1, b=0.7, c=0.2, d=0.1, Kp=5, Kg=5",
+     main = "a=0.1, b=0.7, c=0.2, d=0.1, Kp=5, Kg=5",
      ylim = range(c(ArmsRace[2, ], ArmsRace[3, ])), lwd = 10)
 lines(ArmsRace[1, ], ArmsRace[3, ], col = "red", lwd = 10)
 legend("topright", legend = c("Nation P", "Nation G"),
@@ -154,7 +154,7 @@ png("logistic_case2.png", width = 1000, height = 1000)
 par(cex = 3.5)
 plot(ArmsRace[1, ], ArmsRace[2, ], type = "l", col = "blue",
      xlab = "Time", ylab = "National Arms",
-     main = "Logistic fear: a=0.5, b=0.5, c=0.2, d=0.1, Kp=5, Kg=5",
+     main = "a=0.5, b=0.5, c=0.2, d=0.1, Kp=5, Kg=5",
      ylim = range(c(ArmsRace[2, ], ArmsRace[3, ])), lwd = 10)
 lines(ArmsRace[1, ], ArmsRace[3, ], col = "red", lwd = 10)
 legend("topleft", legend = c("Nation P", "Nation G"),
@@ -169,7 +169,7 @@ png("logistic_case3.png", width = 1000, height = 1000)
 par(cex = 3.5)
 plot(ArmsRace[1, ], ArmsRace[2, ], type = "l", col = "blue",
      xlab = "Time", ylab = "National Arms",
-     main = "Logistic fear: a=0.7, b=0.5, c=0.5, d=0.7, Kp=5, Kg=5",
+     main = "a=0.7, b=0.5, c=0.5, d=0.7, Kp=5, Kg=5",
      ylim = range(c(ArmsRace[2, ], ArmsRace[3, ])), lwd = 10)
 lines(ArmsRace[1, ], ArmsRace[3, ], col = "red", lwd = 10)
 legend("right", legend = c("Nation P", "Nation G"),
