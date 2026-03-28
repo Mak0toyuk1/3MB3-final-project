@@ -202,11 +202,74 @@
 \end{frame}
 
 \begin{frame}{Long Term Behavior (Public Sentiment)}
-    \begin{itemize}
-        \item provide plots
-        \item provide stability conditions and convergences
-        \item This model will take on negative values so discuss that by either capping the value or other methods 
-    \end{itemize}
+    \begin{columns}
+        \column{0.5\textwidth}
+        \begin{center}
+        \textbf{$bd>ac$}
+        \end{center}
+        \column{0.5\textwidth}
+        \begin{center}
+         \textbf{$bd<ac$}
+        \end{center}
+    \end{columns}
+    \begin{columns}
+        \column{0.5\textwidth}
+        \includegraphics[width=1\textwidth]{S1_bd_gt_ac.png}
+        \column{0.5\textwidth}
+        \includegraphics[width=1\textwidth]{S2_bd_lt_ac.png}
+    \end{columns}
+    
+\vspace{0.3cm}
+
+    \begin{columns}
+    \column{0.5\textwidth}
+        \centering
+        Complete mutual disarmament \\
+        %\((p^\infty,g^\infty)=(0,0)\)
+    \column{0.5\textwidth}
+        \centering
+        Perpetual arms race \\
+        %\((p^\infty,g^\infty)=(\infty,\infty)\)
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Long Term Behavior (Public Sentiment)}
+
+\vspace{0.1cm}
+
+    \begin{columns}
+        \column{0.33\textwidth}
+        \centering
+        \textbf{\small $bd=ac, r=0, s=0$}\\
+        \includegraphics[width=0.75\textwidth]{S7_bd_eq_ac.png}\\
+        \tiny Trajectories never reach equilibrium
+        \column{0.33\textwidth}
+        \centering
+        \textbf{\small $bd=ac, r<0, s<0$}\\
+        \includegraphics[width=0.75\textwidth]{S5_bd_eq_ac.png}\\
+        \tiny Complete mutual disarmament
+        \column{0.33\textwidth}
+        \centering
+        \textbf{\small $bd=ac, r>0, s>0$}\\
+        \includegraphics[width=0.75\textwidth]{S6_bd_eq_ac.png}\\
+        \tiny Perpetual arms race
+    \end{columns}
+
+\vspace{0.1cm}
+
+    \begin{columns}
+        \column{0.5\textwidth}
+        \centering
+        \textbf{\small $bd=ac, r<0, s>0$}\\
+        \includegraphics[width=0.5\textwidth]{S4_bd_eq_ac.png}\\
+        \tiny One grows, one shrinks
+        \column{0.5\textwidth}
+        \centering
+        \textbf{\small $bd=ac, r=0, s>0$}\\
+        \includegraphics[width=0.5\textwidth]{S3_bd_eq_ac.png}\\
+        \tiny Both diverge
+    \end{columns}
+
 \end{frame}
 
 % Section 
@@ -278,6 +341,42 @@
     \textbf{$bd < ac$}\\
     \includegraphics[width=\linewidth]{logistic_case3.png}\\
     \small Perpetual arms race
+\end{columns}
+
+\vspace{0.4cm}
+
+% \begin{itemize}
+%     \item Stability depends on relative strength of fear ($b,d$) vs restraint ($a,c$)
+%     \item Convergence:
+%     \begin{itemize}
+%         \item $bd > ac$ $\rightarrow$ decay to zero (disarmament)
+%         \item $bd = ac$ $\rightarrow$ steady-state equilibrium
+%         \item $bd < ac$ $\rightarrow$ unbounded growth (arms race)
+%     \end{itemize}
+% \end{itemize}
+
+\end{frame}
+
+\begin{frame}{Long Term Behavior (Mutual Logistic Fear)}
+
+\begin{columns}[T]
+    \column{0.33\textwidth}
+    \centering
+    \textbf{$bd > ac$}\\
+    \includegraphics[width=\linewidth]{S1_only_origin.png}\\
+    \small Complete mutual disarmament
+
+    \column{0.33\textwidth}
+    \centering
+    \textbf{$bd < ac$}\\
+    \includegraphics[width=\linewidth]{S2_one_equil.png}\\
+    \small Stabilized spending
+
+    \column{0.33\textwidth}
+    \centering
+    \textbf{$r,s=1$}\\
+    \includegraphics[width=\linewidth]{S3_grievance_unique.png}\\
+    \small Unique equilibrium based on trust/hostility
 \end{columns}
 
 \vspace{0.4cm}
