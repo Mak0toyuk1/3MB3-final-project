@@ -1,4 +1,6 @@
 \beamer@sectionintoc {1}{Overview}{2}{0}{1}
 \beamer@sectionintoc {2}{Base Model}{3}{0}{2}
-\beamer@sectionintoc {3}{Mutual Logistic Fear}{7}{0}{3}
-\beamer@sectionintoc {4}{End}{9}{0}{4}
+\beamer@sectionintoc {3}{Mutual Logistic Fear}{6}{0}{3}
+\beamer@sectionintoc {4}{End}{8}{0}{4}
+\beamer@sectionintoc {5}{Conclusion and Next Steps}{8}{0}{5}
+\beamer@sectionintoc {6}{End}{9}{0}{6}
