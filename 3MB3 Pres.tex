@@ -14,8 +14,8 @@
 \title[Topic 5: Arms Race]{Topic 5: Arms Race (Group 10)}
 % \subtitle{MATH 3MB3 Final Project}
 \author[Jaswal, Khan, Palin, Reeves, and Xu]{Zeyn Jaswal, Azzaam Khan, Timothy Palin, Meredith Reeves, and Tony Xu}
-\institute[]{McMaster University}
-%\date{}
+% \institute[McMaster University]{McMaster University}
+\date{}
 
 \begin{document}
 
@@ -53,12 +53,20 @@
     \begin{block}{Model Equations}
         
         The equations for the base model are:
-        \begin{align*}
-        \dfrac{\partial p}{\partial t} &= a g(t) - b p(t) + r \\
-        % \Delta p &= a g(t) - b p(t) \\
-        \dfrac{\partial g}{\partial t} &= c p(t) - d g(t) + s
-        % \Delta g &= c p(t) - d g(t)
-        \end{align*}
+        % \begin{align*}
+        % \dfrac{\partial p}{\partial t} &= a g(t) - b p(t) + r \\
+        % % \Delta p &= a g(t) - b p(t) \\
+        % \dfrac{\partial g}{\partial t} &= c p(t) - d g(t) + s
+        % % \Delta g &= c p(t) - d g(t)
+        % \end{align*}
+
+    \begin{equation}
+\dfrac{\partial p}{\partial t} = a g(t) - b p(t) + r
+\end{equation}
+
+\begin{equation}
+\dfrac{\partial g}{\partial t} = c p(t) - d g(t) + s
+\end{equation}
     \end{block}
     \begin{itemize}
         \item Feasibility Condition: \((p(t),g(t) \ge 0)\)
@@ -113,7 +121,7 @@
 % \fi
 
 \begin{frame}{Long Term Behavior}
-    When both countries are neutral, $r=s=0$ and we have:
+    When both countries are neutral ($r=s=0$), we have:
     \begin{columns}[t]
         \column{0.33\textwidth}
         \begin{center}
@@ -308,11 +316,14 @@
      
 \vspace{0.3cm}
     \begin{block}{Model Equations}
-        The equations after adding logistic growth to account of limited resources are:
-   \begin{align*}
-        \dfrac{\partial p}{\partial t} &= a(1-\frac{p(t)}{K_p})g(t) - b p(t) + r\\
-        \dfrac{\partial g}{\partial t} &= c(1-\frac{g(t)}{K_g})p(t) - d g(t) + s
-    \end{align*}
+        The equations after adding logistic growth are:
+   \begin{equation}
+        \dfrac{\partial p}{\partial t} = a \left (1-\frac{p(t)}{K_p} \right) g(t) - b p(t) + r
+    \end{equation}
+
+   \begin{equation}
+        \dfrac{\partial g}{\partial t} = c \left (1-\frac{g(t)}{K_g} \right)  p(t) - d g(t) + s
+    \end{equation}
     \end{block}
 
 % \vspace{0.3cm}
@@ -419,7 +430,7 @@
 
 %\end{frame}
 
-\section{End}
+% \section{End}
 \section{Conclusion and Next Steps}
 
 \begin{frame}{Conclusion and Next Steps}

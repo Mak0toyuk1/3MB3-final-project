@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.3.6)  30 MAR 2026 21:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.3.6)  30 MAR 2026 22:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -848,7 +848,7 @@ Dictionary: translator-numbers-dictionary, Language: English
 ) (/usr/share/texmf-dist/tex/latex/translator/translator-theorem-dictionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 ) (./3MB3 Pres.nav)
-<graphics/mcmaster-shield-only-background.png, id=69, 1606.0pt x 2039.62pt>
+<graphics/mcmaster-shield-only-background.png, id=63, 1606.0pt x 2039.62pt>
 File: graphics/mcmaster-shield-only-background.png Graphic file (type png)
 <use graphics/mcmaster-shield-only-background.png>
 Package pdftex.def Info: graphics/mcmaster-shield-only-background.png  used on input line 23.
@@ -856,7 +856,7 @@ Package pdftex.def Info: graphics/mcmaster-shield-only-background.png  used on i
  [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf-dist/fonts/enc/dvips/tex-gyre/q-rm.enc}
 
  <./graphics/mcmaster-shield-only-background.png>]
-<graphics/mcmaster-shield-only-title.png, id=119, 1606.0pt x 2039.62pt>
+<graphics/mcmaster-shield-only-title.png, id=111, 1606.0pt x 2039.62pt>
 File: graphics/mcmaster-shield-only-title.png Graphic file (type png)
 <use graphics/mcmaster-shield-only-title.png>
 Package pdftex.def Info: graphics/mcmaster-shield-only-title.png  used on input line 48.
@@ -864,134 +864,134 @@ Package pdftex.def Info: graphics/mcmaster-shield-only-title.png  used on input 
  [2
 
  <./graphics/mcmaster-shield-only-title.png>]
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 94.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 102.
  (/usr/share/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 94.
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 102.
  (/usr/share/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 94.
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 102.
  (/usr/share/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 94.
+(Font)              <10.95> on input line 102.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 94.
+(Font)              <8> on input line 102.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 94.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 94.
+(Font)              <6> on input line 102.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 102.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 94.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 102.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 File: graphics/mcmaster-shield-only-title.png Graphic file (type png)
 <use graphics/mcmaster-shield-only-title.png>
-Package pdftex.def Info: graphics/mcmaster-shield-only-title.png  used on input line 94.
+Package pdftex.def Info: graphics/mcmaster-shield-only-title.png  used on input line 102.
 (pdftex.def)             Requested size: 12.44882pt x 15.81pt.
  [3
 
 {/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}]
-<bdgeac.png, id=193, 1003.75pt x 1003.75pt>
+<bdgeac.png, id=181, 1003.75pt x 1003.75pt>
 File: bdgeac.png Graphic file (type png)
 <use bdgeac.png>
-Package pdftex.def Info: bdgeac.png  used on input line 156.
+Package pdftex.def Info: bdgeac.png  used on input line 164.
 (pdftex.def)             Requested size: 112.95807pt x 112.95529pt.
-<bdeqac.png, id=194, 1003.75pt x 1003.75pt>
+<bdeqac.png, id=182, 1003.75pt x 1003.75pt>
 File: bdeqac.png Graphic file (type png)
 <use bdeqac.png>
-Package pdftex.def Info: bdeqac.png  used on input line 156.
+Package pdftex.def Info: bdeqac.png  used on input line 164.
 (pdftex.def)             Requested size: 112.95807pt x 112.95529pt.
-<bdleac.png, id=195, 1003.75pt x 1003.75pt>
+<bdleac.png, id=183, 1003.75pt x 1003.75pt>
 File: bdleac.png Graphic file (type png)
 <use bdleac.png>
-Package pdftex.def Info: bdleac.png  used on input line 156.
+Package pdftex.def Info: bdleac.png  used on input line 164.
 (pdftex.def)             Requested size: 112.95807pt x 112.95529pt.
 File: graphics/mcmaster-shield-only-title.png Graphic file (type png)
 <use graphics/mcmaster-shield-only-title.png>
-Package pdftex.def Info: graphics/mcmaster-shield-only-title.png  used on input line 156.
+Package pdftex.def Info: graphics/mcmaster-shield-only-title.png  used on input line 164.
 (pdftex.def)             Requested size: 12.44882pt x 15.81pt.
  [4
 
  <./bdgeac.png (PNG copy)> <./bdeqac.png (PNG copy)> <./bdleac.png (PNG copy)>]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 299.
+(Font)              <10> on input line 307.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 299.
+(Font)              <7> on input line 307.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 299.
-<rs_p1.png, id=230, 1003.75pt x 1003.75pt>
+(Font)              <5> on input line 307.
+<rs_p1.png, id=216, 1003.75pt x 1003.75pt>
 File: rs_p1.png Graphic file (type png)
 <use rs_p1.png>
-Package pdftex.def Info: rs_p1.png  used on input line 299.
+Package pdftex.def Info: rs_p1.png  used on input line 307.
 (pdftex.def)             Requested size: 113.98178pt x 113.98146pt.
-<rs_p2.png, id=231, 1003.75pt x 1003.75pt>
+<rs_p2.png, id=217, 1003.75pt x 1003.75pt>
 File: rs_p2.png Graphic file (type png)
 <use rs_p2.png>
-Package pdftex.def Info: rs_p2.png  used on input line 299.
+Package pdftex.def Info: rs_p2.png  used on input line 307.
 (pdftex.def)             Requested size: 113.98178pt x 113.98146pt.
-<rs_p3.png, id=232, 1003.75pt x 1003.75pt>
+<rs_p3.png, id=218, 1003.75pt x 1003.75pt>
 File: rs_p3.png Graphic file (type png)
 <use rs_p3.png>
-Package pdftex.def Info: rs_p3.png  used on input line 299.
+Package pdftex.def Info: rs_p3.png  used on input line 307.
 (pdftex.def)             Requested size: 113.98178pt x 113.98146pt.
 File: graphics/mcmaster-shield-only-title.png Graphic file (type png)
 <use graphics/mcmaster-shield-only-title.png>
-Package pdftex.def Info: graphics/mcmaster-shield-only-title.png  used on input line 299.
+Package pdftex.def Info: graphics/mcmaster-shield-only-title.png  used on input line 307.
 (pdftex.def)             Requested size: 12.44882pt x 15.81pt.
  [5
 
  <./rs_p1.png> <./rs_p2.png> <./rs_p3.png>]
 File: graphics/mcmaster-shield-only-title.png Graphic file (type png)
 <use graphics/mcmaster-shield-only-title.png>
-Package pdftex.def Info: graphics/mcmaster-shield-only-title.png  used on input line 348.
+Package pdftex.def Info: graphics/mcmaster-shield-only-title.png  used on input line 359.
 (pdftex.def)             Requested size: 12.44882pt x 15.81pt.
  [6
 
-]
-<logistic_case1.png, id=305, 1003.75pt x 1003.75pt>
+{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}]
+<logistic_case1.png, id=288, 1003.75pt x 1003.75pt>
 File: logistic_case1.png Graphic file (type png)
 <use logistic_case1.png>
-Package pdftex.def Info: logistic_case1.png  used on input line 384.
+Package pdftex.def Info: logistic_case1.png  used on input line 395.
 (pdftex.def)             Requested size: 112.95807pt x 112.95529pt.
-<logistic_case2.png, id=306, 1003.75pt x 1003.75pt>
+<logistic_case2.png, id=289, 1003.75pt x 1003.75pt>
 File: logistic_case2.png Graphic file (type png)
 <use logistic_case2.png>
-Package pdftex.def Info: logistic_case2.png  used on input line 384.
+Package pdftex.def Info: logistic_case2.png  used on input line 395.
 (pdftex.def)             Requested size: 112.95807pt x 112.95529pt.
-<logistic_case3.png, id=307, 1003.75pt x 1003.75pt>
+<logistic_case3.png, id=290, 1003.75pt x 1003.75pt>
 File: logistic_case3.png Graphic file (type png)
 <use logistic_case3.png>
-Package pdftex.def Info: logistic_case3.png  used on input line 384.
+Package pdftex.def Info: logistic_case3.png  used on input line 395.
 (pdftex.def)             Requested size: 112.95807pt x 112.95529pt.
 File: graphics/mcmaster-shield-only-title.png Graphic file (type png)
 <use graphics/mcmaster-shield-only-title.png>
-Package pdftex.def Info: graphics/mcmaster-shield-only-title.png  used on input line 384.
+Package pdftex.def Info: graphics/mcmaster-shield-only-title.png  used on input line 395.
 (pdftex.def)             Requested size: 12.44882pt x 15.81pt.
  [7
 
  <./logistic_case1.png (PNG copy)> <./logistic_case2.png (PNG copy)> <./logistic_case3.png (PNG copy)>]
 File: graphics/mcmaster-shield-only-title.png Graphic file (type png)
 <use graphics/mcmaster-shield-only-title.png>
-Package pdftex.def Info: graphics/mcmaster-shield-only-title.png  used on input line 450.
+Package pdftex.def Info: graphics/mcmaster-shield-only-title.png  used on input line 461.
 (pdftex.def)             Requested size: 12.44882pt x 15.81pt.
 
-Overfull \vbox (1.23291pt too high) detected at line 450
+Overfull \vbox (1.23291pt too high) detected at line 461
  []
 
 [8
 
 ]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 457.
+(Font)              <9> on input line 468.
 File: graphics/mcmaster-shield-only-background.png Graphic file (type png)
 <use graphics/mcmaster-shield-only-background.png>
-Package pdftex.def Info: graphics/mcmaster-shield-only-background.png  used on input line 457.
+Package pdftex.def Info: graphics/mcmaster-shield-only-background.png  used on input line 468.
 (pdftex.def)             Requested size: 172.0535pt x 218.51813pt.
  [9
 
@@ -1011,21 +1011,21 @@ LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
 Package rerunfilecheck Info: File `"3MB3 Pres".out' has not changed.
-(rerunfilecheck)             Checksum: 1C7B177B0CEF018149C538A8FCDD40F5;621.
+(rerunfilecheck)             Checksum: 4C925A4A6FAF277CEA90C0F0D024A349;563.
  ) 
 Here is how much of TeX's memory you used:
- 26983 strings out of 469515
- 535046 string characters out of 5470808
- 916374 words of memory out of 5000000
- 55031 multiletter control sequences out of 15000+600000
+ 26975 strings out of 469515
+ 534962 string characters out of 5470808
+ 916324 words of memory out of 5000000
+ 55023 multiletter control sequences out of 15000+600000
  699909 words of font info for 92 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  128i,19n,123p,413b,989s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/tex-gyre/qhvb.pfb></usr/share/texmf-dist/fonts/type1/public/tex-gyre/qhvr.pfb></usr/share/texmf-dist/fonts/type1/public/tex-gyre/qhvri.pfb>
-Output written on "3MB3 Pres.pdf" (9 pages, 1067583 bytes).
+</usr/share/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/tex-gyre/qhvb.pfb></usr/share/texmf-dist/fonts/type1/public/tex-gyre/qhvr.pfb></usr/share/texmf-dist/fonts/type1/public/tex-gyre/qhvri.pfb>
+Output written on "3MB3 Pres.pdf" (9 pages, 1070535 bytes).
 PDF statistics:
- 431 PDF objects out of 1000 (max. 8388607)
- 233 compressed objects within 3 object streams
- 25 named destinations out of 1000 (max. 500000)
- 158 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 413 PDF objects out of 1000 (max. 8388607)
+ 223 compressed objects within 3 object streams
+ 24 named destinations out of 1000 (max. 500000)
+ 150 words of extra memory for PDF output out of 10000 (max. 10000000)
 
