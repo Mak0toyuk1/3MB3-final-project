@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.3.6)  30 MAR 2026 22:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.3.6)  30 MAR 2026 22:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -978,20 +978,20 @@ Package pdftex.def Info: graphics/mcmaster-shield-only-title.png  used on input 
  <./logistic_case1.png (PNG copy)> <./logistic_case2.png (PNG copy)> <./logistic_case3.png (PNG copy)>]
 File: graphics/mcmaster-shield-only-title.png Graphic file (type png)
 <use graphics/mcmaster-shield-only-title.png>
-Package pdftex.def Info: graphics/mcmaster-shield-only-title.png  used on input line 461.
+Package pdftex.def Info: graphics/mcmaster-shield-only-title.png  used on input line 459.
 (pdftex.def)             Requested size: 12.44882pt x 15.81pt.
 
-Overfull \vbox (1.23291pt too high) detected at line 461
+Overfull \vbox (1.23291pt too high) detected at line 459
  []
 
 [8
 
 ]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 468.
+(Font)              <9> on input line 466.
 File: graphics/mcmaster-shield-only-background.png Graphic file (type png)
 <use graphics/mcmaster-shield-only-background.png>
-Package pdftex.def Info: graphics/mcmaster-shield-only-background.png  used on input line 468.
+Package pdftex.def Info: graphics/mcmaster-shield-only-background.png  used on input line 466.
 (pdftex.def)             Requested size: 172.0535pt x 218.51813pt.
  [9
 
