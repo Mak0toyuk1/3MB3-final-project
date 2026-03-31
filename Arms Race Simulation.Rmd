@@ -215,12 +215,13 @@ ArmsRace = euler_logistic(
 )
 
 png("logistic_rs_case1.png", width = 1000, height = 1000)
+par(cex = 3.5)
 plot(ArmsRace[1, ], ArmsRace[2, ], type = "l", col = "blue",
      xlab = "Time", ylab = "National Arms",
      main = "a=0.25, b=0.1, c=0.25, d=0.1, r=-0.1, s=-0.1, Kp=5, Kg=5",
      ylim = range(c(ArmsRace[2, ], ArmsRace[3, ])), lwd = 8, cex.main = 0.8)
 lines(ArmsRace[1, ], ArmsRace[3, ], col = "red", lwd = 8)
-legend("topleft", legend = c("Nation P", "Nation G"),
+legend("topright", legend = c("Nation P", "Nation G"),
        col = c("blue", "red"), lwd = 8)
 dev.off()
 
@@ -233,12 +234,13 @@ ArmsRace = euler_logistic(
 )
 
 png("logistic_rs_case2.png", width = 1000, height = 1000)
+par(cex = 3.5)
 plot(ArmsRace[1, ], ArmsRace[2, ], type = "l", col = "blue",
      xlab = "Time", ylab = "National Arms",
      main = "a=b=c=d=0.25, r=-0.3, s=0.3, Kp=5, Kg=5",
      ylim = range(c(ArmsRace[2, ], ArmsRace[3, ])), lwd = 8, cex.main = 0.8)
 lines(ArmsRace[1, ], ArmsRace[3, ], col = "red", lwd = 8)
-legend("topleft", legend = c("Nation P", "Nation G"),
+legend("right", legend = c("Nation P", "Nation G"),
        col = c("blue", "red"), lwd = 8)
 dev.off()
 
@@ -251,12 +253,13 @@ ArmsRace = euler_logistic(
 )
 
 png("logistic_rs_case3.png", width = 1000, height = 1000)
+par(cex = 3.5)
 plot(ArmsRace[1, ], ArmsRace[2, ], type = "l", col = "blue",
      xlab = "Time", ylab = "National Arms",
      main = "a=0.1, b=0.25, c=0.1, d=0.25, r=0.3, s=0.3, Kp=5, Kg=5",
      ylim = range(c(ArmsRace[2, ], ArmsRace[3, ])), lwd = 8, cex.main = 0.8)
 lines(ArmsRace[1, ], ArmsRace[3, ], col = "red", lwd = 8)
-legend("topleft", legend = c("Nation P", "Nation G"),
+legend("bottomright", legend = c("Nation P", "Nation G"),
        col = c("blue", "red"), lwd = 8)
 dev.off()
 ```
