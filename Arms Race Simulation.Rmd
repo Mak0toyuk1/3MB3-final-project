@@ -177,4 +177,99 @@ legend("right", legend = c("Nation P", "Nation G"),
 dev.off()
 ```
 
+# Logistic mutual fear with trust/hostility
+
+```{r}
+# Simulation variables
+t = 50
+dt = 0.1
+steps = t / dt
+
+euler_logistic = function(a, b, c, d, r, s, Kp, Kg, p0 = 0.5, g0 = 1) {
+  ArmsRace = matrix(0, nrow = 3, ncol = steps + 1)
+  ArmsRace[1, 1] = 0
+  ArmsRace[2, 1] = p0
+  ArmsRace[3, 1] = g0
+  
+  for (i in 1:steps) {
+    t_i = ArmsRace[1, i]
+    p_i = ArmsRace[2, i]
+    g_i = ArmsRace[3, i]
+    
+    dp = a * (1 - p_i / Kp) * g_i - b * p_i + r
+    dg = c * (1 - g_i / Kg) * p_i - d * g_i + s
+    
+    ArmsRace[1, i + 1] = t_i + dt
+    ArmsRace[2, i + 1] = max(0, p_i + dt * dp)
+    ArmsRace[3, i + 1] = max(0, g_i + dt * dg)
+  }
+  
+  return(ArmsRace)
+}
+
+# -------------------------
+# Case 1: bd < ac, r < 0, s < 0
+# keep other parameters same as before
+# -------------------------
+ArmsRace = euler_logistic(
+  a = 0.7, b = 0.5, c = 0.5, d = 0.7,
+  r = -0.1, s = -0.1,
+  Kp = 5, Kg = 5
+)
+
+png("logistic_rs_case1.png", width = 1000, height = 1000)
+par(cex = 3.0)
+plot(ArmsRace[1, ], ArmsRace[2, ], type = "l", col = "blue",
+     xlab = "Time", ylab = "National Arms",
+     main = "a=0.7, b=0.5, c=0.5, d=0.7, r=-0.1, s=-0.1, Kp=5, Kg=5",
+     ylim = range(c(ArmsRace[2, ], ArmsRace[3, ])), lwd = 8, cex.main = 0.6)
+lines(ArmsRace[1, ], ArmsRace[3, ], col = "red", lwd = 8)
+legend("topright", legend = c("Nation P", "Nation G"),
+       col = c("blue", "red"), lwd = 8)
+dev.off()
+
+# -------------------------
+# Case 2: bd = ac, r < 0, s > 0
+# keep other parameters same as before
+# -------------------------
+ArmsRace = euler_logistic(
+  a = 0.5, b = 0.5, c = 0.2, d = 0.1,
+  r = -0.1, s = 0.1,
+  Kp = 5, Kg = 5
+)
+
+png("logistic_rs_case2.png", width = 1000, height = 1000)
+par(cex = 3.0)
+plot(ArmsRace[1, ], ArmsRace[2, ], type = "l", col = "blue",
+     xlab = "Time", ylab = "National Arms",
+     main = "a=0.5, b=0.5, c=0.2, d=0.1, r=-0.1, s=0.1, Kp=5, Kg=5",
+     ylim = range(c(ArmsRace[2, ], ArmsRace[3, ])), lwd = 8, cex.main = 0.6)
+lines(ArmsRace[1, ], ArmsRace[3, ], col = "red", lwd = 8, cex.main = 0.4)
+legend("topleft", legend = c("Nation P", "Nation G"),
+       col = c("blue", "red"), lwd = 8)
+dev.off()
+
+# -------------------------
+# Case 3: bd > ac, r > 0, s > 0
+# keep other parameters same as before
+# -------------------------
+ArmsRace = euler_logistic(
+  a = 0.1, b = 0.7, c = 0.2, d = 0.1,
+  r = 0.1, s = 0.1,
+  Kp = 5, Kg = 5
+)
+
+png("logistic_rs_case3.png", width = 1000, height = 1000)
+par(cex = 3.0)
+plot(ArmsRace[1, ], ArmsRace[2, ], type = "l", col = "blue",
+     xlab = "Time", ylab = "National Arms",
+     main = "a=0.1, b=0.7, c=0.2, d=0.1, r=0.1, s=0.1, Kp=5, Kg=5",
+     ylim = range(c(ArmsRace[2, ], ArmsRace[3, ])), lwd = 8,      cex.main = 0.6)
+lines(ArmsRace[1, ], ArmsRace[3, ], col = "red", lwd = 8)
+legend(x = 30, y = 1.2,
+       legend = c("Nation P", "Nation G"),
+       col = c("blue", "red"), lwd = 10)
+dev.off()
+```
+
 
