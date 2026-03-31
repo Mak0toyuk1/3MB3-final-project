@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.3.8)  30 MAR 2026 23:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.3.8)  30 MAR 2026 23:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -954,44 +954,44 @@ Package pdftex.def Info: graphics/mcmaster-shield-only-title.png  used on input 
  [6
 
 {/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}]
-<logistic_case1.png, id=288, 1003.75pt x 1003.75pt>
-File: logistic_case1.png Graphic file (type png)
-<use logistic_case1.png>
-Package pdftex.def Info: logistic_case1.png  used on input line 389.
+<logistic_rs_case1.png, id=288, 1003.75pt x 1003.75pt>
+File: logistic_rs_case1.png Graphic file (type png)
+<use logistic_rs_case1.png>
+Package pdftex.def Info: logistic_rs_case1.png  used on input line 385.
 (pdftex.def)             Requested size: 112.95807pt x 112.95529pt.
-<logistic_case2.png, id=289, 1003.75pt x 1003.75pt>
-File: logistic_case2.png Graphic file (type png)
-<use logistic_case2.png>
-Package pdftex.def Info: logistic_case2.png  used on input line 389.
+<logistic_rs_case2.png, id=289, 1003.75pt x 1003.75pt>
+File: logistic_rs_case2.png Graphic file (type png)
+<use logistic_rs_case2.png>
+Package pdftex.def Info: logistic_rs_case2.png  used on input line 385.
 (pdftex.def)             Requested size: 112.95807pt x 112.95529pt.
-<logistic_case3.png, id=290, 1003.75pt x 1003.75pt>
-File: logistic_case3.png Graphic file (type png)
-<use logistic_case3.png>
-Package pdftex.def Info: logistic_case3.png  used on input line 389.
+<logistic_rs_case3.png, id=290, 1003.75pt x 1003.75pt>
+File: logistic_rs_case3.png Graphic file (type png)
+<use logistic_rs_case3.png>
+Package pdftex.def Info: logistic_rs_case3.png  used on input line 385.
 (pdftex.def)             Requested size: 112.95807pt x 112.95529pt.
 File: graphics/mcmaster-shield-only-title.png Graphic file (type png)
 <use graphics/mcmaster-shield-only-title.png>
-Package pdftex.def Info: graphics/mcmaster-shield-only-title.png  used on input line 389.
+Package pdftex.def Info: graphics/mcmaster-shield-only-title.png  used on input line 385.
 (pdftex.def)             Requested size: 12.44882pt x 15.81pt.
  [7
 
- <./logistic_case1.png (PNG copy)> <./logistic_case2.png (PNG copy)> <./logistic_case3.png (PNG copy)>]
+ <./logistic_rs_case1.png (PNG copy)> <./logistic_rs_case2.png (PNG copy)> <./logistic_rs_case3.png (PNG copy)>]
 File: graphics/mcmaster-shield-only-title.png Graphic file (type png)
 <use graphics/mcmaster-shield-only-title.png>
-Package pdftex.def Info: graphics/mcmaster-shield-only-title.png  used on input line 453.
+Package pdftex.def Info: graphics/mcmaster-shield-only-title.png  used on input line 449.
 (pdftex.def)             Requested size: 12.44882pt x 15.81pt.
 
-Overfull \vbox (1.23291pt too high) detected at line 453
+Overfull \vbox (1.23291pt too high) detected at line 449
  []
 
 [8
 
 ]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 460.
+(Font)              <9> on input line 456.
 File: graphics/mcmaster-shield-only-background.png Graphic file (type png)
 <use graphics/mcmaster-shield-only-background.png>
-Package pdftex.def Info: graphics/mcmaster-shield-only-background.png  used on input line 460.
+Package pdftex.def Info: graphics/mcmaster-shield-only-background.png  used on input line 456.
 (pdftex.def)             Requested size: 172.0535pt x 218.51813pt.
  [9
 
@@ -1015,14 +1015,14 @@ Package rerunfilecheck Info: File `"3MB3 Pres".out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  26975 strings out of 469515
- 534968 string characters out of 5470808
+ 535031 string characters out of 5470808
  916293 words of memory out of 5000000
  55023 multiletter control sequences out of 15000+600000
  699909 words of font info for 92 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  128i,19n,123p,415b,989s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/tex-gyre/qhvb.pfb></usr/share/texmf-dist/fonts/type1/public/tex-gyre/qhvr.pfb></usr/share/texmf-dist/fonts/type1/public/tex-gyre/qhvri.pfb>
-Output written on "3MB3 Pres.pdf" (9 pages, 1070622 bytes).
+Output written on "3MB3 Pres.pdf" (9 pages, 982874 bytes).
 PDF statistics:
  413 PDF objects out of 1000 (max. 8388607)
  223 compressed objects within 3 object streams
