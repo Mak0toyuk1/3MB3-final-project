@@ -52,14 +52,16 @@ has no mathematical symbols or jargon; instead, it should be focused on the real
 text and what you are trying to study. The math is a tool you will introduce later, not the
 main focus of the paper.
 
+Consider @Talele2025, a great guy who wrote some cool stuff.
+
 # Base Model
 
 For either hypothetical country, P and G, the assumptions for our base model are as follows:
 
-- The rate of change in one nation's arms spending is directly proportional to the other nation's arms spending
-- The rate of change in one nation's arms spending is also negatively directly proportion to that nation's own current spending
-- There may be underlying trust and hostility between the two nations, which will have a constant effect on rate of change
-- For now, we assume that each country has infinite amounts of wealth at their disposal (not realistic at all in a real-world context)
+1. The rate of change in one nation's arms spending is directly proportional to the other nation's arms spending
+1. The rate of change in one nation's arms spending is also negatively directly proportion to that nation's own current spending
+1. There may be underlying trust and hostility between the two nations, which will have a constant effect on rate of change
+1. For now, we assume that each country has infinite amounts of wealth at their disposal (not realistic at all in a real-world context)
 
 Based on these assumptions, the following model was derived:
 
@@ -103,8 +105,8 @@ As a starting point, we assume that both nations have no underlying trust or hos
 
 $$
 \begin{bmatrix}
-     \frac{\partial p}{\partial t} \\  
-     \frac{\partial g}{\partial t}
+     \dfrac{\partial p}{\partial t} \\  
+     \dfrac{\partial g}{\partial t}
 \end{bmatrix}
 =
 \begin{bmatrix}
@@ -117,9 +119,11 @@ $$
 $$
 
 To determine equilibrium points, set $\begin{bmatrix}
-     \frac{\partial p}{\partial t} \\  
-     \frac{\partial g}{\partial t} \end{bmatrix}
-=0$. Thus, 
+     \dfrac{\partial p}{\partial t} \\  
+     \dfrac{\partial g}{\partial t} \end{bmatrix}
+=0$. 
+
+Thus, 
 
 $$
 \begin{bmatrix}
@@ -138,7 +142,9 @@ $$
 
 An obvious equlibrium that can be derived from this formulation is $\begin{bmatrix}
     p^*(t) \\ g^*(t)
-\end{bmatrix} = \begin{bmatrix}0 \\ 0\end{bmatrix}$, which corresponds to a scenario where both nations mutually demilitarize. To determine the stability conditions of such a scenario, we need to compute the Jacobian. Since the system of differential equations are already in linear form, the Jacobian is simply given by:
+\end{bmatrix} = \begin{bmatrix}0 \\ 0\end{bmatrix}$, which corresponds to a scenario where both nations mutually demilitarize. 
+
+To determine the stability conditions of such a scenario, we need to compute the Jacobian. Since the system of differential equations are already in linear form, the Jacobian is simply given by:
 
 $$
 J =
@@ -231,13 +237,6 @@ this as a way to conclude your whole paper.
 
 <!-- ![A Hexapod](hexy.png){ height=130px } -->
 
-
-<!-- A subset of vertices and edges of any graph form a *subgraph* @west2001. -->
-
-\pb
-
-# References
-
 \pb
 
 # Appendix: Individual Contributions
@@ -263,3 +262,9 @@ this as a way to conclude your whole paper.
 ### Meredith Reeves
 1. Presentation: Public Sentiment 
 1. Report: Public Sentiment
+
+\pb
+
+# References
+
+<!-- \pb -->
