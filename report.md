@@ -1,6 +1,6 @@
 ---
 title: Topic 5 - Arms Race
-author: Zeyn Jaswal, Azzaam Khan, Timothy Palin, Aoxing Xu, Meredith Reeves
+author: Zeyn Jaswal, Azzaam Khan, Timothy Palin, Tony Xu, Meredith Reeves
 #date: \today
 linestretch: 2.0
 fontsize: 12pt
@@ -23,6 +23,12 @@ bibliography: ref.bib
 header-includes: |
     \newcommand{\pb}{\pagebreak}
     \renewcommand{\familydefault}{\sfdefault}
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+    \usepackage{lmodern}
+    \usepackage{sansmath}
+    \usepackage[T1]{fontenc}
+    \sansmath
 #    \pagestyle{empty}
 ---
 
@@ -57,14 +63,14 @@ For either hypothetical country, P and G, the assumptions for our base model are
 
 Based on these assumptions, the following model was derived:
 
-$$
-\begin{aligned}
-    \frac{\partial p}{\partial t} &= ag(t) - bp(t) + r \\
-    \frac{\partial g}{\partial t} &= cp(t) - dg(t) + s \\
-\end{aligned}
-$$
+\begin{equation}
+    \dfrac{\partial p}{\partial t} = ag(t) - bp(t) + r 
+\end{equation}
+\begin{equation}
+    \dfrac{\partial g}{\partial t} = cp(t) - dg(t) + s
+\end{equation}
 
-In particular $\frac{\partial p}{\partial t},\frac{\partial g}{\partial t}$ denote the rate of change of each country's arm spending. $a,c$ measure the effect of mutual fear that each country has on the other's arms spending, $b,d$ measure the effect of expenditure burden that each country has on their own spending, and $r,s$ measure the underlying hostility or trust that the each nation has to another. For the sake of realism, $p(t),g(t)$ are held to be non-negative values as negative arms spending would not make sense in this scenario. Moreover, to ensure that mutual fear and expenditure burden match the behavior as laid out in the assumptions, $a,b,c,d$ are held to be non-negative as well. On the other hand, $r,s$ can assume any value where negative values denote trust and positive values denote hostility.
+In particular $\dfrac{\partial p}{\partial t},\dfrac{\partial g}{\partial t}$ denote the rate of change of each country's arm spending. $a,c$ measure the effect of mutual fear that each country has on the other's arms spending, $b,d$ measure the effect of expenditure burden that each country has on their own spending, and $r,s$ measure the underlying hostility or trust that the each nation has to another. For the sake of realism, $p(t),g(t)$ are held to be non-negative values as negative arms spending would not make sense in this scenario. Moreover, to ensure that mutual fear and expenditure burden match the behavior as laid out in the assumptions, $a,b,c,d$ are held to be non-negative as well. On the other hand, $r,s$ can assume any value where negative values denote trust and positive values denote hostility.
 
 The parameters in the model $(a,b,c,d,r,s)$ assume no form of units as they serve as abstractions of qualitative measures (i.e. it would be hard to attach a unit to expenditure burden or fear). However, the state variables themselves would be expressed in some common currency (e.g. U.S. dollars) and the derivatives of those state variables $(\frac{\partial p}{\partial t},\frac{\partial g}{\partial t})$ would be expressed in that currency over time (e.g. U.S. dollars per year).
 
@@ -235,3 +241,25 @@ this as a way to conclude your whole paper.
 \pb
 
 # Appendix: Individual Contributions
+
+### Zeyn Jaswal
+
+1. Presentation: Overview 
+1. Report: Introduction and Conclusion 
+
+
+### Azzaam Khan
+1. Presentation: Base Model 
+1. Report: Base Model
+
+### Timothy Palin
+1. Presentation: Results 
+1. Report: Results
+
+### Tony Xu
+1. Presentation: Logistic Mutual Fear Extension 
+1. Report: Logistic Mutual Fear Extension
+
+### Meredith Reeves
+1. Presentation: Public Sentiment 
+1. Report: Public Sentiment
