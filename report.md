@@ -72,9 +72,15 @@ Based on these assumptions, the following model was derived:
     \dfrac{\partial g}{\partial t} = cp(t) - dg(t) + s
 \end{equation}
 
-In particular $\dfrac{\partial p}{\partial t},\dfrac{\partial g}{\partial t}$ denote the rate of change of each country's arm spending. $a,c$ measure the effect of mutual fear that each country has on the other's arms spending, $b,d$ measure the effect of expenditure burden that each country has on their own spending, and $r,s$ measure the underlying hostility or trust that the each nation has to another. For the sake of realism, $p(t),g(t)$ are held to be non-negative values as negative arms spending would not make sense in this scenario. Moreover, to ensure that mutual fear and expenditure burden match the behavior as laid out in the assumptions, $a,b,c,d$ are held to be non-negative as well. On the other hand, $r,s$ can assume any value where negative values denote trust and positive values denote hostility.
+In particular $\dfrac{\partial p}{\partial t},\dfrac{\partial g}{\partial t}$ denote the rate of change of each country's arm spending.
+The variables $a,c$ measure the effect of mutual fear that each country has on the other's arms spending, 
+$b,d$ measure the effect of expenditure burden that each country has on their own spending, and 
+$r,s$ measure the underlying hostility or trust that the each nation has to another. 
 
-The parameters in the model $(a,b,c,d,r,s)$ assume no form of units as they serve as abstractions of qualitative measures (i.e. it would be hard to attach a unit to expenditure burden or fear). However, the state variables themselves would be expressed in some common currency (e.g. U.S. dollars) and the derivatives of those state variables $(\frac{\partial p}{\partial t},\frac{\partial g}{\partial t})$ would be expressed in that currency over time (e.g. U.S. dollars per year).
+For the sake of realism, $p(t),g(t)$ are held to be non-negative values as negative arms spending would not make sense in this scenario.
+Moreover, to ensure that mutual fear and expenditure burden match the behavior as laid out in the assumptions, $a,b,c,d$ are held to be non-negative as well. On the other hand, $r,s$ can assume any value where negative values denote trust and positive values denote hostility.
+
+The parameters in the model $(a,b,c,d,r,s)$ assume no form of units as they serve as abstractions of qualitative measures (i.e. it would be hard to attach a unit to expenditure burden or fear). However, the state variables themselves would be expressed in some common currency (e.g. U.S. dollars) and the derivatives of those state variables $(\dfrac{\partial p}{\partial t},\dfrac{\partial g}{\partial t})$ would be expressed in that currency over time (e.g. U.S. dollars per year).
 
 Theoretically speaking, this model is a system of multivariate, autonomous linear differential equations. In this situation, the Jacobian would have to be computed for the purposes of stability analysis.
 
@@ -84,8 +90,8 @@ To facilitate the stability analysis of the base model, we now reformulate the s
 
 $$
 \begin{bmatrix}
-     \frac{\partial p}{\partial t} \\  
-     \frac{\partial g}{\partial t}
+     \dfrac{\partial p}{\partial t} \\  
+     \dfrac{\partial g}{\partial t}
 \end{bmatrix}
 =
 \begin{bmatrix}
@@ -118,13 +124,13 @@ $$
 \end{bmatrix}
 $$
 
-To determine equilibrium points, set $\begin{bmatrix}
+To determine equilibrium points, set 
+$\begin{bmatrix}
      \dfrac{\partial p}{\partial t} \\  
      \dfrac{\partial g}{\partial t} \end{bmatrix}
 =0$. 
 
 Thus, 
-
 $$
 \begin{bmatrix}
      0 \\  
@@ -140,12 +146,14 @@ $$
 \end{bmatrix}
 $$
 
-An obvious equlibrium that can be derived from this formulation is $\begin{bmatrix}
+An obvious equlibrium that can be derived from this formulation is:
+$$\begin{bmatrix}
     p^*(t) \\ g^*(t)
-\end{bmatrix} = \begin{bmatrix}0 \\ 0\end{bmatrix}$, which corresponds to a scenario where both nations mutually demilitarize. 
+\end{bmatrix} = \begin{bmatrix}0 \\ 0\end{bmatrix}$$ 
+
+This equilibrium point corresponds to a scenario where both nations mutually demilitarize. 
 
 To determine the stability conditions of such a scenario, we need to compute the Jacobian. Since the system of differential equations are already in linear form, the Jacobian is simply given by:
-
 $$
 J =
 \begin{bmatrix}
@@ -155,7 +163,6 @@ J =
 $$
 
 In order for the scenario of mutual disarmament to be asymptotically stable, the eigenvalues of the jacobian should both be negative. The eigenvalues are given by:
-
 $$
 \det(J-I\lambda) =
 \begin{bmatrix}
@@ -164,14 +171,12 @@ $$
 \end{bmatrix} = \lambda^2 +(b+d)\lambda +bd-ac = 0
 $$
 
-The solutions to these eigenvalues are in the form:
-
+The solutions to these eigenvalues are of the form:
 $$
 \lambda = \frac{-(b+d)\pm\sqrt{(b+d)^2-4(bd-ac)}}{2}
 $$
 
 Expanding the square term in the discriminant and simplifying the equation yields the following:
-
 $$
 \lambda = \frac{-(b+d)\pm\sqrt{(b-d)^2+4ac}}{2}
 $$
@@ -266,5 +271,3 @@ this as a way to conclude your whole paper.
 \pb
 
 # References
-
-<!-- \pb -->
