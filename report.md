@@ -107,6 +107,8 @@ $$
 \end{bmatrix}
 $$
 
+## Analysis without underlying trust or hostility
+
 As a starting point, we assume that both nations have no underlying trust or hostility such that $r=s=0$. Thus, the model equations are now:
 
 $$
@@ -123,6 +125,31 @@ $$
     p(t) \\ g(t)
 \end{bmatrix}
 $$
+
+Note that by having the system in linear form, the Jacobian is simply the matrix $J=\begin{bmatrix}
+    -b & a \\
+    c & - d
+\end{bmatrix}$. 
+
+Setting $r=s=0$ lends a unique advantage in that the resulting system of linear differential equations is now homogenous (i.e. there is no constant term). This means that a closed-form of the state-variables can be found in the form of:
+
+$$
+\begin{bmatrix}
+     p(t) \\  
+     g(t)
+\end{bmatrix}
+= P
+\begin{bmatrix}
+    e^{\lambda_1 t} & 0 \\
+    0 & e^{\lambda_2 t}
+\end{bmatrix}
+P^{-1}
+\begin{bmatrix}
+    p(0) \\ g(0)
+\end{bmatrix}
+$$
+
+Where $\lambda_1,\lambda_2$ denotes the eigenvalues of the Jacobian $J$, $P$ denotes the matrix of eigenvectors, and $p(0),g(0)$ denotes the initial spending of the two countries.
 
 To determine equilibrium points, set 
 $\begin{bmatrix}
@@ -151,7 +178,7 @@ $$\begin{bmatrix}
     p^*(t) \\ g^*(t)
 \end{bmatrix} = \begin{bmatrix}0 \\ 0\end{bmatrix}$$ 
 
-This equilibrium point corresponds to a scenario where both nations mutually demilitarize. 
+This equilibrium point corresponds to a scenario where both nations mutually demilitarize.
 
 To determine the stability conditions of such a scenario, we need to compute the Jacobian. Since the system of differential equations are already in linear form, the Jacobian is simply given by:
 $$
@@ -187,7 +214,82 @@ To check when the eigenvalues remain negative, we look for conditions when $(b+d
 
 On the other hand, if $bd<ac$, then the combined mutual fear will outweigh the combined expenditure burden. In this case, the equilibrium of mutual disarmament will become unstable and both nations will engage in a perpetual arms race.
 
-Another point to consider is what happens when $bd = ac$. In this case, one eigenvalue will be negative and the other will be 0, which will result in a line of fixed stable points. In this case, both nations will converge to a fixed level of spending contingent on what they were initially spending.
+Another point to consider is what happens when $bd = ac$. In this case, we substitute $ac =bd$ in the formula for the eigenvalues:
+
+$$
+\lambda = \frac{-(b+d)\pm\sqrt{(b+d)^2-4(bd-ac)}}{2} \\
+\lambda = 0,-(b+d)\\
+$$
+
+In this case, one eigenvalue is negative and the other is 0. The closed form sheds further light onto what this implies for the model. To this end, the eigenvalues were substitued back in the Jacobian to derive the eigenvectors. These eigenvectors are $\vec{v}_1=\begin{bmatrix} 
+\frac{a}{b}
+\\ 
+1 
+\end{bmatrix}$ for $\lambda_1 = 0$ and $\vec{v}_2=\begin{bmatrix} 
+-\frac{a}{d}
+\\ 
+1 
+\end{bmatrix}$ for $\lambda_2 = -(b+d)$. The closed form solution is therefore:
+
+$$
+\begin{bmatrix}
+     p(t) \\  
+     g(t)
+\end{bmatrix}
+= 
+\begin{bmatrix}
+    \frac{a}{b} & -\frac{a}{d} \\
+    1 & 1
+\end{bmatrix}
+\begin{bmatrix}
+    e^{(0) t} & 0 \\
+    0 & e^{-(b+d) t}
+\end{bmatrix}
+\begin{bmatrix}
+    \frac{a}{b} & -\frac{a}{d} \\
+    1 & 1
+\end{bmatrix}^{-1}
+\begin{bmatrix}
+    p(0) \\ g(0)
+\end{bmatrix}
+$$
+
+To determine the long-term behavior of the closed form, we let $t\to\infty$, which results in the following convergence.
+
+$$
+\begin{bmatrix}
+     p(\infty) \\  
+     g(\infty)
+\end{bmatrix}
+= 
+\begin{bmatrix}
+   \frac{dp(0)+ag(0)}{b+d} \\
+   \frac{cp(0)+bg(0)}{b+d}
+\end{bmatrix}
+$$
+
+Within the scope of the scenario, this convergence suggests that both countries will reach a stabilized level of spending contingent on what they were initially spending.
+
+To summarize the analysis, the base model without any underlying trust or hostily has three types of convergencies:
+
+- When $bd>ac$, both countries mutually disarm ((0,0) is a stable equilibrium point)
+- When $bd<ac$, both countries engage in an a perpetual arms race ((0,0) is an unstable equilibrium point)
+- When $bd=ac$, both countries reach a stabilized level of spending contingent on initial spending (There is a line of stable equilibrium points)
+
+## Analysis with trust or hostility
+
+Now that we assume $r,s$ to be some other value other than zero, the model is not homogenous anymore, meaning that there is not a convenient closed form solution of the system as there was before.
+
+The equilibrium point also changes:
+
+$$\begin{bmatrix}
+    p^*(t) \\ g^*(t)
+\end{bmatrix} = \begin{bmatrix} \frac{rd+sa}{bd-ac} \\  \frac{rc+sb}{bd-ac}\end{bmatrix}$$ 
+
+Now the convergences of the model may not necessarily converge to zero. To determine the stability conditions of this equilibrium, the Jacobian from the previous form of the model can be reused as the system is still linear. In this case, we have the same stability conditions for the equilibrium point as before: $bd>ac$.
+
+To determine what happens when $bd=ac$, we conduct simulations to adjust the values of r and s.
+
 
 > This subsection should describe the various analysis you’ve performed on your base model
 and the results you’ve obtained from them. You should be using a mix of analytical tools
