@@ -64,7 +64,6 @@ For either hypothetical country, P and G, the assumptions for our base model are
 1. For now, we assume that each country has infinite amounts of wealth at their disposal (not realistic at all in a real-world context)
 
 Based on these assumptions, the following model was derived:
-
 \begin{equation}
     \dfrac{\partial p}{\partial t} = ag(t) - bp(t) + r 
 \end{equation}
@@ -87,7 +86,6 @@ Theoretically speaking, this model is a system of multivariate, autonomous linea
 # Analysis of Base Model
 
 To facilitate the stability analysis of the base model, we now reformulate the system of equations into matrix form:
-
 $$
 \begin{bmatrix}
      \dfrac{\partial p}{\partial t} \\  
@@ -110,7 +108,6 @@ $$
 ## Analysis without underlying trust or hostility
 
 As a starting point, we assume that both nations have no underlying trust or hostility such that $r=s=0$. Thus, the model equations are now:
-
 $$
 \begin{bmatrix}
      \dfrac{\partial p}{\partial t} \\  
@@ -126,13 +123,13 @@ $$
 \end{bmatrix}
 $$
 
-Note that by having the system in linear form, the Jacobian is simply the matrix $J=\begin{bmatrix}
+Note that by having the system in linear form, the Jacobian is simply the matrix 
+$$J=\begin{bmatrix}
     -b & a \\
     c & - d
-\end{bmatrix}$. 
+\end{bmatrix}$$ 
 
 Setting $r=s=0$ lends a unique advantage in that the resulting system of linear differential equations is now homogenous (i.e. there is no constant term). This means that a closed-form of the state-variables can be found in the form of:
-
 $$
 \begin{bmatrix}
      p(t) \\  
@@ -152,10 +149,10 @@ $$
 Where $\lambda_1,\lambda_2$ denotes the eigenvalues of the Jacobian $J$, $P$ denotes the matrix of eigenvectors, and $p(0),g(0)$ denotes the initial spending of the two countries.
 
 To determine equilibrium points, set 
-$\begin{bmatrix}
+$$\begin{bmatrix}
      \dfrac{\partial p}{\partial t} \\  
      \dfrac{\partial g}{\partial t} \end{bmatrix}
-=0$. 
+=0$$ 
 
 Thus, 
 $$
@@ -215,22 +212,26 @@ To check when the eigenvalues remain negative, we look for conditions when $(b+d
 On the other hand, if $bd<ac$, then the combined mutual fear will outweigh the combined expenditure burden. In this case, the equilibrium of mutual disarmament will become unstable and both nations will engage in a perpetual arms race.
 
 Another point to consider is what happens when $bd = ac$. In this case, we substitute $ac =bd$ in the formula for the eigenvalues:
-
 $$
 \lambda = \frac{-(b+d)\pm\sqrt{(b+d)^2-4(bd-ac)}}{2} \\
 \lambda = 0,-(b+d)\\
 $$
 
-In this case, one eigenvalue is negative and the other is 0. The closed form sheds further light onto what this implies for the model. To this end, the eigenvalues were substitued back in the Jacobian to derive the eigenvectors. These eigenvectors are $\vec{v}_1=\begin{bmatrix} 
+In this case, one eigenvalue is negative and the other is 0. The closed form sheds further light onto what this implies for the model. To this end, the eigenvalues were substitued back in the Jacobian to derive the eigenvectors. 
+
+These eigenvectors are 
+$$\vec{v}_1=\begin{bmatrix} 
 \frac{a}{b}
 \\ 
 1 
-\end{bmatrix}$ for $\lambda_1 = 0$ and $\vec{v}_2=\begin{bmatrix} 
+\end{bmatrix}$$ for $\lambda_1 = 0$ and 
+$$\vec{v}_2=\begin{bmatrix} 
 -\frac{a}{d}
 \\ 
 1 
-\end{bmatrix}$ for $\lambda_2 = -(b+d)$. The closed form solution is therefore:
+\end{bmatrix}$$ for $\lambda_2 = -(b+d)$. 
 
+The closed form solution is therefore:
 $$
 \begin{bmatrix}
      p(t) \\  
