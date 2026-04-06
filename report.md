@@ -270,11 +270,18 @@ $$
 
 Within the scope of the scenario, this convergence suggests that both countries will reach a stabilized level of spending contingent on what they were initially spending.
 
-To summarize the analysis, the base model without any underlying trust or hostily has three types of convergencies:
+To summarize the analysis, the base model without any underlying trust or hostily has three types of convergences. Attached alongside each explanation of these convergences are vector plots to illustrate the scenarios.
 
-- When $bd>ac$, both countries mutually disarm ((0,0) is a stable equilibrium point)
-- When $bd<ac$, both countries engage in an a perpetual arms race ((0,0) is an unstable equilibrium point)
-- When $bd=ac$, both countries reach a stabilized level of spending contingent on initial spending (There is a line of stable equilibrium points)
+- When $bd>ac$, both countries mutually disarm ((0,0) is a stable equilibrium point) (Figure 1)
+- When $bd<ac$, both countries engage in an a perpetual arms race ((0,0) is an unstable equilibrium point) (Figure 2)
+- When $bd=ac$, both countries reach a stabilized level of spending contingent on initial spending (There is a line of stable equilibrium points) (Figure 3)
+
+![Mutual Disarmament](Vecplot1_disarm.png)
+
+![Perpetual Arms Race](Vecplot2_race.png)
+
+![Stable Spending](Vecplot3_stable.png)
+
 
 ## Analysis with trust or hostility
 

@@ -1,0 +1,327 @@
+---
+title: ''
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Plots without goodwill/grievance
+
+```{r}
+#Nation p
+#a=0.1 #mutual fear,
+#b=0.7 #expenditure
+#r=0 #goodwill/grievance
+
+#Nation g
+#c=0.2 #mutual fear
+#d=0.1 #expenditure
+#s=0 #goodwill/grievance
+
+#Simulation variables
+t = 50
+dt=0.1
+steps=t/dt
+
+euler = function(a,b,c,d,r,s,p0=0.5,g0=1) {
+  #Matrix and initial
+  ArmsRace = matrix(0,nrow=3,ncol=steps+1) #3 rows are for t,p,g, n+1 columns for including both endpoints of time (start at 0)
+  ArmsRace[1,1]=0
+  ArmsRace[2,1]=p0 #p initial condition
+  ArmsRace[3,1]=g0 #g initial condition
+
+
+#Euler Method
+for (i in 1:steps) {
+  t_i=ArmsRace[1,i]
+  p_i=ArmsRace[2,i]
+  g_i=ArmsRace[3,i]
+  
+  dp=a*g_i-b*p_i+r
+  dg=c*p_i-d*g_i+s
+  
+  ArmsRace[1,i+1]=t_i+dt
+  ArmsRace[2,i+1]=p_i+dt*dp
+  ArmsRace[3,i+1]=g_i+dt*dg
+}
+  return(ArmsRace)
+}
+
+#bd>ac
+ArmsRace = euler(a=0.1,b=0.7,c=0.2,d=0.1,r=0,s=0)
+png("bdgeac.png", width=1000, height=1000) # Saves plot as a png
+par(cex=3.5)
+plot(ArmsRace[1,], ArmsRace[2,], type = "l",col="blue",
+xlab="Time", ylab="National Arms",
+main ="a=0.1, b=0.7, c=0.2, d=0.1",
+ylim=range(c(ArmsRace[2,],ArmsRace[3,])), lwd=10)
+lines(ArmsRace[1,],ArmsRace[3,],col="red",lwd=10)
+legend("topright",legend=c("Nation P","Nation G"),col=c("blue","red"),lwd=10)
+dev.off()
+
+##bd<ac
+ArmsRace = euler(0.5,0.5,0.2,0.1,0,0)
+png("bdleac.png", width=1000, height=1000)
+par(cex=3.5)
+plot(ArmsRace[1,], ArmsRace[2,], type = "l",col="blue",
+xlab="Time", ylab="National Arms",
+main ="a=0.5, b=0.5, c=0.2, d=0.1",
+ylim=range(c(ArmsRace[2,],ArmsRace[3,])), lwd=10)
+lines(ArmsRace[1,],ArmsRace[3,],col="red",lwd=10)
+legend("topleft",legend=c("Nation P","Nation G"),col=c("blue","red"),lwd=10)
+dev.off()
+
+##EDGE CASE: bd=ac
+ArmsRace = euler(0.7,0.5,0.5,0.7,0,0)
+png("bdeqac.png", width=1000, height=1000)
+par(cex=3.5)
+plot(ArmsRace[1,], ArmsRace[2,], type = "l",col="blue",
+xlab="Time", ylab="National Arms",
+main ="a=0.7, b=0.5, c=0.5, d=0.7",
+ylim=range(c(ArmsRace[2,],ArmsRace[3,])), lwd=10)
+lines(ArmsRace[1,],ArmsRace[3,],col="red",lwd=10)
+legend("right",legend=c("Nation P","Nation G"),col=c("blue","red"),lwd=10)
+dev.off()
+```
+
+
+
+
+# vector plots:
+
+```{r}
+vplot = function(pngname,a,b,c,d,r,s,y1,y2,y3){
+
+p_vals <- seq(0, 2, length.out = 20)
+g_vals <- seq(0, 2, length.out = 20)
+
+grid <- expand.grid(p = p_vals, g = g_vals)
+
+# Compute derivatives at each grid point
+dp <- numeric(nrow(grid))
+dg <- numeric(nrow(grid))
+
+
+for (i in 1:nrow(grid)) {
+  state <- c(grid$x1[i], grid$x2[i])
+  dp[i] <- a*grid$g[i]-b*grid$p[i]+r
+  dg[i] <- c*grid$p[i]-d*grid$g[i]+s
+}
+
+euler1=euler(a,b,c,d,r,s,p0=y1[1],g0=y1[2])
+euler2=euler(a,b,c,d,r,s,p0=y2[1],g0=y2[2])
+euler3=euler(a,b,c,d,r,s,p0=y3[1],g0=y3[2])
+
+
+png(pngname,width=1000,height=1000)
+plot(grid$p, grid$g, pch = 20, col = "lightgray",
+     cex.main=3,cex.lab=4,main = paste("a=" ,a, ", b=" ,b,", c=" ,c,", d=",d,", r=",r,", s=",s), xlab = "p", ylab = "g")
+
+
+points(y1[1],y1[2],col="black",cex=2,pch=16)
+lines(euler1[2,],euler1[3,],col="red",lwd=5)
+
+points(y2[1],y2[2],col="black",cex=2,pch=16)
+lines(euler2[2,],euler2[3,],col="red",lwd=5)
+
+points(y3[1],y3[2],col="black",cex=2,pch=16)
+lines(euler3[2,],euler3[3,],col="red",lwd=5)
+
+
+arrows(grid$p, grid$g,
+       grid$p + 0.1 * dp,
+       grid$g + 0.1 * dg,
+       length = 0.1, col = "blue",lwd=2)
+
+legend("topright",
+       legend = c("Instantaneous change", "Simulation start point", "Simulation"),
+       col = c("blue", "black", "red"),
+       lty = c(1, NA, 1),
+       pch = c(NA, 16, NA),
+       lwd = c(1, NA, 2),
+       cex = 2.0)
+
+dev.off()
+}
+```
+
+# Without goodwill grievance
+```{r}
+vplot("Vecplot1_disarm.png",
+a=0.4,b=0.8,c=0.3,d=0.2,r=0,s=0,
+y1=c(0.3,1.4),y2=c(1.4,0.2),y3=c(1.6,0.5))
+vplot("Vecplot2_race.png",
+a=0.4,b=0.1,c=0.3,d=0.2,r=0,s=0,
+y1=c(0.3,1.4),y2=c(1.4,0.2),y3=c(1.6,0.5))
+vplot("Vecplot3_stable.png",
+a=0.4,b=0.6,c=0.3,d=0.2,r=0,s=0,
+y1=c(0.3,1.4),y2=c(1.4,0.2),y3=c(1.6,0.5))
+```
+
+```{r}
+
+vplot("Vector_Case1_Stable grievance.png",a=0.1,b=0.25,c=0.1,d=0.25,r=0.1,s=0.1,y1=c(1.2,0.2),y2=c(1.4,0.2),y3=c(1.6,0.5))
+vplot("Vector_Case2_ac=bd.png",a=0.1,b=0.1,c=0.1,d=0.1,r=-0.1,s=0.1,y1=c(1.2,0.2),y2=c(1.4,0.2),y3=c(1.6,0.5))
+vplot("Vector_Case3_unstable+Goodwill.png",a=0.25,b=0.1,c=0.25,d=0.1,r=-0.1,s=-0.1,y1=c(1.2,0.1),y2=c(1.4,0.2),y3=c(1.6,0.5))
+vplot("Vector_Case4_Unstable+GandG.png",a=0.25,b=0.1,c=0.25,d=0.1,r=-0.3,s=0.1,y1=c(0.2,0.6),y2=c(1.4,0.2),y3=c(1.6,0.5))
+```
+
+# Plots with goodwill/grievances
+
+```{r}
+#currently using vector plots instead
+# Use the euler function to look at each case depending on varying r,s values. 
+# Maybe create an updated euler function to cap the spending values when they turn negative
+```
+
+# Plots with mutual logistic fear
+
+```{r}
+# Create a new euler function with the logistic adjustments and fit the plots. 
+
+# Simulation variables
+t = 50
+dt = 0.1
+steps = t / dt
+
+euler_logistic = function(a, b, c, d, r, s, Kp, Kg, p0 = 0.5, g0 = 1) {
+  # Matrix: row 1 = time, row 2 = p, row 3 = g
+  ArmsRace = matrix(0, nrow = 3, ncol = steps + 1)
+  ArmsRace[1, 1] = 0
+  ArmsRace[2, 1] = p0
+  ArmsRace[3, 1] = g0
+  
+  for (i in 1:steps) {
+    t_i = ArmsRace[1, i]
+    p_i = ArmsRace[2, i]
+    g_i = ArmsRace[3, i]
+    
+    # Logistic fear adjustment
+    dp = a * g_i * (1 - p_i / Kp) - b * p_i + r
+    dg = c * p_i * (1 - g_i / Kg) - d * g_i + s
+    
+    ArmsRace[1, i + 1] = t_i + dt
+    ArmsRace[2, i + 1] = p_i + dt * dp
+    ArmsRace[3, i + 1] = g_i + dt * dg
+    
+    # Prevent negative arms levels
+    ArmsRace[2, i + 1] = max(0, ArmsRace[2, i + 1])
+    ArmsRace[3, i + 1] = max(0, ArmsRace[3, i + 1])
+  }
+  
+  return(ArmsRace)
+}
+
+# Case 1
+ArmsRace = euler_logistic(a = 0.1, b = 0.7, c = 0.2, d = 0.1,
+                          r = 0, s = 0, Kp = 5, Kg = 5)
+
+png("logistic_case1.png", width = 1000, height = 1000)
+par(cex = 3.5)
+plot(ArmsRace[1, ], ArmsRace[2, ], type = "l", col = "blue",
+     xlab = "Time", ylab = "National Arms",
+     main = "Logistic fear: a=0.1, b=0.7, c=0.2, d=0.1, Kp=5, Kg=5",
+     ylim = range(c(ArmsRace[2, ], ArmsRace[3, ])), lwd = 10)
+lines(ArmsRace[1, ], ArmsRace[3, ], col = "red", lwd = 10)
+legend("topright", legend = c("Nation P", "Nation G"),
+       col = c("blue", "red"), lwd = 10)
+dev.off()
+
+# Case 2
+ArmsRace = euler_logistic(a = 0.5, b = 0.5, c = 0.2, d = 0.1,
+                          r = 0, s = 0, Kp = 5, Kg = 5)
+
+png("logistic_case2.png", width = 1000, height = 1000)
+par(cex = 3.5)
+plot(ArmsRace[1, ], ArmsRace[2, ], type = "l", col = "blue",
+     xlab = "Time", ylab = "National Arms",
+     main = "Logistic fear: a=0.5, b=0.5, c=0.2, d=0.1, Kp=5, Kg=5",
+     ylim = range(c(ArmsRace[2, ], ArmsRace[3, ])), lwd = 10)
+lines(ArmsRace[1, ], ArmsRace[3, ], col = "red", lwd = 10)
+legend("topleft", legend = c("Nation P", "Nation G"),
+       col = c("blue", "red"), lwd = 10)
+dev.off()
+
+# Case 3
+ArmsRace = euler_logistic(a = 0.7, b = 0.5, c = 0.5, d = 0.7,
+                          r = 0, s = 0, Kp = 5, Kg = 5)
+
+png("logistic_case3.png", width = 1000, height = 1000)
+par(cex = 3.5)
+plot(ArmsRace[1, ], ArmsRace[2, ], type = "l", col = "blue",
+     xlab = "Time", ylab = "National Arms",
+     main = "Logistic fear: a=0.7, b=0.5, c=0.5, d=0.7, Kp=5, Kg=5",
+     ylim = range(c(ArmsRace[2, ], ArmsRace[3, ])), lwd = 10)
+lines(ArmsRace[1, ], ArmsRace[3, ], col = "red", lwd = 10)
+legend("right", legend = c("Nation P", "Nation G"),
+       col = c("blue", "red"), lwd = 10)
+dev.off()
+```
+
+
+
+
+# Vecor plots for mutual logistic fear
+```{r}
+vplot_logistic = function(pngname,a,b,c,d,r,s,Kp,Kg,y1,y2,y3){
+
+p_vals <- seq(0, 2, length.out = 20)
+g_vals <- seq(0, 2, length.out = 20)
+
+grid <- expand.grid(p = p_vals, g = g_vals)
+
+# Compute derivatives at each grid point
+dp <- numeric(nrow(grid))
+dg <- numeric(nrow(grid))
+
+
+for (i in 1:nrow(grid)) {
+  state <- c(grid$x1[i], grid$x2[i])
+  dp[i] <- a*grid$g[i]*(1-grid$p[i]/Kp)-b*grid$p[i]+r
+  dg[i] <- c*grid$p[i]*(1-grid$g[i]/Kg)-d*grid$g[i]+s
+}
+
+euler1=euler_logistic(a,b,c,d,r,s,Kp,Kg,p0=y1[1],g0=y1[2])
+euler2=euler_logistic(a,b,c,d,r,s,Kp,Kg,p0=y2[1],g0=y2[2])
+euler3=euler_logistic(a,b,c,d,r,s,Kp,Kg,p0=y3[1],g0=y3[2])
+
+
+png(pngname,width=1000,height=1000)
+plot(grid$p, grid$g, pch = 20, col = "lightgray",
+     cex.main=3,cex.lab=5,main = paste("a=" ,a, ", b=" ,b,", c=" ,c,", d=",d,", r=",r,", s=",s,", Kp=",Kp,", Kg=",Kg), xlab = "p", ylab = "g")
+
+
+points(y1[1],y1[2],col="black",cex=2,pch=16)
+lines(euler1[2,],euler1[3,],col="red",lwd=5)
+
+points(y2[1],y2[2],col="black",cex=2,pch=16)
+lines(euler2[2,],euler2[3,],col="red",lwd=5)
+
+points(y3[1],y3[2],col="black",cex=2,pch=16)
+lines(euler3[2,],euler3[3,],col="red",lwd=5)
+
+
+arrows(grid$p, grid$g,
+       grid$p + 0.2 * dp,
+       grid$g + 0.2 * dg,
+       length = 0.2, col = "blue")
+legend("topleft",
+       legend = c("Instantaneous change", "Simulation start point", "Simulation"),
+       col = c("blue", "black", "red"),
+       lty = c(1, NA, 1),
+       pch = c(NA, 16, NA),
+       lwd = c(1, NA, 2),
+       cex=2)
+dev.off()
+}
+```
+
+
+```{r}
+vplot_logistic("Example mutual logistic fear.png",a=0.7,b=0.5,c=0.5,d=0.7,r=0,s=0,Kp=5,Kg=5,y1=c(0.5,1),y2=c(1.4,0.2),y3=c(1.6,0.5))
+
+```
+
+
