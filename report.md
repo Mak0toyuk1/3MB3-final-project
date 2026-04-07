@@ -277,12 +277,13 @@ To summarize the analysis, the base model without any underlying trust or hostil
 - When $bd<ac$, both countries engage in an a perpetual arms race ((0,0) is an unstable equilibrium point) (Figure 2)
 - When $bd=ac$, both countries reach a stabilized level of spending contingent on initial spending (There is a line of stable equilibrium points) (Figure 3)
 
-![Mutual Disarmament](Vecplot1_disarm.png)
+![Mutual Disarmament](Vecplot1_disarm.png){ height=250px }
 
-![Perpetual Arms Race](Vecplot2_race.png)
+![Perpetual Arms Race](Vecplot2_race.png){ height=250px }
 
-![Stable Spending](Vecplot3_stable.png)
+![Stable Spending](Vecplot3_stable.png){ height=250px }
 
+\pb
 
 ## Analysis with trust or hostility
 
