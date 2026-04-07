@@ -332,8 +332,8 @@ To address this limitation, we extend the model by introducing **self-limiting l
 
 For either hypothetical country P and G, the assumptions for the extended model are as follows:
 
-1. The rate of change in one nation’s arms spending is still directly proportional to the other nation’s arms spending (mutual fear).
-2. The rate of change is negatively proportional to the nation’s own current spending (expenditure burden).
+1. The rate of change in one nation’s arms spending is still directly proportional to the other nation’s arms spending.
+2. The rate of change is negatively proportional to the nation’s own current spending.
 3. Each country faces a finite resource constraint that limits how much arms spending can grow.
 4. There may still be underlying trust or hostility between the two nations, which has a constant effect on the rate of change.
 5. Arms spending remains non-negative at all times.
@@ -342,7 +342,7 @@ For either hypothetical country P and G, the assumptions for the extended model 
 
 To incorporate resource limits, we introduce **carrying capacities** $K_p$ and $K_g$, which represent the maximum sustainable arms levels for countries P and G, respectively. The mutual fear terms are now scaled by logistic factors that reduce growth as spending approaches these limits.
 
-The resulting model is:
+So we have:
 
 $$
 \frac{\partial p}{\partial t} = a\left(1 - \frac{p(t)}{K_p}\right)g(t) - bp(t) + r
@@ -354,12 +354,13 @@ $$
 
 ### Definition of Variables and Parameters
 
-- $p(t), g(t)$: arms spending of countries P and G (e.g. in U.S. dollars)
-- $\frac{\partial p}{\partial t}, \frac{\partial g}{\partial t}$: rate of change of arms spending (e.g. dollars per year)
+- $p(t), g(t)$: arms spending of countries P and G 
+
+- $\frac{\partial p}{\partial t}, \frac{\partial g}{\partial t}$: rate of change of arms spending
 
 Parameters:
-- $a, c$: mutual fear coefficients (response to the opponent’s arms level)
-- $b, d$: expenditure burden coefficients (self-damping effects)
+- $a, c$: mutual fear coefficients 
+- $b, d$: expenditure burden coefficients 
 - $r, s$: exogenous trust/hostility terms
   - $r, s > 0$: hostility / pressure to increase arms
   - $r, s < 0$: trust / pressure to reduce arms
@@ -379,7 +380,7 @@ The key modelling choice in this extension is the introduction of **logistic sca
 
 The extended model differs from the base model in one fundamental way: the inclusion of the logistic terms $\left(1 - \frac{p}{K_p}\right)$ and $\left(1 - \frac{g}{K_g}\right)$.
 
-This modification transforms the system from a **linear system of differential equations** into a **nonlinear system**, and introduces bounded dynamics. In particular:
+In particular:
 
 - The base model allows for unbounded growth when mutual fear dominates.
 - The extended model prevents unbounded growth by enforcing resource constraints.
@@ -387,9 +388,9 @@ This modification transforms the system from a **linear system of differential e
 
 This extension therefore provides a more realistic representation of arms dynamics by combining strategic interaction with physical and economic limitations.
 
-### Illustrative Simulations
+### Simulations
 
-To visualize the effect of the added trust/hostility terms, we consider three representative parameter regimes while keeping $K_p = K_g = 5$ fixed.
+ We consider the following three representative parameter regimes while keeping $K_p = K_g = 5$ fixed.
 
 #### Case 1: $bd < ac,\; r < 0,\; s < 0$
 
