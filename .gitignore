@@ -1,0 +1,36 @@
+## Core LaTeX auxiliary files
+*.aux
+*.lof
+*.log
+*.lot
+*.fls
+*.out
+*.toc
+*.fmt
+*.fot
+*.cb
+*.cb2
+.*.lb
+
+## Intermediate documents
+*.dvi
+*.xdv
+
+## Bibliography-related files
+*.bbl
+*.blg
+*.brf
+
+## Build tool artifacts
+*.fdb_latexmk
+*.synctex.gz
+*.pdfsync
+
+## Glossaries and listings
+*.ist
+*.glo
+*.gls
+*.acn
+*.acr
+*.alg
+*.glg
