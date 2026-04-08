@@ -59,7 +59,7 @@ Consider @Talele2025, a great guy who wrote some cool stuff.
 For either hypothetical country, P and G, the assumptions for our base model are as follows:
 
 1. The rate of change in one nation's arms spending is directly proportional to the other nation's arms spending
-1. The rate of change in one nation's arms spending is also negatively directly proportion to that nation's own current spending
+1. The rate of change in one nation's arms spending is also negatively directly proportional to that nation's own current spending
 1. There may be underlying trust and hostility between the two nations, which will have a constant effect on rate of change
 1. For now, we assume that each country has infinite amounts of wealth at their disposal (not realistic at all in a real-world context)
 
@@ -271,11 +271,17 @@ $$
 
 Within the scope of the scenario, this convergence suggests that both countries will reach a stabilized level of spending contingent on what they were initially spending.
 
+## Summary
+
 To summarize the analysis, the base model without any underlying trust or hostily has three types of convergences. Attached alongside each explanation of these convergences are vector plots to illustrate the scenarios.
 
-- When $bd>ac$, both countries mutually disarm ((0,0) is a stable equilibrium point) (Figure 1)
-- When $bd<ac$, both countries engage in an a perpetual arms race ((0,0) is an unstable equilibrium point) (Figure 2)
-- When $bd=ac$, both countries reach a stabilized level of spending contingent on initial spending (There is a line of stable equilibrium points) (Figure 3)
+- When $bd>ac$, both countries mutually disarm ((0,0) is a stable equilibrium point). Figure 1 indicates that all the paths in this scenario reach (0,0)
+- When $bd<ac$, both countries engage in an a perpetual arms race ((0,0) is an unstable equilibrium point). Figure 2 shows each simulation path veering away from (0,0) and going beyond the borders of the graph.
+- When $bd=ac$, both countries reach a stabilized level of spending contingent on initial spending (There is a line of stable equilibrium points). Figure 3 shows each path reaching to a stable line in a straight trajectory.
+
+## Explanation of vector plots
+
+For each R simulation, the parameter values are listed in the title of each plot. The vector plot shows the direction of the nations' arms spending for each possible point in the simulation (showcased by the arrows). The red lines indicate the possible trajectories that each nation's arm spending can take based on their initial spending.
 
 ![Mutual Disarmament](Vecplot1_disarm.png){ height=250px }
 
@@ -311,7 +317,7 @@ the end of the paper (see below). Be sure to describe what these analysis tell y
 base model and what predictions they make (this should be in the context of the real-world
 scenario framing your project).
 
-# Model Extension 
+# Model Extension
 
 <!-- > Here, you should describe the extension you’ve chosen to study for your model. Start by
 discussing what the extension is and how you plan to change your base model to account
