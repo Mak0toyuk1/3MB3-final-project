@@ -361,7 +361,6 @@ $$
 
 - $p(t), g(t)$: arms spending of countries P and G 
 
-- $\frac{\partial p}{\partial t}, \frac{\partial g}{\partial t}$: rate of change of arms spending
 
 Parameters:
 - $a, c$: mutual fear coefficients 
@@ -371,7 +370,6 @@ Parameters:
   - $r, s < 0$: trust / pressure to reduce arms
 - $K_p, K_g$: carrying capacities representing maximum sustainable arms levels
 
-As in the base model, $a, b, c, d \geq 0$, while $r$ and $s$ may take any real value. 
 
 
 ### Differences from the Base Model
