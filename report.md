@@ -332,7 +332,7 @@ here. That will go in the next section -->
 
 One major limitation of the base model is the assumption that each country has access to infinite resources. In reality, arms spending is constrained by economic capacity, political limitations, and logistical considerations. As a result, the base model may produce unrealistic outcomes such as unbounded growth in arms expenditure.
 
-To address this limitation, we extend the model by introducing **self-limiting logistic growth terms**. The purpose of this extension is to incorporate resource constraints directly into the dynamics of arms accumulation.
+To address this limitation, we extend the model by introducing logistic growth terms.
 
 ### Assumptions
 
@@ -342,11 +342,10 @@ For either hypothetical country P and G, the assumptions for the extended model 
 2. The rate of change is negatively proportional to the nation’s own current spending.
 3. Each country faces a finite resource constraint that limits how much arms spending can grow.
 4. There may still be underlying trust or hostility between the two nations, which has a constant effect on the rate of change.
-5. Arms spending remains non-negative at all times.
 
 ### Model Formulation
 
-To incorporate resource limits, we introduce **carrying capacities** $K_p$ and $K_g$, which represent the maximum sustainable arms levels for countries P and G, respectively. The mutual fear terms are now scaled by logistic factors that reduce growth as spending approaches these limits.
+To incorporate resource limits, we introduce carrying capacities $K_p$ and $K_g$, which represent the maximum sustainable arms levels for countries P and G, respectively. The mutual fear terms are now scaled by logistic factors that reduce growth as spending approaches these limits.
 
 So we have:
 
@@ -372,15 +371,8 @@ Parameters:
   - $r, s < 0$: trust / pressure to reduce arms
 - $K_p, K_g$: carrying capacities representing maximum sustainable arms levels
 
-As in the base model, $a, b, c, d \geq 0$, while $r$ and $s$ may take any real value. The parameters remain unitless abstractions of qualitative effects, while the state variables retain units of currency.
+As in the base model, $a, b, c, d \geq 0$, while $r$ and $s$ may take any real value. 
 
-### Modelling Choices
-
-The key modelling choice in this extension is the introduction of **logistic scaling** in the interaction terms. This ensures that:
-
-- When arms levels are low relative to capacity, the system behaves similarly to the base model.
-- As arms levels approach $K_p$ or $K_g$, growth slows down.
-- If arms exceed these capacities, the interaction term becomes negative, pushing the system back toward feasible levels.
 
 ### Differences from the Base Model
 
@@ -390,7 +382,7 @@ In particular:
 
 - The base model allows for unbounded growth when mutual fear dominates.
 - The extended model prevents unbounded growth by enforcing resource constraints.
-- Long-term outcomes are no longer solely determined by the relationship between $ac$ and $bd$, but also by the carrying capacities and the external terms $r$ and $s$.
+
 
 This extension therefore provides a more realistic representation of arms dynamics by combining strategic interaction with physical and economic limitations.
 
@@ -414,7 +406,7 @@ Here, the two countries face asymmetric external pressures. Country P experience
 
 ![Case 3: High steady-state spending](logistic_rs_case3.png){ width=70% }
 
-In this case, both countries experience positive external pressure, representing hostility or incentives to increase arms. Due to the logistic caps, the system does not grow without bound; instead, both countries converge to a high steady-state level of arms spending.
+In this case, both countries experience positive external pressure, representing hostility or incentives to increase arms. Both countries converge to a high steady-state level of arms spending.
 
 # Results
 
