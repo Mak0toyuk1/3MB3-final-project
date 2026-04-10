@@ -52,7 +52,10 @@ has no mathematical symbols or jargon; instead, it should be focused on the real
 text and what you are trying to study. The math is a tool you will introduce later, not the
 main focus of the paper.
 
-Consider @Talele2025, a great guy who wrote some cool stuff.
+<!-- Consider @Talele2025, a great guy who wrote some cool stuff. -->
+
+
+<!-- Bipolar arms races between two countries @Wallace1979  -->
 
 # Base Model
 
