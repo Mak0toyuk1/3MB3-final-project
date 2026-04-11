@@ -228,11 +228,13 @@ $$\vec{v}_1=\begin{bmatrix}
 \\ 
 1 
 \end{bmatrix}$$ for $\lambda_1 = 0$ and 
-$$\vec{v}_2=\begin{bmatrix} 
+$$
+\vec{v}_2=\begin{bmatrix} 
 -\frac{a}{d}
 \\ 
 1 
 \end{bmatrix}$$ for $\lambda_2 = -(b+d)$. 
+
 
 The closed form solution is therefore:
 $$
@@ -410,6 +412,20 @@ Here, the two countries face asymmetric external pressures. Country P experience
 In this case, both countries experience positive external pressure, representing hostility or incentives to increase arms. Both countries converge to a high steady-state level of arms spending.
 
 # Results
+## Sensitivity:
+With regards to the sensivity, we tested how changes in each of the variables in our model would impact nations arms spending, here only a,b, and r will be tested, but the conclusions relate to c,d and s in the same way respecfully.
+
+Sensitivity of a:
+![ Sensitivity of a](sensitivity_a.png)
+in this case we can see that increases in one countries **Mutual Fear (a)** will lead to increases in both countries spending at all times, this is due to the fact that a higher **a** will lead to **p** wanting to spend more for each unit of **g** arms, so **p** arms will be higher, since c>0 (model definitition), this higher level of **p** arms will also lead to more **g** arms spending
+
+Sensitivity of b:
+![ Sensitivity of b](sensitivity_b.png)
+in this case we can see that increases in one countries **expenditure burden (b)** will lead to decreases in both countries spending at all times, this is due to the fact that a higher **b** will lead to **p** wanting to less for each unit of **p** arms, so **p** arms will be lower, since c>0 (model definitition), this lower level of **p** arms will also lead to lower **g** arms spending
+
+Sensitivity of c:
+![ Sensitivity of c](sensitivity_c.png)
+in this case we can see that increases in one countries **goodwill/grievance term (r)** will lead to increases in both countries spending at all times, this is due to the fact that a higher **r**  will lead to **p** wanting to more due to its higher grievance towards **g**, so **p** arms will be higher, since c>0 (model definitition), this higher level of **p** arms will also lead to higher **g** arms spending
 
 > n this section, you should describe the analysis you performed on your extended model. Be
 sure to motivate your analysis in the context of your research question (i.e., why do you
