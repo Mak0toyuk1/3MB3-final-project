@@ -289,10 +289,16 @@ To summarize the analysis, the base model without any underlying trust or hostil
 For each R simulation, the parameter values are listed in the title of each plot. The vector plot shows the direction of the nations' arms spending for each possible point in the simulation (showcased by the arrows). The red lines indicate the possible trajectories that each nation's arm spending can take based on their initial spending.
 
 ![Mutual Disarmament](Vecplot1_disarm.png){ height=250px }
+this first plot shows the results that occur when 
+(ac&lt;bd), we can see that for various initial conditions nations will approach mutual disarming
 
 ![Perpetual Arms Race](Vecplot2_race.png){ height=250px }
+this second plot shows the results that can occur when (ac>bd), we can see that for various initial conditions countries will engage in an unending arms race.
 
 ![Stable Spending](Vecplot3_stable.png){ height=250px }
+this third plot shows the results that occur when ac=bd, in this case we can see that depending on the initial spending of the two nations, they will approach a different point on a line of stable spending after which they wont move.
+
+
 
 \pb
 
