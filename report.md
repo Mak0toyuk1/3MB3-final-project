@@ -302,9 +302,26 @@ $$\begin{bmatrix}
 
 Now the convergences of the model may not necessarily converge to zero. To determine the stability conditions of this equilibrium, the Jacobian from the previous form of the model can be reused as the system is still linear. In this case, we have the same stability conditions for the equilibrium point as before: $bd>ac$.
 
-To determine what happens when $bd=ac$, we conduct simulations to adjust the values of r and s.
+To determine what happens when $bd=ac$, we conduct simulations to adjust the values of r and s. We uncover four cases when we loosen r and s conditions, allowing our trust/hostility parameters to take on $r,s \neq 0$ values. For each case, we provide an explanation accompanied by a vector plot which visualizes convergence. Vector plots were constructed using R, we provide the parameter values in the title of each plot for each case. The vector plot shows the direction of the nations' arms spending for each possible point in the simulation (showcased by the arrows). The red lines indicate the possible trajectories that each nation's arm spending can take based on their initial spending.
 
-## Pending graphs and simulation descriptions (Conduct simulations here)
+![Mutual Disarmament](S5_bd_eq_ac.png){fig-pos="H" width=50%}
+
+We observe mutual disarmament in Figure 4, in which spending for all trajectories decays to (0,0) for both nations, when $r<0$ and $s<0$. This represents opposing nations trusting each other. This first case is most similar to the mutual disarmament seen when r and s are zero; however, this mutual disarmament is solely driven by trust between Nations P and G.
+
+![Disarmament and Aramament](S4_bd_eq_ac.png){fig-pos="H" width=50%}
+
+When r and s are of opposing sign, we find that one nation is conciliatory and will disarm, decaying to (0,0), while the other nation is hostile and will arm itself (with bound, not infinitely) for all trajectories. In Figure 5, we set $r<0$ and $s>0$ and observe that, for all trajectories, Nation P fully disarms, while Nation G converges to a bounded value depending on the inital conditions of the system and system parameters. 
+
+![Symmetric Perpetual Arms Race](S6_bd_eq_ac.png){fig-pos="H" width=50%}
+
+We observe a perpetual arms race in Figure 6, in which spending grows without bound for both nations, when $r>0$ and $s>0$. This represents that opposing nations hold independent grievances. Arms spending will diverge the quickest as Nations P and G arm independently and reactively to the other nation arming itself. It is important to note that this perpetual aramament is balanced; as one can observe, the red trajectory lines converge in a symmetric fashion relative to x- and y-axes.
+
+![Asymmetric Perpetual Arms Race](S3_bd_eq_ac.png){fig-pos="H" width=50%}
+
+We observe a perpetual arms race in Figure 7, in which spending grows without bound for both nations. When one of r and s is set to zero (no feelings towards the opposing nation), and the other is set to a positive value (hostile feelings towards the opposing nation). Unlike in the previous perpetual arms race, this aramament is unbalanced; one nation drives the arms race while the other reacts and arms accordingly. In this case, we set $r=0$ and $s>0$ and observe that Nation G drives the arms race while Nation P lags behind in spending; the red trajectory converge in an asymmetric fashion relative to x- and y-axes, growing more quickly in the y-axis (Nation G arms spending).
+
+We believe that the inclusion of $r,s \neq 0$ possiblities, we more accruately predict how real-world nations react to the (dis)aramament of their contemporaries. With $r,s \neq 0$, we can account for goodwill and grievance between nations, where in previous cases with parameters r and s excluded, we could only predict independent behaviour. This model still has flaws, however. In particular, nations are able to arm themselves without bound, which is not realistic as money is a finite resource. We hope that our model extension will correct the issues that our base model is restricted by.
+
 <!-- > This subsection should describe the various analysis you’ve performed on your base model
 and the results you’ve obtained from them. You should be using a mix of analytical tools
 (e.g., finding equilibrium points, determining stability) and numerical tools (e.g., model sim-
