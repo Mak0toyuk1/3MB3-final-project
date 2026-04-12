@@ -361,13 +361,13 @@ To incorporate resource limits, we introduce carrying capacities $K_p$ and $K_g$
 
 Based on these assumptions, the following model was formulated:
 
-\begin{equation}
+$\begin{equation}
 \frac{\partial p}{\partial t} = a\left(1 - \frac{p(t)}{K_p}\right)g(t) - bp(t) + r
-\end{equation}
+\end{equation}$
 
-\begin{equation}
+$\begin{equation}
 \frac{\partial g}{\partial t} = c\left(1 - \frac{g(t)}{K_g}\right)p(t) - dg(t) + s
-\end{equation}
+\end{equation}$
 
 Here, $K_p, K_g$ denote the maximum level of sustainable arms spending for countries P and G respectively. The units these parameters assume would be in a common currency such as U.S. dollars. The rest of the parameters and state variables assume the same meaning as specified for the base model.
 
@@ -393,6 +393,167 @@ In particular:
 - The extended model prevents unbounded growth by enforcing resource constraints.
 
 This extension therefore provides a more realistic representation of arms dynamics by combining strategic interaction with physical and economic limitations.
+
+## Analysis of Mutual Logistic Fear Model
+
+
+
+<!-- In contrast with the base model, there is generally no simple closed-form equilibrium such as $(0,0)$ unless the trust/hostility terms are chosen appropriately. Instead, the equilibria depend jointly on the parameters
+$$
+a,b,c,d,r,s,K_p,K_g.
+$$
+
+Thus, the long-term behavior of the extended model is governed by the location and stability of the solutions to this nonlinear system. -->
+
+### Jacobian Matrix
+
+To determine the local stability of an equilibrium point, we compute the Jacobian matrix:
+$$
+J(p,g)=
+\begin{bmatrix}
+\frac{\partial f}{\partial p} & \frac{\partial f}{\partial g} \\
+\frac{\partial h}{\partial p} & \frac{\partial h}{\partial g}
+\end{bmatrix}
+$$
+
+
+After computing the partial derivatives, the Jacobian of the extended model is
+$$
+J(p,g)=
+\begin{bmatrix}
+-\frac{ag}{K_p}-b & a\left(1-\frac{p}{K_p}\right) \\
+c\left(1-\frac{g}{K_g}\right) & -\frac{cp}{K_g}-d
+\end{bmatrix}
+$$
+
+Evaluating this Jacobian at an equilibrium point $(p^*,g^*)$ yields
+$$
+J(p^*,g^*)=
+\begin{bmatrix}
+-\frac{ag^*}{K_p}-b & a\left(1-\frac{p^*}{K_p}\right) \\
+c\left(1-\frac{g^*}{K_g}\right) & -\frac{cp^*}{K_g}-d
+\end{bmatrix}
+$$
+
+The eigenvalues of this matrix determine the local stability of the equilibrium.
+
+### Equilibrium Points 
+
+We set:
+
+$$
+a\left(1 - \frac{p^*}{K_p}\right)g^* - bp^* + r = 0
+$$
+
+$$
+c\left(1 - \frac{g^*}{K_g}\right)p^* - dg^* + s = 0.
+$$
+
+These equations define the equilibrium point $(p^*, g^*)$.
+
+
+Rearranging the first equation yields:
+$$
+a\left(1 - \frac{p^*}{K_p}\right)g^* = bp^* - r,
+$$
+and hence,
+$$
+g^* = \frac{K_p(bp^* - r)}{a(K_p - p^*)}, \qquad p^* \neq K_p.
+$$
+
+Similarly, rearranging the second equation gives:
+$$
+c\left(1 - \frac{g^*}{K_g}\right)p^* = dg^* - s,
+$$
+and thus,
+$$
+p^* = \frac{K_g(dg^* - s)}{c(K_g - g^*)}, \qquad g^* \neq K_g.
+$$
+
+## Stability Conditions
+
+For a two-dimensional system, an equilibrium point is locally asymptotically stable if the Jacobian evaluated at that point has:
+
+$$
+\operatorname{tr}(J(p^*,g^*))<0
+\qquad \text{and} \qquad
+\det(J(p^*,g^*))>0.
+$$
+
+### Trace
+
+The trace is
+$$
+\operatorname{tr}(J(p^*,g^*))=
+\left(-\frac{ag^*}{K_p}-b\right)+\left(-\frac{cp^*}{K_g}-d\right).
+$$
+
+So,
+$$
+\operatorname{tr}(J(p^*,g^*))=
+-\frac{ag^*}{K_p}-\frac{cp^*}{K_g}-(b+d).
+$$
+
+Since
+$$
+a,b,c,d,K_p,K_g,p^*,g^* \geq 0,
+$$
+it follows that
+$$
+\operatorname{tr}(J(p^*,g^*))<0
+$$
+for any nonnegative equilibrium point, provided $b+d>0$.
+
+Thus, in the extended model, the trace is automatically negative under the natural assumptions of the scenario.
+
+### Determinant
+
+The determinant is
+$$
+\det(J(p^*,g^*))=
+$$
+
+
+$$
+\left(-\frac{ag^*}{K_p}-b\right)\left(-\frac{cp^*}{K_g}-d\right)
+-
+a\left(1-\frac{p^*}{K_p}\right)c\left(1-\frac{g^*}{K_g}\right).
+$$
+
+Expanding this gives
+$$
+\det(J(p^*,g^*))=
+
+$$
+
+$$
+\left(b+\frac{ag^*}{K_p}\right)\left(d+\frac{cp^*}{K_g}\right)
+-
+ac\left(1-\frac{p^*}{K_p}\right)\left(1-\frac{g^*}{K_g}\right).
+$$
+
+
+Unlike the base model, the determinant of the Jacobian in the extended model depends explicitly on the equilibrium values $p^*$ and $g^*$. 
+
+
+As a result, it is generally not possible to derive a simple analytical condition for stability in terms of the parameters alone.
+
+### Eigenvalues and Stability
+
+The eigenvalues of the Jacobian are given by
+$$
+\lambda = \frac{\operatorname{tr}(J(p^*,g^*)) \pm \sqrt{\operatorname{tr}(J(p^*,g^*))^2 - 4\det(J(p^*,g^*))}}{2}.
+$$
+
+Clearly, this expression depends on the equilibrium values $p^*$ and $g^*$, which are not generally available explicitly. Consequently, the eigenvalues do not yield simple analytical conditions for stability, unlike in the base model.
+
+
+
+
+
+
+
+
 
 ### Simulations
 
