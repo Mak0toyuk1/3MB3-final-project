@@ -23,6 +23,8 @@ bibliography: ref.bib
 header-includes: |
     \newcommand{\pb}{\pagebreak}
     \renewcommand{\familydefault}{\sfdefault}
+    \usepackage{float}
+    \makeatletter\def\fps@figure{H}\makeatother
     \usepackage{amsmath}
     \usepackage{amssymb}
     \usepackage{lmodern}
@@ -35,7 +37,7 @@ header-includes: |
 <!--\pagenumbering{gobble}-->
 \setlength{\parindent}{36pt}
 
-# Introduction 
+# Introduction
 
 > This section should outline the real-world background and context of your model. Discuss
 the motivation one might have to study this model. You may want to research the relevant
@@ -54,7 +56,6 @@ main focus of the paper.
 
 <!-- Consider @Talele2025, a great guy who wrote some cool stuff. -->
 
-
 <!-- Bipolar arms races between two countries @Wallace1979  -->
 
 # Base Model
@@ -68,21 +69,19 @@ For either hypothetical country, P and G, the assumptions for our base model are
 
 Based on these assumptions, the following model was derived:
 \begin{equation}
-    \dfrac{\partial p}{\partial t} = ag(t) - bp(t) + r 
+    \dfrac{\partial p}{\partial t} = ag(t) - bp(t) + r
 \end{equation}
 \begin{equation}
     \dfrac{\partial g}{\partial t} = cp(t) - dg(t) + s
 \end{equation}
 
-In particular $\dfrac{\partial p}{\partial t},\dfrac{\partial g}{\partial t}$ denote the rate of change of each country's arm spending.
-The variables $a,c$ measure the effect of mutual fear that each country has on the other's arms spending, 
-$b,d$ measure the effect of expenditure burden that each country has on their own spending, and 
-$r,s$ measure the underlying hostility or trust that the each nation has to another. 
+In particular, $p(t),g(t)$ denote the arms spending at time $t$ for countries P and G respectively. Meanwhile, $\dfrac{\partial p}{\partial t},\dfrac{\partial g}{\partial t}$ denote the rate of change of each country's arm spending. The variables $a,c$ measure the effect of mutual fear that each country has on the other's arms spending, $b,d$ measure the effect of expenditure burden that each country has on their own spending, and $r,s$ measure the underlying hostility or trust that the each nation has to another.
 
 For the sake of realism, $p(t),g(t)$ are held to be non-negative values as negative arms spending would not make sense in this scenario.
+
 Moreover, to ensure that mutual fear and expenditure burden match the behavior as laid out in the assumptions, $a,b,c,d$ are held to be non-negative as well. On the other hand, $r,s$ can assume any value where negative values denote trust and positive values denote hostility.
 
-The parameters in the model $(a,b,c,d,r,s)$ assume no form of units as they serve as abstractions of qualitative measures (i.e. it would be hard to attach a unit to expenditure burden or fear). However, the state variables themselves would be expressed in some common currency (e.g. U.S. dollars) and the derivatives of those state variables $(\dfrac{\partial p}{\partial t},\dfrac{\partial g}{\partial t})$ would be expressed in that currency over time (e.g. U.S. dollars per year).
+The parameters in the model $(a,b,c,d,r,s)$ assume no form of units as they serve as abstractions of qualitative measures (i.e. it would be hard to attach a unit to expenditure burden or fear). However, the state variables $p(t),g(t)$ themselves would be expressed in some common currency (e.g. U.S. dollars) and the derivatives of those state variables $(\dfrac{\partial p}{\partial t},\dfrac{\partial g}{\partial t})$ would be expressed in that currency over time (e.g. U.S. dollars per year).
 
 Theoretically speaking, this model is a system of multivariate, autonomous linear differential equations. In this situation, the Jacobian would have to be computed for the purposes of stability analysis.
 
@@ -126,11 +125,11 @@ $$
 \end{bmatrix}
 $$
 
-Note that by having the system in linear form, the Jacobian is simply the matrix 
+Note that by having the system in linear form, the Jacobian is simply the matrix
 $$J=\begin{bmatrix}
     -b & a \\
     c & - d
-\end{bmatrix}$$ 
+\end{bmatrix}$$
 
 Setting $r=s=0$ lends a unique advantage in that the resulting system of linear differential equations is now homogenous (i.e. there is no constant term). This means that a closed-form of the state-variables can be found in the form of:
 $$
@@ -151,13 +150,13 @@ $$
 
 Where $\lambda_1,\lambda_2$ denotes the eigenvalues of the Jacobian $J$, $P$ denotes the matrix of eigenvectors, and $p(0),g(0)$ denotes the initial spending of the two countries.
 
-To determine equilibrium points, set 
+To determine equilibrium points, set
 $$\begin{bmatrix}
      \dfrac{\partial p}{\partial t} \\  
      \dfrac{\partial g}{\partial t} \end{bmatrix}
-=0$$ 
+=0$$
 
-Thus, 
+Thus,
 $$
 \begin{bmatrix}
      0 \\  
@@ -176,7 +175,7 @@ $$
 An obvious equlibrium that can be derived from this formulation is:
 $$\begin{bmatrix}
     p^*(t) \\ g^*(t)
-\end{bmatrix} = \begin{bmatrix}0 \\ 0\end{bmatrix}$$ 
+\end{bmatrix} = \begin{bmatrix}0 \\ 0\end{bmatrix}$$
 
 This equilibrium point corresponds to a scenario where both nations mutually demilitarize.
 
@@ -208,7 +207,7 @@ $$
 \lambda = \frac{-(b+d)\pm\sqrt{(b-d)^2+4ac}}{2}
 $$
 
-It should be noted that because of the non-negative restrictions imposed upon $a,b,c,d$, the discriminant will always remain positive. From this, we expect that the model will always behave monotonically.
+It should be noted that because of the non-negative restrictions imposed upon $a,b,c,d$, the discriminant will always remain positive. From this, we expect that the model will always behave monotonically. In other words, the arms spending of countries P and G will not oscillate.
 
 To check when the eigenvalues remain negative, we look for conditions when $(b+d)$ is greater than $\sqrt{(b-d)^2+4ac}$ in magnitude. After doing some algebra, the result turns out to be: $bd>ac$. In the context of the scenario, the arms spending of countries P and G will converge to complete mutual disarmament if their combined expenditure burden outweighs the combined mutual fear they have for each other.
 
@@ -220,21 +219,20 @@ $$
 \lambda = 0,-(b+d)\\
 $$
 
-In this case, one eigenvalue is negative and the other is 0. The closed form sheds further light onto what this implies for the model. To this end, the eigenvalues were substitued back in the Jacobian to derive the eigenvectors. 
+In this case, one eigenvalue is negative and the other is 0. The closed form sheds further light onto what this implies for the model. To this end, the eigenvalues were substitued back in the Jacobian to derive the eigenvectors.
 
-These eigenvectors are 
-$$\vec{v}_1=\begin{bmatrix} 
+These eigenvectors are
+$$\vec{v}_1=\begin{bmatrix}
 \frac{a}{b}
-\\ 
-1 
-\end{bmatrix}$$ for $\lambda_1 = 0$ and 
+\\
+1
+\end{bmatrix}$$ for $\lambda_1 = 0$ and
 $$
-\vec{v}_2=\begin{bmatrix} 
+\vec{v}_2=\begin{bmatrix}
 -\frac{a}{d}
-\\ 
-1 
-\end{bmatrix}$$ for $\lambda_2 = -(b+d)$. 
-
+\\
+1
+\end{bmatrix}$$ for $\lambda_2 = -(b+d)$.
 
 The closed form solution is therefore:
 $$
@@ -242,7 +240,7 @@ $$
      p(t) \\  
      g(t)
 \end{bmatrix}
-= 
+=
 \begin{bmatrix}
     \frac{a}{b} & -\frac{a}{d} \\
     1 & 1
@@ -267,7 +265,7 @@ $$
      p(\infty) \\  
      g(\infty)
 \end{bmatrix}
-= 
+=
 \begin{bmatrix}
    \frac{dp(0)+ag(0)}{b+d} \\
    \frac{cp(0)+bg(0)}{b+d}
@@ -276,31 +274,21 @@ $$
 
 Within the scope of the scenario, this convergence suggests that both countries will reach a stabilized level of spending contingent on what they were initially spending.
 
-## Summary
+### Summary
 
-To summarize the analysis, the base model without any underlying trust or hostily has three types of convergences. Attached alongside each explanation of these convergences are vector plots to illustrate the scenarios.
+To summarize the analysis, the base model without any underlying trust or hostily has three types of convergences. Attached alongside each explanation of these convergences are vector plots to illustrate the scenarios. These vector plots were constructed using R. For each R simulation, the parameter values are listed in the title of each plot. The vector plot shows the direction of the nations' arms spending for each possible point in the simulation (showcased by the arrows). The red lines indicate the possible trajectories that each nation's arm spending can take based on their initial spending.
 
-- When $bd>ac$, both countries mutually disarm ((0,0) is a stable equilibrium point). Figure 1 indicates that all the paths in this scenario reach (0,0)
-- When $bd<ac$, both countries engage in an a perpetual arms race ((0,0) is an unstable equilibrium point). Figure 2 shows each simulation path veering away from (0,0) and going beyond the borders of the graph.
-- When $bd=ac$, both countries reach a stabilized level of spending contingent on initial spending (There is a line of stable equilibrium points). Figure 3 shows each path reaching to a stable line in a straight trajectory.
+![Mutual Disarmament](Vecplot1_disarm.png){fig-pos="H" width=50%}
 
-## Explanation of vector plots
+When $bd>ac$, both countries mutually disarm for various initial spending points ((0,0) is a stable equilibrium point). Figure 1 indicates that all the paths in this scenario reach (0,0)
 
-For each R simulation, the parameter values are listed in the title of each plot. The vector plot shows the direction of the nations' arms spending for each possible point in the simulation (showcased by the arrows). The red lines indicate the possible trajectories that each nation's arm spending can take based on their initial spending.
+![Perpetual Arms Race](Vecplot2_race.png){fig-pos="H" width=50%}
 
-![Mutual Disarmament](Vecplot1_disarm.png){ height=250px }
-this first plot shows the results that occur when 
-(ac&lt;bd), we can see that for various initial conditions nations will approach mutual disarming
+When $bd<ac$, both countries engage in an a perpetual arms race ((0,0) is an unstable equilibrium point). Figure 2 shows each simulation path veering away from (0,0) and going beyond the borders of the graph.
 
-![Perpetual Arms Race](Vecplot2_race.png){ height=250px }
-this second plot shows the results that can occur when (ac>bd), we can see that for various initial conditions countries will engage in an unending arms race.
+![Stable Spending](Vecplot3_stable.png){fig-pos="H" width=50%}
 
-![Stable Spending](Vecplot3_stable.png){ height=250px }
-this third plot shows the results that occur when ac=bd, in this case we can see that depending on the initial spending of the two nations, they will approach a different point on a line of stable spending after which they wont move.
-
-
-
-\pb
+When $bd=ac$, both countries reach a stabilized level of spending contingent on initial spending (There is a line of stable equilibrium points). Figure 3 shows each path reaching to a stable line in a straight trajectory.
 
 ## Analysis with trust or hostility
 
@@ -310,14 +298,14 @@ The equilibrium point also changes:
 
 $$\begin{bmatrix}
     p^*(t) \\ g^*(t)
-\end{bmatrix} = \begin{bmatrix} \frac{rd+sa}{bd-ac} \\  \frac{rc+sb}{bd-ac}\end{bmatrix}$$ 
+\end{bmatrix} = \begin{bmatrix} \frac{rd+sa}{bd-ac} \\  \frac{rc+sb}{bd-ac}\end{bmatrix}$$
 
 Now the convergences of the model may not necessarily converge to zero. To determine the stability conditions of this equilibrium, the Jacobian from the previous form of the model can be reused as the system is still linear. In this case, we have the same stability conditions for the equilibrium point as before: $bd>ac$.
 
 To determine what happens when $bd=ac$, we conduct simulations to adjust the values of r and s.
 
-
-> This subsection should describe the various analysis you’ve performed on your base model
+## Pending graphs and simulation descriptions (Conduct simulations here)
+<!-- > This subsection should describe the various analysis you’ve performed on your base model
 and the results you’ve obtained from them. You should be using a mix of analytical tools
 (e.g., finding equilibrium points, determining stability) and numerical tools (e.g., model sim-
 ulations in R). When discussing analytical calculations, you don’t need to list out every
@@ -326,7 +314,7 @@ merical simulations, you should describe what your R code is doing and present s
 to supplement your written descriptions; all R code should be presented in an appendix at
 the end of the paper (see below). Be sure to describe what these analysis tell you about your
 base model and what predictions they make (this should be in the context of the real-world
-scenario framing your project).
+scenario framing your project). -->
 
 # Model Extension
 
@@ -339,49 +327,44 @@ from your base model. If appropriate, it would be good to include a model diagra
 should also write out the model equations. Do not discuss any analysis of the extended model
 here. That will go in the next section -->
 
-## Mutual Logistic Fear Model (Extension)
+## Mutual Logistic Fear Model
 
-One major limitation of the base model is the assumption that each country has access to infinite resources. In reality, arms spending is constrained by economic capacity, political limitations, and logistical considerations. As a result, the base model may produce unrealistic outcomes such as unbounded growth in arms expenditure.
+One major limitation of the base model is the assumption that each country has access to infinite resources. In reality, arms spending is constrained by each country's limited amounts of funds. As a result, the base model produces unrealistic outcomes such as unbounded growth in arms expenditure. To address this limitation, we extend the model by introducing logistic growth terms.
 
-To address this limitation, we extend the model by introducing logistic growth terms.
-
-### Assumptions
+### Model overview
 
 For either hypothetical country P and G, the assumptions for the extended model are as follows:
 
-1. The rate of change in one nation’s arms spending is still directly proportional to the other nation’s arms spending.
+1. The rate of change in one nation’s arms spending follows a logistic growth depending on the other nation’s arms spending. This is accompanied by a finite resource constraint that limits how much each country can spend.
 2. The rate of change is negatively proportional to the nation’s own current spending.
-3. Each country faces a finite resource constraint that limits how much arms spending can grow.
-4. There may still be underlying trust or hostility between the two nations, which has a constant effect on the rate of change.
+3. There may still be underlying trust or hostility between the two nations, which has a constant effect on the rate of change.
 
-### Model Formulation
+<!--### Model Formulation
+To incorporate resource limits, we introduce carrying capacities $K_p$ and $K_g$, which represent the maximum sustainable arms levels for countries P and G respectively. The mutual fear terms are now scaled by logistic factors that reduce growth as spending approaches these limits.-->
 
-To incorporate resource limits, we introduce carrying capacities $K_p$ and $K_g$, which represent the maximum sustainable arms levels for countries P and G, respectively. The mutual fear terms are now scaled by logistic factors that reduce growth as spending approaches these limits.
+Based on these assumptions, the following model was formulated:
 
-So we have:
-
-$$
+\begin{equation}
 \frac{\partial p}{\partial t} = a\left(1 - \frac{p(t)}{K_p}\right)g(t) - bp(t) + r
-$$
+\end{equation}
 
-$$
+\begin{equation}
 \frac{\partial g}{\partial t} = c\left(1 - \frac{g(t)}{K_g}\right)p(t) - dg(t) + s
-$$
+\end{equation}
 
-### Definition of Variables and Parameters
+Here, $K_p, K_g$ denote the maximum level of sustainable arms spending for countries P and G respectively. The units these parameters assume would be in a common currency such as U.S. dollars. The rest of the parameters and state variables assume the same meaning as specified for the base model.
 
-- $p(t), g(t)$: arms spending of countries P and G 
+<!-- ### Definition of Variables and Parameters
 
+- $p(t), g(t)$: arms spending of countries P and G
 
 Parameters:
-- $a, c$: mutual fear coefficients 
-- $b, d$: expenditure burden coefficients 
+- $a, c$: mutual fear coefficients
+- $b, d$: expenditure burden coefficients
 - $r, s$: exogenous trust/hostility terms
   - $r, s > 0$: hostility / pressure to increase arms
   - $r, s < 0$: trust / pressure to reduce arms
-- $K_p, K_g$: carrying capacities representing maximum sustainable arms levels
-
-
+- $K_p, K_g$: carrying capacities representing maximum sustainable arms levels -->
 
 ### Differences from the Base Model
 
@@ -392,7 +375,6 @@ In particular:
 - The base model allows for unbounded growth when mutual fear dominates.
 - The extended model prevents unbounded growth by enforcing resource constraints.
 
-
 This extension therefore provides a more realistic representation of arms dynamics by combining strategic interaction with physical and economic limitations.
 
 ### Simulations
@@ -401,46 +383,52 @@ This extension therefore provides a more realistic representation of arms dynami
 
 #### Case 1: $bd < ac,\; r < 0,\; s < 0$
 
-![Case 1: Mutual disarmament](logistic_rs_case1.png){ width=70% }
+![Case 1: Mutual disarmament](logistic_rs_case1.png){fig-pos="H" width=70%}
 
 In this case, both countries experience negative external pressure, representing trust or incentives to de-escalate. Arms spending falls over time, leading to mutual disarmament.
 
 #### Case 2: $bd = ac,\; r < 0,\; s > 0$
 
-![Case 2: Stabilized but unequal spending](logistic_rs_case2.png){ width=70% }
+![Case 2: Stabilized but unequal spending](logistic_rs_case2.png){fig-pos="H" width=70%}
 
 Here, the two countries face asymmetric external pressures. Country P experiences trust or downward pressure, while country G experiences hostility or upward pressure. The model predicts stabilization, but at unequal long-run spending levels.
 
 #### Case 3: $bd > ac,\; r > 0,\; s > 0$
 
-![Case 3: High steady-state spending](logistic_rs_case3.png){ width=70% }
+![Case 3: High steady-state spending](logistic_rs_case3.png){fig-pos="H" width=70%}
 
 In this case, both countries experience positive external pressure, representing hostility or incentives to increase arms. Both countries converge to a high steady-state level of arms spending.
 
 # Results
-## Sensitivity:
-With regards to the sensivity, we tested how changes in each of the variables in our model would impact nations arms spending, here only a,b, and r will be tested, but the conclusions relate to c,d and s in the same way respecfully.
+## Sensitivity Analysis
+With regards to the sensivity, we tested how changes in each of the variables in our model would impact nations arms spending. Here, only $a$,$b$, and $r$ will be tested, but the conclusions relate to $c$,$d$ and $s$ in the same way respectively.
 
-Sensitivity of a:
-![ Sensitivity of a](sensitivity_a.png)
-in this case we can see that increases in one countries **Mutual Fear (a)** will lead to increases in both countries spending at all times, this is due to the fact that a higher **a** will lead to **p** wanting to spend more for each unit of **g** arms, so **p** arms will be higher, since c>0 (model definitition), this higher level of **p** arms will also lead to more **g** arms spending
+### Sensitivity of *a*:
 
-Sensitivity of b:
-![ Sensitivity of b](sensitivity_b.png)
-in this case we can see that increases in one countries **expenditure burden (b)** will lead to decreases in both countries spending at all times, this is due to the fact that a higher **b** will lead to **p** wanting to less for each unit of **p** arms, so **p** arms will be lower, since c>0 (model definitition), this lower level of **p** arms will also lead to lower **g** arms spending
+![ Sensitivity of a](sensitivity_a.png){fig-pos="H" width=70%}
 
-Sensitivity of c:
-![ Sensitivity of c](sensitivity_c.png)
-in this case we can see that increases in one countries **goodwill/grievance term (r)** will lead to increases in both countries spending at all times, this is due to the fact that a higher **r**  will lead to **p** wanting to more due to its higher grievance towards **g**, so **p** arms will be higher, since c>0 (model definitition), this higher level of **p** arms will also lead to higher **g** arms spending
+In this case, we can see that increases in one country's **mutual fear (_a_)** will lead to increases in both countries' spending at all times. This is due to the fact that a higher ***a*** will lead to country **P** wanting to spend more for each unit of **G**'s arms, so **P**'s arms will be higher. Since $c>0$ (model definitition), this higher level of **P**'s arms will also lead to higher arms spending by **G**.
 
-> n this section, you should describe the analysis you performed on your extended model. Be
+### Sensitivity of *b*:
+
+![ Sensitivity of b](sensitivity_b.png){fig-pos="H" width=70%}
+
+In this case, we can see that increases in one country's **expenditure burden (_b_)** will lead to decreases in both countries spending at all times, this is due to the fact that a higher ***b*** will lead to **P** wanting to spend less for each unit of **P**'s arms, so **P**'s arms will be lower. Since $c>0$ (model definitition), this lower level of **P**'s arms will also lead to lower **G**'s arms spending
+
+### Sensitivity of *r*:
+
+![ Sensitivity of $r$](sensitivity_c.png){fig-pos="H" width=70%}
+
+In this case, we can see that increases in one country's **trust/hostility (_r_)** will lead to increases in both countries' spending at all times. This is due to the fact that a higher ***r***  will lead to **P** wanting to spend more due to its higher grievance towards **G**, so **P**'s arms will be higher. Since $c>0$ (model definitition), this higher level of **P** arms will also lead to higher **G** arms spending.
+
+<!-- > n this section, you should describe the analysis you performed on your extended model. Be
 sure to motivate your analysis in the context of your research question (i.e., why do you
 want to perform each analysis, what are you hoping it will tell you). These analysis can be
 purely simulation-based: you are not required to perform any mathematical analysis of your
 extended models, but if you can, you should! Mathematical analysis generally tell you more
 about model behaviour than simulations (when both are possible). You should be including
 plots here, as well, to go along with any simulations you did. Unlike with the draft, this
-section of the paper should now be complete and all results should be discussed in the pape
+section of the paper should now be complete and all results should be discussed in the pape -->
 
 # Discussion
 
@@ -468,24 +456,23 @@ this as a way to conclude your whole paper.
 
 ### Zeyn Jaswal
 
-1. Presentation: Overview 
-1. Report: Introduction and Conclusion 
-
+1. Presentation: Overview
+1. Report: Introduction and Conclusion
 
 ### Azzaam Khan
-1. Presentation: Base Model 
+1. Presentation: Base Model
 1. Report: Base Model
 
 ### Timothy Palin
-1. Presentation: Results 
+1. Presentation: Results
 1. Report: Results
 
 ### Tony Xu
-1. Presentation: Logistic Mutual Fear Extension 
+1. Presentation: Logistic Mutual Fear Extension
 1. Report: Logistic Mutual Fear Extension
 
 ### Meredith Reeves
-1. Presentation: Public Sentiment 
+1. Presentation: Public Sentiment
 1. Report: Public Sentiment
 
 \pb
