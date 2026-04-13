@@ -46,10 +46,10 @@ literature and include some citations to support your framing of the real-world 
 that is directly related to your research project. Really focus on what the reader needs to
 know to understand your work, and be interested and excited by it. -->
 
-> The final paragraph of your Introduction should frame your research question and de-
+<!-- > The final paragraph of your Introduction should frame your research question and de-
 scribe what you will be studying in your paper. Briefly mention, in words, what you will
 be doing and showing in the rest of the paper. It is often good to lay out your main find-
-ing/result here, too. 
+ing/result here, too.  -->
 <!-- A good Introduction section for an applied mathematics paper ideally
 has no mathematical symbols or jargon; instead, it should be focused on the real-world con-
 text and what you are trying to study. The math is a tool you will introduce later, not the
@@ -607,15 +607,19 @@ section of the paper should now be complete and all results should be discussed 
 
 ## Motivated analysis of US-Iran with our model
 
-with the current US-IRAN conflict consequences being felt around the world, we wanted to see if our model could properly reflect the sitution. Our assumptions for modelling the conflict were as follows (we set the US=Country P in our model setup, IRAN=Country G);
+With the consequences of the current US-Iran conflict being felt around the world, we wanted to see if our model could properly reflect the sitution. 
+Our assumptions for modelling the conflict were as follows (we set the US=Country P in our model setup, Iran=Country G);
 
-Initial arms spending of the two countries, while relations between US and IRAN wouldnt really have been called "good" for a long time, the countries were in a relatively stable place of arms spending against one another prior to this year.
+Initial arms spending of the two countries, while relations between US and Iran would not really have been called "good" for a long time, the countries were in a relatively stable place of arms spending against one another prior to this year.
 
-Early this year, the US leadership was convinced that IRAN was a more serious threat than previous, and as a result increased their military action against IRAN, in our model this will be taken as an increase in both the grievance held (r increased) and an increase in the fear caused by iranian spending (a increased)
+Early this year, the US leadership was convinced that Iran was a more serious threat than previous, and as a result increased their military action against Iran.
+In our model this will be taken as an increase in both the grievance held ($r$ increased) and an increase in the fear caused by Iranian spending ($a$ increased)
 
-![ US vs IRAN](US_vs_Iran.png){fig-pos="H" width=70%}
+![US vs IRAN](US_vs_Iran.png){fig-pos="H" width=70%}
 
-above, we can see the result of modelling as if this change occurs at t=25 (changing from the conditions in main title, to a=0.8,r=0.05), with the US's escallation also causing IRAN to increase their spending. this is a key prediction, as while the US seemed to think that IRAN would simply give up, that is not very realistic assumption as countries are almost always more willing to fight to protect their nation than to give up. (despite reduced spending because of relatively good relations over the last while, IRAN was still willing to rearm themselves if needed, which is exactly what we saw happen)
+Above, we can see the result of modelling as if this change occurs at $t=25$ (changing from the conditions in main title, to $a=0.8$, $r=0.05$), with the US's escalation also causing Iran to increase their spending. 
+This is a key prediction, because while the US seemed to think that Iran would simply give up, that is not very realistic assumption as countries are almost always more willing to fight to protect their nation than to give up. 
+Despite reduced spending because of relatively good relations over the last while, Iran was still willing to rearm themselves if needed, which is exactly what we saw happen.
 
 
 
@@ -653,11 +657,11 @@ this as a way to conclude your whole paper.
 
 ### Timothy Palin
 1. Presentation: Results
-1. Report: Results, 
+1. Report: Results 
 
 ### Tony Xu
 1. Presentation: Logistic Mutual Fear Extension
-1. Report: Logistic Mutual Fear Extension, Results
+1. Report: Logistic Mutual Fear Extension
 
 ### Meredith Reeves
 1. Presentation: Public Sentiment
