@@ -591,6 +591,21 @@ about model behaviour than simulations (when both are possible). You should be i
 plots here, as well, to go along with any simulations you did. Unlike with the draft, this
 section of the paper should now be complete and all results should be discussed in the pape -->
 
+## Motivated analysis of US-Iran with our model
+
+with the current US-IRAN conflict consequences being felt around the world, we wanted to see if our model could properly reflect the sitution. Our assumptions for modelling the conflict were as follows (we set the US=Country P in our model setup, IRAN=Country G);
+
+Initial arms spending of the two countries, while relations between US and IRAN wouldnt really have been called "good" for a long time, the countries were in a relatively stable place of arms spending against one another prior to this year.
+
+Early this year, the US leadership was convinced that IRAN was a more serious threat than previous, and as a result increased their military action against IRAN, in our model this will be taken as an increase in both the grievance held (r increased) and an increase in the fear caused by iranian spending (a increased)
+
+![ US vs IRAN](US_vs_Iran.png){fig-pos="H" width=70%}
+
+above, we can see the result of modelling as if this change occurs at t=25 (changing from the conditions in main title, to a=0.8,r=0.05), with the US's escallation also causing IRAN to increase their spending. this is a key prediction, as while the US seemed to think that IRAN would simply give up, that is not very realistic assumption as countries are almost always more willing to fight to protect their nation than to give up. (despite reduced spending because of relatively good relations over the last while, IRAN was still willing to rearm themselves if needed, which is exactly what we saw happen)
+
+
+
+
 # Discussion
 
 > This is the final section of the main body of your paper. Start by briefly summarizing

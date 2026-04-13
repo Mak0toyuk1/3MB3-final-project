@@ -430,3 +430,64 @@ dev.off()
 ```
 
 
+```{r}
+#USIRAN function changes value of r and a miday past certain t
+euler_logistic_USIRAN = function(a, b, c, d, r, s, Kp, Kg, p0 = 0.5, g0 = 1,a_new,r_new) {
+  # Matrix: row 1 = time, row 2 = p, row 3 = g
+  ArmsRace = matrix(0, nrow = 3, ncol = steps + 1)
+  ArmsRace[1, 1] = 0
+  ArmsRace[2, 1] = p0
+  ArmsRace[3, 1] = g0
+  
+  for (i in 1:steps) {
+    t_i = ArmsRace[1, i]
+    p_i = ArmsRace[2, i]
+    g_i = ArmsRace[3, i]
+    
+    
+    if (i > 250) {
+      a_use = a_new
+      r_use = r_new
+    } else {
+      a_use = a
+      r_use = r
+    }
+    
+    
+    # Logistic fear adjustment
+    dp = a_use * g_i * (1 - p_i / Kp) - b * p_i + r_use
+    dg = c * p_i * (1 - g_i / Kg) - d * g_i + s
+    
+    ArmsRace[1, i + 1] = t_i + dt
+    ArmsRace[2, i + 1] = p_i + dt * dp
+    ArmsRace[3, i + 1] = g_i + dt * dg
+    
+    # Prevent negative arms levels
+    ArmsRace[2, i + 1] = max(0, ArmsRace[2, i + 1])
+    ArmsRace[3, i + 1] = max(0, ArmsRace[3, i + 1])
+  }
+  
+  return(ArmsRace)
+}
+
+
+
+#US vs IRAN illustration 
+ArmsRace = euler_logistic_USIRAN(a=0.2,b=0.3,c=0.2,d=0.3,r=0,s=0,p0=0.2,g0=0.1,Kp=1,Kg=1,a_new=0.8,r_new=0.05)
+png("US_Vs_IRAN.png", width=1000, height=1000) # Saves plot as a png
+par(cex=3.5)
+plot(ArmsRace[1,], ArmsRace[2,], type = "l",col="blue",
+xlab="Time", ylab="National Arms",
+ylim=c(0,1),
+main ="a=c=0.2, b=d=0.3, r=s=0, Kp=Kg=1",
+cex.main=1,
+#ylim=range(c(ArmsRace[2,],ArmsRace[3,])),
+lwd=10)
+lines(ArmsRace[1,],ArmsRace[3,],col="red",lwd=10)
+
+legend("topright",legend=c("US","IRAN"),col=c("blue","red"),lwd=10,lty=c(1,1),bg = "transparent")
+dev.off()
+
+```
+
+
