@@ -360,14 +360,12 @@ For either hypothetical country P and G, the assumptions for the extended model 
 To incorporate resource limits, we introduce carrying capacities $K_p$ and $K_g$, which represent the maximum sustainable arms levels for countries P and G respectively. The mutual fear terms are now scaled by logistic factors that reduce growth as spending approaches these limits.-->
 
 Based on these assumptions, the following model was formulated:
-
-$\begin{equation}
+\begin{equation}
 \frac{\partial p}{\partial t} = a\left(1 - \frac{p(t)}{K_p}\right)g(t) - bp(t) + r
-\end{equation}$
-
-$\begin{equation}
+\end{equation}
+\begin{equation}
 \frac{\partial g}{\partial t} = c\left(1 - \frac{g(t)}{K_g}\right)p(t) - dg(t) + s
-\end{equation}$
+\end{equation}
 
 Here, $K_p, K_g$ denote the maximum level of sustainable arms spending for countries P and G respectively. The units these parameters assume would be in a common currency such as U.S. dollars. The rest of the parameters and state variables assume the same meaning as specified for the base model.
 
@@ -440,11 +438,9 @@ The eigenvalues of this matrix determine the local stability of the equilibrium.
 ### Equilibrium Points 
 
 We set:
-
 $$
 a\left(1 - \frac{p^*}{K_p}\right)g^* - bp^* + r = 0
 $$
-
 $$
 c\left(1 - \frac{g^*}{K_g}\right)p^* - dg^* + s = 0.
 $$
@@ -495,13 +491,9 @@ $$
 $$
 
 Since
-$$
-a,b,c,d,K_p,K_g,p^*,g^* \geq 0,
-$$
+$a,b,c,d,K_p,K_g,p^*,g^* \geq 0,$
 it follows that
-$$
-\operatorname{tr}(J(p^*,g^*))<0
-$$
+$\operatorname{tr}(J(p^*,g^*))<0$
 for any nonnegative equilibrium point, provided $b+d>0$.
 
 Thus, in the extended model, the trace is automatically negative under the natural assumptions of the scenario.
@@ -511,10 +503,6 @@ Thus, in the extended model, the trace is automatically negative under the natur
 The determinant is
 $$
 \det(J(p^*,g^*))=
-$$
-
-
-$$
 \left(-\frac{ag^*}{K_p}-b\right)\left(-\frac{cp^*}{K_g}-d\right)
 -
 a\left(1-\frac{p^*}{K_p}\right)c\left(1-\frac{g^*}{K_g}\right).
@@ -523,15 +511,10 @@ $$
 Expanding this gives
 $$
 \det(J(p^*,g^*))=
-
-$$
-
-$$
 \left(b+\frac{ag^*}{K_p}\right)\left(d+\frac{cp^*}{K_g}\right)
 -
 ac\left(1-\frac{p^*}{K_p}\right)\left(1-\frac{g^*}{K_g}\right).
 $$
-
 
 Unlike the base model, the determinant of the Jacobian in the extended model depends explicitly on the equilibrium values $p^*$ and $g^*$. 
 
