@@ -55,26 +55,43 @@ has no mathematical symbols or jargon; instead, it should be focused on the real
 text and what you are trying to study. The math is a tool you will introduce later, not the
 main focus of the paper. -->
 
-Since the Iranian Revolution in 1979, relations between the United States and Iran have been defined by long-term strategic competition instead of direct warfare @grant_us_iran_timeline.
+The spread of military technology and the persistence of geopolitical tensions have made arms races a central issue in international relations.
+Since the Iranian Revolution in 1979, relations between the United States and Iran have been defined by long-term strategic competition rather than direct warfare @grant_us_iran_timeline.
 Over the past several decades, both countries have invested in military capabilities aimed at deterring one another, including missile systems, regional alliances, and, most notably, nuclear-related technologies
 @cfr_us_iran_relations.
-In February 2026, the arms race between the two countries escalated to a global conflict, with both sides launching attacks on the other's TODO TODO TODO TODO 
+This type of rivalry reflects a broader global pattern in which nations respond to perceived threats by increasing their own military strength.
+In February 2026, the long-standing arms race between the United States and Iran escalated into open conflict, with both sides carrying out direct military strikes on each other’s strategic targets, marking a radical shift from indirect competition to active confrontation @britannica2026iranwar.
 
+<!-- In February 2026, the arms race between the two countries escalated to a global conflict, with both sides launching attacks on the other's TODO TODO TODO TODO  -->
+
+Arms races are often understood through the lens of strategic interaction, where the actions of one country influence the decisions of another. 
+When one state increases its military spending, its rival may interpret this as a threat and respond in kind, leading to a cycle of escalation.
 Understanding how and why arms races escalate, or stabilize, is important for global security and peacekeeping. 
 Governments and policymakers rely on predictive tools to assess whether increased military investment by one side will provoke retaliation or eventually lead to equilibrium.
 Mathematical models provide a way to explore these dynamics in a <!-- simplified, --> controlled setting, and help us identify the conditions under which competition intensifies or de-escalates.
 These insights can be used to inform development of policies that promote peace between warring countries, and prevent conflict from escalating to a point of no return. 
 
-
+<!-- 
 In this paper, we investigate how an arms race between two rival states, Purple and Green, evolves over time, using the relationship between the United States and Iran as a motivating example. 
 First, we develop a mathematical model to describe how each country adjusts its level of armament in response to the other, factoring in assumptions about public sentiment between the two countries. 
-Then, we analyze the model under different assumptions, such as public sentiment <!-- or resource constraints -->, and we explore whether the system leads to stable outcomes and peace or continuous escalation and eventual conflict.
-Finally, we extend the base model by implementing self limiting mutual logistic fear to account for resource constraints in a real world scenario. 
-Our results show that TODO TODO TODO TODO TODO <!-- the balance between defensive concerns and internal limitations plays a crucial role in determining whether an arms race stabilizes or spirals upward. --> 
+Then, we analyze the model under different assumptions, such as public sentiment or resource constraints, and we explore whether the system leads to stable outcomes and peace or continuous escalation and eventual conflict.
+Finally, we extend the base model by implementing self limiting mutual logistic fear to account for resource constraints in a real world scenario.  -->
+<!-- Our results show that TODO TODO TODO TODO TODO --> 
+<!-- the balance between defensive concerns and internal limitations plays a crucial role in determining whether an arms race stabilizes or spirals upward. --> 
 <!-- The remainder of the paper introduces the model, analyzes its behavior, and discusses the implications of our findings for real-world geopolitical tensions. -->
 
 <!-- In this paper, we investigate how arms spending between two economically competing countries evolves over time. 
 We develop and analyze a mathematical model to represent  -->
+
+In this paper, we investigate how the military spending of two rival countries, Purple (P) and Green (G), evolves over time, using the relationship between the United States and Iran as a motivating example. 
+First, we develop a mathematical model in which each country’s arms spending depends not only on its own policies but also on the actions of its rival. 
+Then, by analyzing both a baseline and an extended version of the model, we show that the base model predicts that each country’s military spending is determined by its response to its rival, leading to a stable equilibrium level of armament. 
+Building on this, the extended model examines how these interactions evolve over time and shows that, if both countries maintain consistent strategies, the system will converge to a stable outcome. 
+Depending on the conditions, this may result in a steady level of military spending or, in some cases, mutual disarmament. 
+The remainder of the paper introduces the model, presents our analysis, and discusses the implications of these results for understanding real-world arms races.
+
+<!-- Then, by analyzing this model, we show that if both countries maintain consistent strategies, the system will tend toward a stable outcome over time. -->
+<!-- Depending on the conditions, this may result in a steady level of military spending or, in some cases, mutual disarmament.  -->
 
 # Base Model
 
@@ -594,7 +611,9 @@ In this case, we can see that increases in one country's expenditure burden ($b$
 
 ![ Sensitivity of $r$](sensitivity_c.png){fig-pos="H" width=70%}
 
-In this case, we can see that increases in one country's **trust/hostility (_r_)** will lead to increases in both countries' spending at all times. This is due to the fact that a higher ***r***  will lead to **P** wanting to spend more due to its higher grievance towards **G**, so **P**'s arms will be higher. Since $c>0$ (model definitition), this higher level of **P** arms will also lead to higher **G** arms spending.
+In this case, we can see that increases in one country's trust/hostility $r$ will lead to increases in both countries' spending at all times. 
+This is due to the fact that a higher $r$  will lead to P wanting to spend more due to its higher grievance towards G, so P's arms will be higher. 
+Since $c>0$ (model definitition), this higher level of P arms will also lead to higher G arms spending.
 
 <!-- > n this section, you should describe the analysis you performed on your extended model. Be
 sure to motivate your analysis in the context of your research question (i.e., why do you
