@@ -39,24 +39,42 @@ header-includes: |
 
 # Introduction
 
-> This section should outline the real-world background and context of your model. Discuss
+<!-- > This section should outline the real-world background and context of your model. Discuss
 the motivation one might have to study this model. You may want to research the relevant
 literature and include some citations to support your framing of the real-world context
 (depending on the project). Be sure to include only background information and context
 that is directly related to your research project. Really focus on what the reader needs to
-know to understand your work, and be interested and excited by it.
+know to understand your work, and be interested and excited by it. -->
 
 > The final paragraph of your Introduction should frame your research question and de-
 scribe what you will be studying in your paper. Briefly mention, in words, what you will
 be doing and showing in the rest of the paper. It is often good to lay out your main find-
-ing/result here, too. A good Introduction section for an applied mathematics paper ideally
+ing/result here, too. 
+<!-- A good Introduction section for an applied mathematics paper ideally
 has no mathematical symbols or jargon; instead, it should be focused on the real-world con-
 text and what you are trying to study. The math is a tool you will introduce later, not the
-main focus of the paper.
+main focus of the paper. -->
 
-<!-- Consider @Talele2025, a great guy who wrote some cool stuff. -->
+Since the Iranian Revolution in 1979, relations between the United States and Iran have been defined by long-term strategic competition instead of direct warfare @grant_us_iran_timeline.
+Over the past several decades, both countries have invested in military capabilities aimed at deterring one another, including missile systems, regional alliances, and, most notably, nuclear-related technologies
+@cfr_us_iran_relations.
+In February 2026, the arms race between the two countries escalated to a global conflict, with both sides launching attacks on the other's TODO TODO TODO TODO 
 
-<!-- Bipolar arms races between two countries @Wallace1979  -->
+Understanding how and why arms races escalate, or stabilize, is important for global security and peacekeeping. 
+Governments and policymakers rely on predictive tools to assess whether increased military investment by one side will provoke retaliation or eventually lead to equilibrium.
+Mathematical models provide a way to explore these dynamics in a <!-- simplified, --> controlled setting, and help us identify the conditions under which competition intensifies or de-escalates.
+These insights can be used to inform development of policies that promote peace between warring countries, and prevent conflict from escalating to a point of no return. 
+
+
+In this paper, we investigate how an arms race between two rival states, Purple and Green, evolves over time, using the relationship between the United States and Iran as a motivating example. 
+First, we develop a mathematical model to describe how each country adjusts its level of armament in response to the other, factoring in assumptions about public sentiment between the two countries. 
+Then, we analyze the model under different assumptions, such as public sentiment <!-- or resource constraints -->, and we explore whether the system leads to stable outcomes and peace or continuous escalation and eventual conflict.
+Finally, we extend the base model by implementing self limiting mutual logistic fear to account for resource constraints in a real world scenario. 
+Our results show that TODO TODO TODO TODO TODO <!-- the balance between defensive concerns and internal limitations plays a crucial role in determining whether an arms race stabilizes or spirals upward. --> 
+<!-- The remainder of the paper introduces the model, analyzes its behavior, and discusses the implications of our findings for real-world geopolitical tensions. -->
+
+<!-- In this paper, we investigate how arms spending between two economically competing countries evolves over time. 
+We develop and analyze a mathematical model to represent  -->
 
 # Base Model
 
@@ -274,7 +292,7 @@ $$
 
 Within the scope of the scenario, this convergence suggests that both countries will reach a stabilized level of spending contingent on what they were initially spending.
 
-### Summary
+## Summary
 
 To summarize the analysis, the base model without any underlying trust or hostily has three types of convergences. Attached alongside each explanation of these convergences are vector plots to illustrate the scenarios. These vector plots were constructed using R. For each R simulation, the parameter values are listed in the title of each plot. The vector plot shows the direction of the nations' arms spending for each possible point in the simulation (showcased by the arrows). The red lines indicate the possible trajectories that each nation's arm spending can take based on their initial spending.
 
@@ -348,7 +366,7 @@ here. That will go in the next section -->
 
 One major limitation of the base model is the assumption that each country has access to infinite resources. In reality, arms spending is constrained by each country's limited amounts of funds. As a result, the base model produces unrealistic outcomes such as unbounded growth in arms expenditure. To address this limitation, we extend the model by introducing logistic growth terms.
 
-### Model overview
+## Model overview
 
 For either hypothetical country P and G, the assumptions for the extended model are as follows:
 
@@ -381,14 +399,14 @@ Parameters:
   - $r, s < 0$: trust / pressure to reduce arms
 - $K_p, K_g$: carrying capacities representing maximum sustainable arms levels -->
 
-### Differences from the Base Model
+## Differences from the Base Model
 
 The extended model differs from the base model in one fundamental way: the inclusion of the logistic terms $\left(1 - \frac{p}{K_p}\right)$ and $\left(1 - \frac{g}{K_g}\right)$.
 
 In particular:
 
-- The base model allows for unbounded growth when mutual fear dominates.
-- The extended model prevents unbounded growth by enforcing resource constraints.
+1. The base model allows for unbounded growth when mutual fear dominates.
+1. The extended model prevents unbounded growth by enforcing resource constraints.
 
 This extension therefore provides a more realistic representation of arms dynamics by combining strategic interaction with physical and economic limitations.
 
@@ -403,7 +421,7 @@ $$
 
 Thus, the long-term behavior of the extended model is governed by the location and stability of the solutions to this nonlinear system. -->
 
-### Jacobian Matrix
+## Jacobian Matrix
 
 To determine the local stability of an equilibrium point, we compute the Jacobian matrix:
 $$
@@ -435,7 +453,7 @@ $$
 
 The eigenvalues of this matrix determine the local stability of the equilibrium.
 
-### Equilibrium Points 
+## Equilibrium Points 
 
 We set:
 $$
@@ -452,8 +470,8 @@ Rearranging the first equation yields:
 $$
 a\left(1 - \frac{p^*}{K_p}\right)g^* = bp^* - r,
 $$
-and hence,
-$$
+<!-- and hence, -->
+$$\implies
 g^* = \frac{K_p(bp^* - r)}{a(K_p - p^*)}, \qquad p^* \neq K_p.
 $$
 
@@ -461,31 +479,27 @@ Similarly, rearranging the second equation gives:
 $$
 c\left(1 - \frac{g^*}{K_g}\right)p^* = dg^* - s,
 $$
-and thus,
-$$
+<!-- and thus, -->
+$$\implies
 p^* = \frac{K_g(dg^* - s)}{c(K_g - g^*)}, \qquad g^* \neq K_g.
 $$
 
 ## Stability Conditions
 
-For a two-dimensional system, an equilibrium point is locally asymptotically stable if the Jacobian evaluated at that point has:
+For a two-dimensional system, an equilibrium point is locally asymptotically stable if the Jacobian evaluated at that point has
+$\operatorname{tr}(J(p^*,g^*))<0$
+and
+$\det(J(p^*,g^*))>0$.
 
-$$
-\operatorname{tr}(J(p^*,g^*))<0
-\qquad \text{and} \qquad
-\det(J(p^*,g^*))>0.
-$$
-
-### Trace
+## Trace
 
 The trace is
 $$
 \operatorname{tr}(J(p^*,g^*))=
 \left(-\frac{ag^*}{K_p}-b\right)+\left(-\frac{cp^*}{K_g}-d\right).
 $$
-
-So,
-$$
+<!-- So, -->
+$$\implies
 \operatorname{tr}(J(p^*,g^*))=
 -\frac{ag^*}{K_p}-\frac{cp^*}{K_g}-(b+d).
 $$
@@ -498,7 +512,7 @@ for any nonnegative equilibrium point, provided $b+d>0$.
 
 Thus, in the extended model, the trace is automatically negative under the natural assumptions of the scenario.
 
-### Determinant
+## Determinant
 
 The determinant is
 $$
@@ -521,7 +535,7 @@ Unlike the base model, the determinant of the Jacobian in the extended model dep
 
 As a result, it is generally not possible to derive a simple analytical condition for stability in terms of the parameters alone.
 
-### Eigenvalues and Stability
+## Eigenvalues and Stability
 
 The eigenvalues of the Jacobian are given by
 $$
@@ -538,7 +552,7 @@ Clearly, this expression depends on the equilibrium values $p^*$ and $g^*$, whic
 
 
 
-### Simulations
+## Simulations
 
  We consider the following three representative parameter regimes while keeping $K_p = K_g = 5$ fixed.
 
@@ -564,19 +578,19 @@ In this case, both countries experience positive external pressure, representing
 ## Sensitivity Analysis
 With regards to the sensivity, we tested how changes in each of the variables in our model would impact nations arms spending. Here, only $a$,$b$, and $r$ will be tested, but the conclusions relate to $c$,$d$ and $s$ in the same way respectively.
 
-### Sensitivity of *a*:
+## Sensitivity of *a*:
 
-![ Sensitivity of a](sensitivity_a.png){fig-pos="H" width=70%}
+![Sensitivity of a](sensitivity_a.png){fig-pos="H" width=70%}
 
-In this case, we can see that increases in one country's **mutual fear (_a_)** will lead to increases in both countries' spending at all times. This is due to the fact that a higher ***a*** will lead to country **P** wanting to spend more for each unit of **G**'s arms, so **P**'s arms will be higher. Since $c>0$ (model definitition), this higher level of **P**'s arms will also lead to higher arms spending by **G**.
+In this case, we can see that increases in one country's mutual fear ($a$) will lead to increases in both countries' spending at all times. This is due to the fact that a higher $a$ will lead to country P wanting to spend more for each unit of G's arms, so P's arms will be higher. Since $c>0$ (model definitition), this higher level of P's arms will also lead to higher arms spending by G.
 
-### Sensitivity of *b*:
+## Sensitivity of *b*:
 
 ![ Sensitivity of b](sensitivity_b.png){fig-pos="H" width=70%}
 
-In this case, we can see that increases in one country's **expenditure burden (_b_)** will lead to decreases in both countries spending at all times, this is due to the fact that a higher ***b*** will lead to **P** wanting to spend less for each unit of **P**'s arms, so **P**'s arms will be lower. Since $c>0$ (model definitition), this lower level of **P**'s arms will also lead to lower **G**'s arms spending
+In this case, we can see that increases in one country's expenditure burden ($b$) will lead to decreases in both countries spending at all times, this is due to the fact that a higher $b$ will lead to P wanting to spend less for each unit of P's arms, so P's arms will be lower. Since $c>0$ (model definitition), this lower level of P's arms will also lead to lower G's arms spending
 
-### Sensitivity of *r*:
+## Sensitivity of *r*:
 
 ![ Sensitivity of $r$](sensitivity_c.png){fig-pos="H" width=70%}
 
@@ -624,8 +638,6 @@ up any other questions? Where else could you go with this work? Are there other 
 you’ve read about in the literature that could be interesting to look at? You should also use
 this as a way to conclude your whole paper.
 
-<!-- ![A Hexapod](hexy.png){ height=130px } -->
-
 \pb
 
 # Appendix: Individual Contributions
@@ -633,7 +645,7 @@ this as a way to conclude your whole paper.
 ### Zeyn Jaswal
 
 1. Presentation: Overview
-1. Report: Introduction and Conclusion
+1. Report: Introduction, Discussion
 
 ### Azzaam Khan
 1. Presentation: Base Model
@@ -641,16 +653,20 @@ this as a way to conclude your whole paper.
 
 ### Timothy Palin
 1. Presentation: Results
-1. Report: Results
+1. Report: Results, 
 
 ### Tony Xu
 1. Presentation: Logistic Mutual Fear Extension
-1. Report: Logistic Mutual Fear Extension
+1. Report: Logistic Mutual Fear Extension, Results
 
 ### Meredith Reeves
 1. Presentation: Public Sentiment
-1. Report: Public Sentiment
+1. Report: Base Model
 
 \pb
 
 # References
+
+<!-- Consider @Talele2025, a great guy who wrote some cool stuff.
+
+Bipolar arms races between two countries @Wallace1979  -->
