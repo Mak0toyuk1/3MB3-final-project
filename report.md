@@ -56,11 +56,11 @@ text and what you are trying to study. The math is a tool you will introduce lat
 main focus of the paper. -->
 
 The spread of military technology and the persistence of geopolitical tensions have made arms races a central issue in international relations.
-Since the Iranian Revolution in 1979, relations between the United States and Iran have been defined by long-term strategic competition rather than direct warfare @grant_us_iran_timeline.
+Since the Iranian Revolution in 1979, relations between the United States and Iran have been defined by long-term strategic competition rather than direct warfare @NazirHussain2015.
 Over the past several decades, both countries have invested in military capabilities aimed at deterring one another, including missile systems, regional alliances, and, most notably, nuclear-related technologies
 @cfr_us_iran_relations.
 This type of rivalry reflects a broader global pattern in which nations respond to perceived threats by increasing their own military strength.
-In February 2026, the long-standing arms race between the United States and Iran escalated into open conflict, with both sides carrying out direct military strikes on each other’s strategic targets, marking a radical shift from indirect competition to active confrontation @britannica2026iranwar.
+In February 2026, the long-standing arms race between the United States and Iran escalated into open conflict, with both sides carrying out direct military strikes on each other’s strategic targets, marking a radical shift from indirect competition to active confrontation @yacoubian2026.
 
 Arms races are often understood through the lens of strategic interaction, where the actions of one country influence the decisions of another. 
 When one state increases its military spending, its rival may interpret this as a threat and respond in kind, leading to a cycle of escalation.
