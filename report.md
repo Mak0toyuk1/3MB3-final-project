@@ -189,7 +189,6 @@ $$\begin{bmatrix}
      \dfrac{\partial p}{\partial t} \\  
      \dfrac{\partial g}{\partial t} \end{bmatrix}
 =0$$
-
 Thus,
 $$
 \begin{bmatrix}
@@ -222,7 +221,7 @@ J =
 \end{bmatrix}
 $$
 
-In order for the scenario of mutual disarmament to be asymptotically stable, the eigenvalues of the jacobian should both be negative. The eigenvalues are given by:
+In order for the scenario of mutual disarmament to be asymptotically stable, the eigenvalues of the Jacobian should both be negative. The eigenvalues are given by:
 $$
 \det(J-I\lambda) =
 \begin{bmatrix}
@@ -233,12 +232,12 @@ $$
 
 The solutions to these eigenvalues are of the form:
 $$
-\lambda = \frac{-(b+d)\pm\sqrt{(b+d)^2-4(bd-ac)}}{2}
+\lambda = \dfrac{-(b+d)\pm\sqrt{(b+d)^2-4(bd-ac)}}{2}
 $$
 
 Expanding the square term in the discriminant and simplifying the equation yields the following:
 $$
-\lambda = \frac{-(b+d)\pm\sqrt{(b-d)^2+4ac}}{2}
+\lambda = \dfrac{-(b+d)\pm\sqrt{(b-d)^2+4ac}}{2}
 $$
 
 It should be noted that because of the non-negative restrictions imposed upon $a,b,c,d$, the discriminant will always remain positive. From this, we expect that the model will always behave monotonically. In other words, the arms spending of countries P and G will not oscillate.
@@ -249,21 +248,21 @@ On the other hand, if $bd<ac$, then the combined mutual fear will outweigh the c
 
 Another point to consider is what happens when $bd = ac$. In this case, we substitute $ac =bd$ in the formula for the eigenvalues:
 $$
-\lambda = \frac{-(b+d)\pm\sqrt{(b+d)^2-4(bd-ac)}}{2} \\
+\lambda = \dfrac{-(b+d)\pm\sqrt{(b+d)^2-4(bd-ac)}}{2} \\
 \lambda = 0,-(b+d)\\
 $$
 
-In this case, one eigenvalue is negative and the other is 0. The closed form sheds further light onto what this implies for the model. To this end, the eigenvalues were substitued back in the Jacobian to derive the eigenvectors.
+In this case, one eigenvalue is negative and the other is $0$. The closed form sheds further light onto what this implies for the model. To this end, the eigenvalues were substitued back in the Jacobian to derive the eigenvectors.
 
 These eigenvectors are
 $$\vec{v}_1=\begin{bmatrix}
-\frac{a}{b}
+\dfrac{a}{b}
 \\
 1
 \end{bmatrix}$$ for $\lambda_1 = 0$ and
 $$
 \vec{v}_2=\begin{bmatrix}
--\frac{a}{d}
+-\dfrac{a}{d}
 \\
 1
 \end{bmatrix}$$ for $\lambda_2 = -(b+d)$.
@@ -276,7 +275,7 @@ $$
 \end{bmatrix}
 =
 \begin{bmatrix}
-    \frac{a}{b} & -\frac{a}{d} \\
+    \dfrac{a}{b} & -\dfrac{a}{d} \\
     1 & 1
 \end{bmatrix}
 \begin{bmatrix}
@@ -284,7 +283,7 @@ $$
     0 & e^{-(b+d) t}
 \end{bmatrix}
 \begin{bmatrix}
-    \frac{a}{b} & -\frac{a}{d} \\
+    \dfrac{a}{b} & -\dfrac{a}{d} \\
     1 & 1
 \end{bmatrix}^{-1}
 \begin{bmatrix}
@@ -301,8 +300,8 @@ $$
 \end{bmatrix}
 =
 \begin{bmatrix}
-   \frac{dp(0)+ag(0)}{b+d} \\
-   \frac{cp(0)+bg(0)}{b+d}
+   \dfrac{dp(0)+ag(0)}{b+d} \\
+   \dfrac{cp(0)+bg(0)}{b+d}
 \end{bmatrix}
 $$
 
@@ -314,11 +313,13 @@ To summarize the analysis, the base model without any underlying trust or hostil
 
 ![Mutual Disarmament](Vecplot1_disarm.png){fig-pos="H" width=50%}
 
-When $bd>ac$, both countries mutually disarm for various initial spending points ((0,0) is a stable equilibrium point). Figure 1 indicates that all the paths in this scenario reach (0,0)
+When $bd>ac$, both countries mutually disarm for various initial spending points ($(0,0)$ is a stable equilibrium point). 
+Figure 1 indicates that all the paths in this scenario reach $(0,0)$.
 
 ![Perpetual Arms Race](Vecplot2_race.png){fig-pos="H" width=50%}
 
-When $bd<ac$, both countries engage in an a perpetual arms race ((0,0) is an unstable equilibrium point). Figure 2 shows each simulation path veering away from (0,0) and going beyond the borders of the graph.
+When $bd<ac$, both countries engage in an a perpetual arms race ($(0,0)$ is an unstable equilibrium point). 
+Figure 2 shows each simulation path veering away from $(0,0)$ and going beyond the borders of the graph.
 
 ![Stable Spending](Vecplot3_stable.png){fig-pos="H" width=50%}
 
@@ -329,32 +330,49 @@ When $bd=ac$, both countries reach a stabilized level of spending contingent on 
 Now that we assume $r,s$ to be some other value other than zero, the model is not homogenous anymore, meaning that there is not a convenient closed form solution of the system as there was before.
 
 The equilibrium point also changes:
-
 $$\begin{bmatrix}
     p^*(t) \\ g^*(t)
-\end{bmatrix} = \begin{bmatrix} \frac{rd+sa}{bd-ac} \\  \frac{rc+sb}{bd-ac}\end{bmatrix}$$
+\end{bmatrix} = \begin{bmatrix} \dfrac{rd+sa}{bd-ac} \\  \dfrac{rc+sb}{bd-ac}\end{bmatrix}$$
 
 Now the convergences of the model may not necessarily converge to zero. To determine the stability conditions of this equilibrium, the Jacobian from the previous form of the model can be reused as the system is still linear. In this case, we have the same stability conditions for the equilibrium point as before: $bd>ac$.
 
-To determine what happens when $bd=ac$, we conduct simulations to adjust the values of r and s. We uncover four cases when we loosen r and s conditions, allowing our trust/hostility parameters to take on $r,s \neq 0$ values. For each case, we provide an explanation accompanied by a vector plot which visualizes convergence. Vector plots were constructed using R, we provide the parameter values in the title of each plot for each case. The vector plot shows the direction of the nations' arms spending for each possible point in the simulation (showcased by the arrows). The red lines indicate the possible trajectories that each nation's arm spending can take based on their initial spending.
+To determine what happens when $bd=ac$, we conduct simulations to adjust the values of $r$ and $s$. 
+We uncover four cases when we loosen $r$ and $s$ conditions, allowing our trust/hostility parameters to take on $r,s \neq 0$ values. 
+For each case, we provide an explanation accompanied by a vector plot which visualizes convergence. 
+Vector plots were constructed using R, we provide the parameter values in the title of each plot for each case.
+The vector plot shows the direction of the nations' arms spending for each possible point in the simulation (showcased by the arrows). 
+The red lines indicate the possible trajectories that each nation's arm spending can take based on their initial spending.
 
 ![Mutual Disarmament](S5_bd_eq_ac.png){fig-pos="H" width=50%}
 
-We observe mutual disarmament in Figure 4, in which spending for all trajectories decays to (0,0) for both nations, when $r<0$ and $s<0$. This represents opposing nations trusting each other. This first case is most similar to the mutual disarmament seen when r and s are zero; however, this mutual disarmament is solely driven by trust between Nations P and G.
+We observe mutual disarmament in Figure 4, in which spending for all trajectories decays to $(0,0)$ for both nations, when $r<0$ and $s<0$. 
+This represents opposing nations trusting each other. 
+This first case is most similar to the mutual disarmament seen when r and s are zero; however, this mutual disarmament is solely driven by trust between Nations P and G.
 
 ![Disarmament and Aramament](S4_bd_eq_ac.png){fig-pos="H" width=50%}
 
-When r and s are of opposing sign, we find that one nation is conciliatory and will disarm, decaying to (0,0), while the other nation is hostile and will arm itself (with bound, not infinitely) for all trajectories. In Figure 5, we set $r<0$ and $s>0$ and observe that, for all trajectories, Nation P fully disarms, while Nation G converges to a bounded value depending on the inital conditions of the system and system parameters. 
+When $r$ and $s$ are of opposing sign, we find that one nation is conciliatory and will disarm, decaying to $(0,0)$, while the other nation is hostile and will arm itself (with bound, not infinitely) for all trajectories. 
+In Figure 5, we set $r<0$ and $s>0$ and observe that, for all trajectories, Nation P fully disarms, while Nation G converges to a bounded value depending on the inital conditions of the system and system parameters. 
 
 ![Symmetric Perpetual Arms Race](S6_bd_eq_ac.png){fig-pos="H" width=50%}
 
-We observe a perpetual arms race in Figure 6, in which spending grows without bound for both nations, when $r>0$ and $s>0$. This represents that opposing nations hold independent grievances. Arms spending will diverge the quickest as Nations P and G arm independently and reactively to the other nation arming itself. It is important to note that this perpetual aramament is balanced; as one can observe, the red trajectory lines converge in a symmetric fashion relative to x- and y-axes.
+We observe a perpetual arms race in Figure 6, in which spending grows without bound for both nations, when $r>0$ and $s>0$. 
+This represents that opposing nations hold independent grievances. 
+Arms spending will diverge the quickest as Nations P and G arm independently and reactively to the other nation arming itself. 
+It is important to note that this perpetual armament is balanced; as one can observe, the red trajectory lines converge in a symmetric fashion relative to x- and y-axes.
 
 ![Asymmetric Perpetual Arms Race](S3_bd_eq_ac.png){fig-pos="H" width=50%}
 
-We observe a perpetual arms race in Figure 7, in which spending grows without bound for both nations. When one of r and s is set to zero (no feelings towards the opposing nation), and the other is set to a positive value (hostile feelings towards the opposing nation). Unlike in the previous perpetual arms race, this aramament is unbalanced; one nation drives the arms race while the other reacts and arms accordingly. In this case, we set $r=0$ and $s>0$ and observe that Nation G drives the arms race while Nation P lags behind in spending; the red trajectory converge in an asymmetric fashion relative to x- and y-axes, growing more quickly in the y-axis (Nation G arms spending).
+We observe a perpetual arms race in Figure 7, in which spending grows without bound for both nations. 
+When one of $r$ and $s$ is set to zero (no feelings towards the opposing nation), and the other is set to a positive value (hostile feelings towards the opposing nation). 
+Unlike in the previous perpetual arms race, this armament is unbalanced; one nation drives the arms race while the other reacts and arms accordingly. 
+In this case, we set $r=0$ and $s>0$ and observe that Nation G drives the arms race while Nation P lags behind in spending; the red trajectory converge in an asymmetric fashion relative to x- and y-axes, growing more quickly in the y-axis (Nation G arms spending).
 
-We believe that the inclusion of $r,s \neq 0$ possiblities, we more accruately predict how real-world nations react to the (dis)aramament of their contemporaries. With $r,s \neq 0$, we can account for goodwill and grievance between nations, where in previous cases with parameters r and s excluded, we could only predict independent behaviour. This model still has flaws, however. In particular, nations are able to arm themselves without bound, which is not realistic as money is a finite resource. We hope that our model extension will correct the issues that our base model is restricted by.
+We believe that the inclusion of $r,s \neq 0$ possiblities, we more accruately predict how real-world nations react to the (dis)aramament of their contemporaries. 
+With $r,s \neq 0$, we can account for goodwill and grievance between nations, where in previous cases with parameters $r$ and $s$ excluded, we could only predict independent behaviour. 
+This model still has flaws, however. 
+In particular, nations are able to arm themselves without bound, which is not realistic as money is a finite resource. 
+We hope that our model extension will correct the issues that our base model is restricted by.
 
 <!-- > This subsection should describe the various analysis you’ve performed on your base model
 and the results you’ve obtained from them. You should be using a mix of analytical tools
@@ -486,7 +504,6 @@ Rearranging the first equation yields:
 $$
 a\left(1 - \frac{p^*}{K_p}\right)g^* = bp^* - r,
 $$
-<!-- and hence, -->
 $$\implies
 g^* = \frac{K_p(bp^* - r)}{a(K_p - p^*)}, \qquad p^* \neq K_p.
 $$
@@ -495,7 +512,6 @@ Similarly, rearranging the second equation gives:
 $$
 c\left(1 - \frac{g^*}{K_g}\right)p^* = dg^* - s,
 $$
-<!-- and thus, -->
 $$\implies
 p^* = \frac{K_g(dg^* - s)}{c(K_g - g^*)}, \qquad g^* \neq K_g.
 $$
@@ -550,7 +566,6 @@ $$
 
 Unlike the base model, the determinant of the Jacobian in the extended model depends explicitly on the equilibrium values $p^*$ and $g^*$. 
 
-
 As a result, it is generally not possible to derive a simple analytical condition for stability in terms of the parameters alone.
 
 ## Eigenvalues and Stability
@@ -561,13 +576,6 @@ $$
 $$
 
 Clearly, this expression depends on the equilibrium values $p^*$ and $g^*$, which are not generally available explicitly. Consequently, the eigenvalues do not yield simple analytical conditions for stability, unlike in the base model.
-
-
-
-
-
-
-
 
 
 ## Simulations
@@ -594,7 +602,7 @@ In this case, both countries experience positive external pressure, representing
 
 # Results
 ## Sensitivity Analysis
-With regards to the sensivity, we tested how changes in each of the variables in our model would impact nations arms spending. Here, only $a$,$b$, and $r$ will be tested, but the conclusions relate to $c$,$d$ and $s$ in the same way respectively.
+With regards to the sensivity, we tested how changes in each of the variables in our model would impact nations arms spending. Here, only $a$, $b$, and $r$ will be tested, but the conclusions relate to $c$, $d$ and $s$ in the same way respectively.
 
 ## Sensitivity of *a*:
 
@@ -604,7 +612,7 @@ In this case, we can see that increases in one country's mutual fear ($a$) will 
 
 ## Sensitivity of *b*:
 
-![ Sensitivity of b](sensitivity_b.png){fig-pos="H" width=70%}
+![Sensitivity of b](sensitivity_b.png){fig-pos="H" width=70%}
 
 In this case, we can see that increases in one country's expenditure burden ($b$) will lead to decreases in both countries spending at all times, this is due to the fact that a higher $b$ will lead to P wanting to spend less for each unit of P's arms, so P's arms will be lower. Since $c>0$ (model definitition), this lower level of P's arms will also lead to lower G's arms spending
 
