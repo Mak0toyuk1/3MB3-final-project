@@ -500,6 +500,8 @@ $$\implies
 p^* = \frac{K_g(dg^* - s)}{c(K_g - g^*)}, \qquad g^* \neq K_g.
 $$
 
+A succinct closed-form expression cannot be conveniently shown for either state variable.
+
 ## Stability Conditions
 
 For a two-dimensional system, an equilibrium point is locally asymptotically stable if the Jacobian evaluated at that point has
@@ -610,8 +612,8 @@ In this case, we can see that increases in one country's expenditure burden ($b$
 
 ![ Sensitivity of $r$](sensitivity_c.png){fig-pos="H" width=70%}
 
-In this case, we can see that increases in one country's trust/hostility $r$ will lead to increases in both countries' spending at all times. 
-This is due to the fact that a higher $r$  will lead to P wanting to spend more due to its higher grievance towards G, so P's arms will be higher. 
+In this case, we can see that increases in one country's trust/hostility $r$ will lead to increases in both countries' spending at all times.
+This is due to the fact that a higher $r$  will lead to P wanting to spend more due to its higher grievance towards G, so P's arms will be higher.
 Since $c>0$ (model definitition), this higher level of P arms will also lead to higher G arms spending.
 
 <!-- > n this section, you should describe the analysis you performed on your extended model. Be
@@ -625,7 +627,7 @@ section of the paper should now be complete and all results should be discussed 
 
 ## Motivated analysis of US-Iran with our model
 
-With the consequences of the current US-Iran conflict being felt around the world, we wanted to see if our model could properly reflect the sitution. 
+With the consequences of the current US-Iran conflict being felt around the world, we wanted to see if our model could properly reflect the sitution.
 Our assumptions for modelling the conflict were as follows (we set the US=Country P in our model setup, Iran=Country G);
 
 Initial arms spending of the two countries, while relations between US and Iran would not really have been called "good" for a long time, the countries were in a relatively stable place of arms spending against one another prior to this year.
@@ -635,12 +637,9 @@ In our model this will be taken as an increase in both the grievance held ($r$ i
 
 ![US vs Iran](US_Vs_IRAN.png){fig-pos="H" width=70%}
 
-Above, we can see the result of modelling as if this change occurs at $t=25$ (changing from the conditions in main title, to $a=0.8$, $r=0.05$), with the US's escalation also causing Iran to increase their spending. 
-This is a key prediction, because while the US seemed to think that Iran would simply give up, that is not very realistic assumption as countries are almost always more willing to fight to protect their nation than to give up. 
+Above, we can see the result of modelling as if this change occurs at $t=25$ (changing from the conditions in main title, to $a=0.8$, $r=0.05$), with the US's escalation also causing Iran to increase their spending.
+This is a key prediction, because while the US seemed to think that Iran would simply give up, that is not very realistic assumption as countries are almost always more willing to fight to protect their nation than to give up.
 Despite reduced spending because of relatively good relations over the last while, Iran was still willing to rearm themselves if needed, which is exactly what we saw happen.
-
-
-
 
 # Discussion
 
@@ -668,18 +667,18 @@ Our results show that arms spending is inherently interdependent: each country�
 In the base model, this interaction leads to a stable equilibrium level of military spending determined by mutual responses. 
 In the extended model, we introduced self-limiting logistic growth to reflect the idea that military expansion is constrained by factors such as economic capacity and resource limitations. 
 With this addition, we found that when countries maintain consistent strategies over time, the system converges to a stable outcome.
-Depending on the conditions, this may result in a sustained level of military expenditure or, in some cases, mutual disarmament. 
+Depending on the conditions, this may result in a sustained level of military expenditure or, in some cases, mutual disarmament.
 These results reinforce the idea that long-term arms race dynamics are shaped not only by strategic competition but also by inherent limits on growth.
 
-In the real-world context, this suggests that even in persistent rivalries such as that between the United States and Iran, unlimited escalation is unlikely. 
-Economic and practical constraints can naturally restrict the growth of military spending, potentially leading to stabilization over time. 
+In the real-world context, this suggests that even in persistent rivalries such as that between the United States and Iran, unlimited escalation is unlikely.
+Economic and practical constraints can naturally restrict the growth of military spending, potentially leading to stabilization over time.
 This highlights the importance of considering both strategic interactions and internal limitations when analyzing global security dynamics.
 
-However, this model has several limitations. 
-First, it simplifies the real-world situation by considering only two interacting countries, but actual arms race dynamics often involve multiple states, alliances, and broader geopolitical blocs. 
+However, this model has several limitations.
+First, it simplifies the real-world situation by considering only two interacting countries, but actual arms race dynamics often involve multiple states, alliances, and broader geopolitical blocs.
 Second, the model assumes that all parameters remain constant over time, including levels of trust, hostility, and responsiveness to rival actions, despite the fact that these factors can change significantly due to political events, leadership shifts, or international agreements.
-Third, we assume that both countries behave in a rational and consistent manner according to the model’s structure, whereas in reality decision-making may be influenced by misperceptions, misinformation, or domestic political pressures. 
-Fourth, the representation of trust and hostility as a constant additive effect is a major simplification, since these relationships evolve dynamically based on historical interactions and ongoing signals between states. 
+Third, we assume that both countries behave in a rational and consistent manner according to the model’s structure, whereas in reality decision-making may be influenced by misperceptions, misinformation, or domestic political pressures.
+Fourth, the representation of trust and hostility as a constant additive effect is a major simplification, since these relationships evolve dynamically based on historical interactions and ongoing signals between states.
 Finally, although the extended model introduces logistic growth to incorporate resource limitations, this remains a simplified approximation of real economic and structural constraints, which are influenced by a wide range of unpredictable factors such as sanctions, technological development, and economic shocks.
 
 <!-- However, this model has several limitations. 
@@ -724,8 +723,402 @@ In more advanced models, such dynamics have been studied in classical work such 
 
 \pb
 
+# Appendix: Code
+
+## Base model
+
+```{r}
+vplot = function(pngname,a,b,c,d,r,s,y1,y2,y3){
+
+p_vals <- seq(0, 2, length.out = 10)
+g_vals <- seq(0, 2, length.out = 10)
+
+grid <- expand.grid(p = p_vals, g = g_vals)
+
+# Compute derivatives at each grid point
+dp <- numeric(nrow(grid))
+dg <- numeric(nrow(grid))
+
+
+for (i in 1:nrow(grid)) {
+  state <- c(grid$x1[i], grid$x2[i])
+  dp[i] <- a*grid$g[i]-b*grid$p[i]+r
+  dg[i] <- c*grid$p[i]-d*grid$g[i]+s
+}
+
+euler1=euler(a,b,c,d,r,s,p0=y1[1],g0=y1[2])
+euler2=euler(a,b,c,d,r,s,p0=y2[1],g0=y2[2])
+euler3=euler(a,b,c,d,r,s,p0=y3[1],g0=y3[2])
+
+
+png(pngname,width=1000,height=1000)
+plot(grid$p, grid$g, pch = 20, col = "lightgray",
+     cex.main=3,cex.lab=5,main = paste("a=" ,a, ", b=" ,b,", c=" ,c,", d=",d,", r=",r,", s=",s), xlab = "p", ylab = "g")
+
+
+points(y1[1],y1[2],col="black",cex=2,pch=16)
+lines(euler1[2,],euler1[3,],col="red",lwd=5)
+
+points(y2[1],y2[2],col="black",cex=2,pch=16)
+lines(euler2[2,],euler2[3,],col="red",lwd=5)
+
+points(y3[1],y3[2],col="black",cex=2,pch=16)
+lines(euler3[2,],euler3[3,],col="red",lwd=5)
+
+
+arrows(grid$p, grid$g,
+       grid$p + 0.2 * dp,
+       grid$g + 0.2 * dg,
+       length = 0.8, col = "blue",lwd=4)
+
+legend("topleft",
+       legend = c("Instantaneous change", "Simulation start point", "Simulation"),
+       col = c("blue", "black", "red"),
+       lty = c(1, NA, 1),
+       pch = c(NA, 16, NA),
+       lwd = c(8, NA, 8))
+
+dev.off()
+}
+
+vplot("Vecplot1_disarm.png",a=0.4,b=0.8,c=0.3,d=0.2,r=0,s=0,y1=c(0.3,1.4),y2=c(1.4,0.2),y3=c(1.6,0.5))
+vplot("Vecplot2_race.png",a=0.4,b=0.8,c=0.3,d=0.2,r=0,s=0,y1=c(0.3,1.4),y2=c(1.4,0.2),y3=c(1.6,0.5))
+vplot("Vecplot3_stable.png",a=0.4,b=0.8,c=0.3,d=0.2,r=0,s=0,y1=c(0.3,1.4),y2=c(1.4,0.2),y3=c(1.6,0.5))
+```
+
+## Trust/Hostility
+
+```{r}
+t = 500
+dt = 0.1
+steps = t / dt
+
+euler_no_trust = function(a, b, c, d, r, s, Kp, Kg, p0 = 0.5, g0 = 1) {
+  ArmsRace = matrix(0, nrow = 3, ncol = steps + 1)
+  ArmsRace[1, 1] = 0
+  ArmsRace[2, 1] = p0
+  ArmsRace[3, 1] = g0
+  
+  for (i in 1:steps) {
+    t_i = ArmsRace[1, i]
+    p_i = ArmsRace[2, i]
+    g_i = ArmsRace[3, i]
+    
+    dp = a * g_i - b * p_i + r
+    dg = c * p_i - d * g_i + s
+    
+    ArmsRace[1, i + 1] = t_i + dt
+    ArmsRace[2, i + 1] = p_i + dt * dp
+    ArmsRace[3, i + 1] = g_i + dt * dg
+    
+    ArmsRace[2, i + 1] = max(0, ArmsRace[2, i + 1])
+    ArmsRace[3, i + 1] = max(0, ArmsRace[3, i + 1])
+  }
+  return(ArmsRace)
+}
+
+vplot_no_trust = function(pngname, a, b, c, d, r, s,
+                          y1, y2, y3,
+                          xlim_max = 2, ylim_max = 2, title = NULL) {
+  p_vals <- seq(0, xlim_max, length.out = 20)
+  g_vals <- seq(0, ylim_max, length.out = 20)
+  grid   <- expand.grid(p = p_vals, g = g_vals)
+  
+  dp <- numeric(nrow(grid))
+  dg <- numeric(nrow(grid))
+  
+  for (i in 1:nrow(grid)) {
+    dp[i] <- a * grid$g[i] - b * grid$p[i] + r
+    dg[i] <- c * grid$p[i] - d * grid$g[i] + s
+  }
+  
+  magnitude <- sqrt(dp^2 + dg^2)
+  nonzero   <- magnitude > 1e-6
+  
+  euler1 = euler_no_trust(a, b, c, d, r, s, p0=y1[1], g0=y1[2])
+  euler2 = euler_no_trust(a, b, c, d, r, s, p0=y2[1], g0=y2[2])
+  euler3 = euler_no_trust(a, b, c, d, r, s, p0=y3[1], g0=y3[2])
+  
+  main_title <- if (!is.null(title)) title else
+    paste("a=",a,", b=",b,", c=",c,", d=",d,", r=",r,", s=",s,", Kp=",Kp,", Kg=",Kg)
+  
+  png(pngname, width=1000, height=1000)
+  par(cex=1.1, mar=c(5, 6, 4, 2), cex.main=2)
+  plot(grid$p, grid$g, pch=20, col="lightgray",
+       cex.main=2, cex.lab=5,
+       main=main_title,
+       xlab="p", ylab="g",
+       xlim=c(0, xlim_max), ylim=c(0, ylim_max))
+  
+  points(y1[1], y1[2], col="black", cex=2, pch=16)
+  lines(euler1[2,], euler1[3,], col="red", lwd=5)
+  
+  points(y2[1], y2[2], col="black", cex=2, pch=16)
+  lines(euler2[2,], euler2[3,], col="red", lwd=5)
+  
+  points(y3[1], y3[2], col="black", cex=2, pch=16)
+  lines(euler3[2,], euler3[3,], col="red", lwd=5)
+  
+  arrows(grid$p[nonzero], grid$g[nonzero],
+         grid$p[nonzero] + 0.15 * dp[nonzero],
+         grid$g[nonzero] + 0.15 * dg[nonzero],
+         length=0.15, col="blue")
+  
+  legend("topleft",
+         legend=c("Instantaneous change", "Simulation start", "Simulation"),
+         col=c("blue","black","red"),
+         lty=c(1, NA, 1),
+         pch=c(NA, 16, NA),
+         lwd=c(1, NA, 2),
+         cex=2)
+  dev.off()
+}
+
+# S3: bd = ac — both diverge
+vplot_no_trust("S3_bd_eq_ac.png",
+               a=0.1, b=0.1, c=0.1, d=0.1,
+               r=0, s=20,
+               y1=c(40, 80),
+               y2=c(100, 150),
+               y3=c(200, 50),
+               xlim_max=300, ylim_max=300,
+               title="a=0.1,b=0.1,c=1,d=0.1,r=0,s=20")
+
+# S4: bd = ac — one grows-one shrinks
+vplot_no_trust("S4_bd_eq_ac.png",
+               a=0.1, b=0.1, c=0.1, d=0.1,
+               r=-20, s=20,
+               y1=c(40, 80),
+               y2=c(100, 150),
+               y3=c(200, 50),
+               xlim_max=300, ylim_max=300,
+               title="a=0.1,b=0.1,c=1,d=0.1,r=-20,s=20")
+
+# S5: bd = ac — disarmament
+vplot_no_trust("S5_bd_eq_ac.png",
+               a=0.1, b=0.1, c=0.1, d=0.1,
+               r=-20, s=-20,
+               y1=c(40, 80),
+               y2=c(100, 150),
+               y3=c(200, 50),
+               xlim_max=300, ylim_max=300,
+               title="a=0.1,b=0.1,c=1,d=0.1,r=-20,s=-20")
+
+# S6: bd = ac — arms race
+vplot_no_trust("S6_bd_eq_ac.png",
+               a=0.1, b=0.1, c=0.1, d=0.1,
+               r=20, s=20,
+               y1=c(40, 80),
+               y2=c(100, 150),
+               y3=c(200, 50),
+               xlim_max=300, ylim_max=300,
+               title="a=0.1,b=0.1,c=1,d=0.1,r=20,s=20")
+```
+
+## Model extension
+
+```{r}
+# Create a new euler function with the logistic adjustments and fit the plots. 
+
+# Simulation variables
+t = 50
+dt = 0.1
+steps = t / dt
+
+euler_logistic = function(a, b, c, d, r, s, Kp, Kg, p0 = 0.5, g0 = 1) {
+  # Matrix: row 1 = time, row 2 = p, row 3 = g
+  ArmsRace = matrix(0, nrow = 3, ncol = steps + 1)
+  ArmsRace[1, 1] = 0
+  ArmsRace[2, 1] = p0
+  ArmsRace[3, 1] = g0
+  
+  for (i in 1:steps) {
+    t_i = ArmsRace[1, i]
+    p_i = ArmsRace[2, i]
+    g_i = ArmsRace[3, i]
+    
+    # Logistic fear adjustment
+    dp = a * g_i * (1 - p_i / Kp) - b * p_i + r
+    dg = c * p_i * (1 - g_i / Kg) - d * g_i + s
+    
+    ArmsRace[1, i + 1] = t_i + dt
+    ArmsRace[2, i + 1] = p_i + dt * dp
+    ArmsRace[3, i + 1] = g_i + dt * dg
+    
+    # Prevent negative arms levels
+    ArmsRace[2, i + 1] = max(0, ArmsRace[2, i + 1])
+    ArmsRace[3, i + 1] = max(0, ArmsRace[3, i + 1])
+  }
+  
+  return(ArmsRace)
+}
+
+# Case 1
+ArmsRace = euler_logistic(a = 0.1, b = 0.7, c = 0.2, d = 0.1,
+                          r = 0, s = 0, Kp = 5, Kg = 5)
+
+png("logistic_case1.png", width = 1000, height = 1000)
+par(cex = 3.5)
+plot(ArmsRace[1, ], ArmsRace[2, ], type = "l", col = "blue",
+     xlab = "Time", ylab = "National Arms",
+     main = "Logistic fear: a=0.1, b=0.7, c=0.2, d=0.1, Kp=5, Kg=5",
+     ylim = range(c(ArmsRace[2, ], ArmsRace[3, ])), lwd = 10)
+lines(ArmsRace[1, ], ArmsRace[3, ], col = "red", lwd = 10)
+legend("topright", legend = c("Nation P", "Nation G"),
+       col = c("blue", "red"), lwd = 10)
+dev.off()
+
+# Case 2
+ArmsRace = euler_logistic(a = 0.5, b = 0.5, c = 0.2, d = 0.1,
+                          r = 0, s = 0, Kp = 5, Kg = 5)
+
+png("logistic_case2.png", width = 1000, height = 1000)
+par(cex = 3.5)
+plot(ArmsRace[1, ], ArmsRace[2, ], type = "l", col = "blue",
+     xlab = "Time", ylab = "National Arms",
+     main = "Logistic fear: a=0.5, b=0.5, c=0.2, d=0.1, Kp=5, Kg=5",
+     ylim = range(c(ArmsRace[2, ], ArmsRace[3, ])), lwd = 10)
+lines(ArmsRace[1, ], ArmsRace[3, ], col = "red", lwd = 10)
+legend("topleft", legend = c("Nation P", "Nation G"),
+       col = c("blue", "red"), lwd = 10)
+dev.off()
+
+# Case 3
+ArmsRace = euler_logistic(a = 0.7, b = 0.5, c = 0.5, d = 0.7,
+                          r = 0, s = 0, Kp = 5, Kg = 5)
+
+png("logistic_case3.png", width = 1000, height = 1000)
+par(cex = 3.5)
+plot(ArmsRace[1, ], ArmsRace[2, ], type = "l", col = "blue",
+     xlab = "Time", ylab = "National Arms",
+     main = "Logistic fear: a=0.7, b=0.5, c=0.5, d=0.7, Kp=5, Kg=5",
+     ylim = range(c(ArmsRace[2, ], ArmsRace[3, ])), lwd = 10)
+lines(ArmsRace[1, ], ArmsRace[3, ], col = "red", lwd = 10)
+legend("right", legend = c("Nation P", "Nation G"),
+       col = c("blue", "red"), lwd = 10)
+dev.off()
+```
+
+## Results
+
+```{r}
+#sensitivity a, 
+ArmsRace = euler_logistic(a=0.5,b=0.2,c=0.25,d=0.2,r=0,s=0,p0=0.8,g0=0.4,Kp=1,Kg=1)
+png("sensitivity_a.png", width=1000, height=1000) # Saves plot as a png
+par(cex=3.5)
+plot(ArmsRace[1,], ArmsRace[2,], type = "l",col="blue",
+xlab="Time", ylab="National Arms",
+ylim=c(0,1),
+main ="c=0.25, b=d=0.2, r=s=0, Kp=Kg=1",
+cex.main=1,
+#ylim=range(c(ArmsRace[2,],ArmsRace[3,])),
+lwd=10)
+lines(ArmsRace[1,],ArmsRace[3,],col="red",lwd=10)
+ArmsRace=euler_logistic(a=0.25,b=0.2,c=0.25,d=0.2,r=0,s=0,p0=0.8,g0=0.4,Kp=1,Kg=1)
+lines(ArmsRace[1,],ArmsRace[2,],lty=3,col="blue",lwd=10)
+lines(ArmsRace[1,],ArmsRace[3,],lty=3,col="red",lwd=10)
+legend("topright",legend=c("Nation P (a=0.5)","Nation G (a=0.5)","Nation P (a=0.25)","Nation G (a=0.25)"),col=c("blue","red"),lwd=10,lty=c(1,1,3,3),bg = "transparent")
+dev.off()
+
+
+
+#sensitivity b, 
+ArmsRace = euler_logistic(a=0.25,b=0.4,c=0.25,d=0.2,r=0,s=0,p0=0.8,g0=0.4,Kp=1,Kg=1)
+png("sensitivity_b.png", width=1000, height=1000) # Saves plot as a png
+par(cex=3.5)
+plot(ArmsRace[1,], ArmsRace[2,], type = "l",col="blue",
+xlab="Time", ylab="National Arms",
+ylim=c(0,1),
+main ="a=c=0.25, d=0.2, r=s=0, Kp=Kg=1",
+cex.main=1,
+#ylim=range(c(ArmsRace[2,],ArmsRace[3,])),
+lwd=10)
+lines(ArmsRace[1,],ArmsRace[3,],col="red",lwd=10)
+ArmsRace=euler_logistic(a=0.25,b=0.2,c=0.25,d=0.2,r=0,s=0,p0=0.8,g0=0.4,Kp=1,Kg=1)
+lines(ArmsRace[1,],ArmsRace[2,],lty=3,col="blue",lwd=10)
+lines(ArmsRace[1,],ArmsRace[3,],lty=3,col="red",lwd=10)
+legend("topright",legend=c("Nation P (b=0.4)","Nation G (b=0.4)","Nation P (b=0.2)","Nation G (b=0.2)"),col=c("blue","red"),lwd=10,lty=c(1,1,3,3),bg = "transparent")
+dev.off()
+
+
+#sensitivity r, 
+ArmsRace = euler_logistic(a=0.25,b=0.2,c=0.25,d=0.2,r=0.1,s=0,p0=0.8,g0=0.4,Kp=1,Kg=1)
+png("sensitivity_c.png", width=1000, height=1000) # Saves plot as a png
+par(cex=3.5)
+plot(ArmsRace[1,], ArmsRace[2,], type = "l",col="blue",
+xlab="Time", ylab="National Arms",
+ylim=c(0,1),
+main ="a=c=0.25, b=d=0.2, s=0, Kp=Kg=1",
+cex.main=1,
+#ylim=range(c(ArmsRace[2,],ArmsRace[3,])),
+lwd=10)
+lines(ArmsRace[1,],ArmsRace[3,],col="red",lwd=10)
+ArmsRace=euler_logistic(a=0.25,b=0.2,c=0.25,d=0.2,r=0,s=0,p0=0.8,g0=0.4,Kp=1,Kg=1)
+lines(ArmsRace[1,],ArmsRace[2,],lty=3,col="blue",lwd=10)
+lines(ArmsRace[1,],ArmsRace[3,],lty=3,col="red",lwd=10)
+legend("topright",legend=c("Nation P (r=0.1)","Nation G (r=0.1)","Nation P (r=0)","Nation G (r=0)"),col=c("blue","red"),lwd=10,lty=c(1,1,3,3),bg = "transparent")
+dev.off()
+```
+
+## Discussion
+
+```{r}
+#USIRAN function changes value of r and a midday past certain t
+euler_logistic_USIRAN = function(a, b, c, d, r, s, Kp, Kg, p0 = 0.5, g0 = 1,a_new,r_new) {
+  # Matrix: row 1 = time, row 2 = p, row 3 = g
+  ArmsRace = matrix(0, nrow = 3, ncol = steps + 1)
+  ArmsRace[1, 1] = 0
+  ArmsRace[2, 1] = p0
+  ArmsRace[3, 1] = g0
+  
+  for (i in 1:steps) {
+    t_i = ArmsRace[1, i]
+    p_i = ArmsRace[2, i]
+    g_i = ArmsRace[3, i]
+    
+    
+    if (i > 250) {
+      a_use = a_new
+      r_use = r_new
+    } else {
+      a_use = a
+      r_use = r
+    }
+    
+    
+    # Logistic fear adjustment
+    dp = a_use * g_i * (1 - p_i / Kp) - b * p_i + r_use
+    dg = c * p_i * (1 - g_i / Kg) - d * g_i + s
+    
+    ArmsRace[1, i + 1] = t_i + dt
+    ArmsRace[2, i + 1] = p_i + dt * dp
+    ArmsRace[3, i + 1] = g_i + dt * dg
+    
+    # Prevent negative arms levels
+    ArmsRace[2, i + 1] = max(0, ArmsRace[2, i + 1])
+    ArmsRace[3, i + 1] = max(0, ArmsRace[3, i + 1])
+  }
+  
+  return(ArmsRace)
+}
+
+
+
+#US vs IRAN illustration 
+ArmsRace = euler_logistic_USIRAN(a=0.2,b=0.3,c=0.2,d=0.3,r=0,s=0,p0=0.2,g0=0.1,Kp=1,Kg=1,a_new=0.8,r_new=0.05)
+png("US_Vs_IRAN.png", width=1000, height=1000) # Saves plot as a png
+par(cex=3.5)
+plot(ArmsRace[1,], ArmsRace[2,], type = "l",col="blue",
+xlab="Time", ylab="National Arms",
+ylim=c(0,1),
+main ="a=c=0.2, b=d=0.3, r=s=0, Kp=Kg=1",
+cex.main=1,
+#ylim=range(c(ArmsRace[2,],ArmsRace[3,])),
+lwd=10)
+lines(ArmsRace[1,],ArmsRace[3,],col="red",lwd=10)
+
+legend("topright",legend=c("US","IRAN"),col=c("blue","red"),lwd=10,lty=c(1,1),bg = "transparent")
+dev.off()
+```
+
 # References
-
-<!-- Consider @Talele2025, a great guy who wrote some cool stuff.
-
-Bipolar arms races between two countries @Wallace1979  -->

@@ -431,7 +431,7 @@ dev.off()
 
 
 ```{r}
-#USIRAN function changes value of r and a miday past certain t
+#USIRAN function changes value of r and a midday past certain t
 euler_logistic_USIRAN = function(a, b, c, d, r, s, Kp, Kg, p0 = 0.5, g0 = 1,a_new,r_new) {
   # Matrix: row 1 = time, row 2 = p, row 3 = g
   ArmsRace = matrix(0, nrow = 3, ncol = steps + 1)
