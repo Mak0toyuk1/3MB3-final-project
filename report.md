@@ -62,8 +62,6 @@ Over the past several decades, both countries have invested in military capabili
 This type of rivalry reflects a broader global pattern in which nations respond to perceived threats by increasing their own military strength.
 In February 2026, the long-standing arms race between the United States and Iran escalated into open conflict, with both sides carrying out direct military strikes on each other’s strategic targets, marking a radical shift from indirect competition to active confrontation @britannica2026iranwar.
 
-<!-- In February 2026, the arms race between the two countries escalated to a global conflict, with both sides launching attacks on the other's TODO TODO TODO TODO  -->
-
 Arms races are often understood through the lens of strategic interaction, where the actions of one country influence the decisions of another. 
 When one state increases its military spending, its rival may interpret this as a threat and respond in kind, leading to a cycle of escalation.
 Understanding how and why arms races escalate, or stabilize, is important for global security and peacekeeping. 
@@ -71,6 +69,7 @@ Governments and policymakers rely on predictive tools to assess whether increase
 Mathematical models provide a way to explore these dynamics in a <!-- simplified, --> controlled setting, and help us identify the conditions under which competition intensifies or de-escalates.
 These insights can be used to inform development of policies that promote peace between warring countries, and prevent conflict from escalating to a point of no return. 
 
+<!-- In February 2026, the arms race between the two countries escalated to a global conflict, with both sides launching attacks on the other's TODO TODO TODO TODO  -->
 <!-- 
 In this paper, we investigate how an arms race between two rival states, Purple and Green, evolves over time, using the relationship between the United States and Iran as a motivating example. 
 First, we develop a mathematical model to describe how each country adjusts its level of armament in response to the other, factoring in assumptions about public sentiment between the two countries. 
@@ -632,9 +631,9 @@ Our assumptions for modelling the conflict were as follows (we set the US=Countr
 Initial arms spending of the two countries, while relations between US and Iran would not really have been called "good" for a long time, the countries were in a relatively stable place of arms spending against one another prior to this year.
 
 Early this year, the US leadership was convinced that Iran was a more serious threat than previous, and as a result increased their military action against Iran.
-In our model this will be taken as an increase in both the grievance held ($r$ increased) and an increase in the fear caused by Iranian spending ($a$ increased)
+In our model this will be taken as an increase in both the grievance held ($r$ increased) and an increase in the fear caused by Iranian spending ($a$ increased).
 
-![US vs IRAN](US_vs_Iran.png){fig-pos="H" width=70%}
+![US vs Iran](US_Vs_IRAN.png){fig-pos="H" width=70%}
 
 Above, we can see the result of modelling as if this change occurs at $t=25$ (changing from the conditions in main title, to $a=0.8$, $r=0.05$), with the US's escalation also causing Iran to increase their spending. 
 This is a key prediction, because while the US seemed to think that Iran would simply give up, that is not very realistic assumption as countries are almost always more willing to fight to protect their nation than to give up. 
@@ -645,12 +644,12 @@ Despite reduced spending because of relatively good relations over the last whil
 
 # Discussion
 
-> This is the final section of the main body of your paper. Start by briefly summarizing
+<!-- > This is the final section of the main body of your paper. Start by briefly summarizing
 the main results you presented in the last section and relating them back to your research
 question. This is also where you should be providing answers, based on your results, to your research question(s). Be sure to interpret your results in the context of the real-world
-scenario framing your project. What are the implications of your results?
+scenario framing your project. What are the implications of your results? -->
 
-> You should also discuss limitations of your work. This is usually related to the modelling
+<!-- > You should also discuss limitations of your work. This is usually related to the modelling
 assumptions you made before. When are your results applicable and when are they not
 applicable? What factors have you omitted from your model that may affect the predictions?
 This is important to discuss, otherwise the reader may come away from your paper with the
@@ -659,7 +658,44 @@ impression that your results are universal which is rarely the case.
 > Finally, you should discuss possible directions for future research. Did your results open
 up any other questions? Where else could you go with this work? Are there other things
 you’ve read about in the literature that could be interesting to look at? You should also use
-this as a way to conclude your whole paper.
+this as a way to conclude your whole paper. -->
+
+In this paper, we examined how an arms race between two rival countries evolves, motivated by the long-standing strategic competition between the United States and Iran. 
+Our goal was to understand how military spending decisions are influenced not only by internal policies but also by the actions of a rival state. 
+By developing and analyzing both a baseline and an extended version of the model, we were able to explore how these interactions shape long-term outcomes.
+
+Our results show that arms spending is inherently interdependent: each country’s decisions are influenced by the behavior of the other. 
+In the base model, this interaction leads to a stable equilibrium level of military spending determined by mutual responses. 
+In the extended model, we introduced self-limiting logistic growth to reflect the idea that military expansion is constrained by factors such as economic capacity and resource limitations. 
+With this addition, we found that when countries maintain consistent strategies over time, the system converges to a stable outcome.
+Depending on the conditions, this may result in a sustained level of military expenditure or, in some cases, mutual disarmament. 
+These results reinforce the idea that long-term arms race dynamics are shaped not only by strategic competition but also by inherent limits on growth.
+
+In the real-world context, this suggests that even in persistent rivalries such as that between the United States and Iran, unlimited escalation is unlikely. 
+Economic and practical constraints can naturally restrict the growth of military spending, potentially leading to stabilization over time. 
+This highlights the importance of considering both strategic interactions and internal limitations when analyzing global security dynamics.
+
+However, this model has several limitations. 
+First, it simplifies the real-world situation by considering only two interacting countries, but actual arms race dynamics often involve multiple states, alliances, and broader geopolitical blocs. 
+Second, the model assumes that all parameters remain constant over time, including levels of trust, hostility, and responsiveness to rival actions, despite the fact that these factors can change significantly due to political events, leadership shifts, or international agreements.
+Third, we assume that both countries behave in a rational and consistent manner according to the model’s structure, whereas in reality decision-making may be influenced by misperceptions, misinformation, or domestic political pressures. 
+Fourth, the representation of trust and hostility as a constant additive effect is a major simplification, since these relationships evolve dynamically based on historical interactions and ongoing signals between states. 
+Finally, although the extended model introduces logistic growth to incorporate resource limitations, this remains a simplified approximation of real economic and structural constraints, which are influenced by a wide range of unpredictable factors such as sanctions, technological development, and economic shocks.
+
+<!-- However, this model has several limitations. 
+It assumes that each country follows a consistent and rational strategy, which may not hold in practice due to changing political leadership, misperceptions, or unexpected external events. 
+The use of logistic growth captures resource limitations in a simplified way, but real-world constraints are more complex and may vary over time.
+Additionally, the model focuses only on two countries and does not account for the influence of allies, regional conflicts, or non-state actors. 
+Other important factors, such as technological innovation and political pressures, are also not explicitly included. -->
+
+<!-- Future research could extend this model by allowing parameters to change over time or by incorporating additional actors to better reflect real-world complexity.
+It would also be valuable to explore how uncertainty, communication, or policy shifts affect the stability of the system. 
+Further work could refine the representation of resource constraints beyond logistic growth to capture more realistic economic and political factors. 
+Overall, this study demonstrates how incorporating realistic limitations into mathematical models can lead to more accurate and meaningful insights into arms race dynamics. -->
+
+Future research could extend this framework by considering interactions between multiple countries rather than just two. 
+This would allow the model to better reflect real-world alliance structures and the way conflicts can spread between groups of states. 
+In more advanced models, such dynamics have been studied in classical work such as Richardson’s equations @Gold1962, which describe how arms competition can evolve in larger systems of interacting countries.
 
 \pb
 
