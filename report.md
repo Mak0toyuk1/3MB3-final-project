@@ -56,17 +56,18 @@ text and what you are trying to study. The math is a tool you will introduce lat
 main focus of the paper. -->
 
 The spread of military technology and the persistence of geopolitical tensions have made arms races a central issue in international relations.
-Since the Iranian Revolution in 1979, relations between the United States and Iran have been defined by long-term strategic competition rather than direct warfare @NazirHussain2015.
-Over the past several decades, both countries have invested in military capabilities aimed at deterring one another, including missile systems, regional alliances, and, most notably, nuclear-related technologies
+Since the Iranian Revolution in 1979, relations between the United States and Iran have been defined by long term strategic competition instead of direct warfare @NazirHussain2015.
+Over the past several decades, both countries have invested in military capabilities aimed at deterring one another, including missile systems, regional alliances, and nuclear technology
 @cfr_us_iran_relations.
-This type of rivalry reflects a broader global pattern in which nations respond to perceived threats by increasing their own military strength.
-In February 2026, the long-standing arms race between the United States and Iran escalated into open conflict, with both sides carrying out direct military strikes on each other’s strategic targets, marking a radical shift from indirect competition to active confrontation @yacoubian2026.
+This type of rivalry reflects a broader global pattern where nations respond to perceived threats by increasing their own military strength.
+In February 2026, the arms race between the United States and Iran escalated into open conflict. 
+Both sides carried out direct military strikes on each other’s strategic targets and this marked a radical shift from indirect competition to active confrontation @yacoubian2026.
 
 Arms races are often understood through the lens of strategic interaction, where the actions of one country influence the decisions of another. 
-When one state increases its military spending, its rival may interpret this as a threat and respond in kind, leading to a cycle of escalation.
+When one state increases it's military spending, it's rival may interpret this as a threat and respond in kind, leading to a cycle of escalation.
 Understanding how and why arms races escalate, or stabilize, is important for global security and peacekeeping. 
 Governments and policymakers rely on predictive tools to assess whether increased military investment by one side will provoke retaliation or eventually lead to equilibrium.
-Mathematical models provide a way to explore these dynamics in a <!-- simplified, --> controlled setting, and help us identify the conditions under which competition intensifies or de-escalates.
+Mathematical models provide a way to explore these questions in a <!-- simplified, --> controlled setting, and help us identify the conditions under which competition intensifies or deescalates.
 These insights can be used to inform development of policies that promote peace between warring countries, and prevent conflict from escalating to a point of no return. 
 
 <!-- In February 2026, the arms race between the two countries escalated to a global conflict, with both sides launching attacks on the other's TODO TODO TODO TODO  -->
@@ -83,11 +84,11 @@ Finally, we extend the base model by implementing self limiting mutual logistic 
 We develop and analyze a mathematical model to represent  -->
 
 In this paper, we investigate how the military spending of two rival countries, Purple (P) and Green (G), evolves over time, using the relationship between the United States and Iran as a motivating example. 
-First, we develop a mathematical model in which each country’s arms spending depends not only on its own policies but also on the actions of its rival. 
+First, we develop a mathematical model where each country’s arms spending depends not only on its own policies but also on the actions of its rival. 
 Then, by analyzing both a baseline and an extended version of the model, we show that the base model predicts that each country’s military spending is determined by its response to its rival, leading to a stable equilibrium level of armament. 
 Building on this, the extended model examines how these interactions evolve over time and shows that, if both countries maintain consistent strategies, the system will converge to a stable outcome. 
 Depending on the conditions, this may result in a steady level of military spending or, in some cases, mutual disarmament. 
-The remainder of the paper introduces the model, presents our analysis, and discusses the implications of these results for understanding real-world arms races.
+The rest of the paper introduces the models, presents our analyses, and discusses the implications of these results for understanding real world arms races.
 
 <!-- Then, by analyzing this model, we show that if both countries maintain consistent strategies, the system will tend toward a stable outcome over time. -->
 <!-- Depending on the conditions, this may result in a steady level of military spending or, in some cases, mutual disarmament.  -->
@@ -667,27 +668,30 @@ up any other questions? Where else could you go with this work? Are there other 
 you’ve read about in the literature that could be interesting to look at? You should also use
 this as a way to conclude your whole paper. -->
 
-In this paper, we examined how an arms race between two rival countries evolves, motivated by the long-standing strategic competition between the United States and Iran. 
+In this paper, we examined how an arms race between two rival countries evolves, motivated by the strategic competition between the United States and Iran. 
 Our goal was to understand how military spending decisions are influenced not only by internal policies but also by the actions of a rival state. 
-By developing and analyzing both a baseline and an extended version of the model, we were able to explore how these interactions shape long-term outcomes.
+By developing and analyzing both a baseline and an extended version of the model, we were able to explore how these interactions shape long term outcomes.
 
-Our results show that arms spending is inherently interdependent: each country’s decisions are influenced by the behavior of the other. 
+Our results show that arms spending is inherently interdependent and that each country’s decisions are influenced by the behavior of the other. 
 In the base model, this interaction leads to a stable equilibrium level of military spending determined by mutual responses. 
-In the extended model, we introduced self-limiting logistic growth to reflect the idea that military expansion is constrained by factors such as economic capacity and resource limitations. 
+In the extended model, we introduced logistic growth to reflect the idea that military expansion is constrained by factors such as economic capacity and resource limitations. 
 With this addition, we found that when countries maintain consistent strategies over time, the system converges to a stable outcome.
 Depending on the conditions, this may result in a sustained level of military expenditure or, in some cases, mutual disarmament.
-These results reinforce the idea that long-term arms race dynamics are shaped not only by strategic competition but also by inherent limits on growth.
+These results reinforce the idea that long term arms races are shaped not only by strategic competition but also by inherent limits on growth.
 
-In the real-world context, this suggests that even in persistent rivalries such as that between the United States and Iran, unlimited escalation is unlikely.
+In the real world, this suggests that even in persistent rivalries such as that between the United States and Iran, unlimited escalation is unlikely.
 Economic and practical constraints can naturally restrict the growth of military spending, potentially leading to stabilization over time.
-This highlights the importance of considering both strategic interactions and internal limitations when analyzing global security dynamics.
+This highlights the importance of considering both strategic interactions and internal limitations when analyzing global security relationships.
 
 However, this model has several limitations.
-First, it simplifies the real-world situation by considering only two interacting countries, but actual arms race dynamics often involve multiple states, alliances, and broader geopolitical blocs.
-Second, the model assumes that all parameters remain constant over time, including levels of trust, hostility, and responsiveness to rival actions, despite the fact that these factors can change significantly due to political events, leadership shifts, or international agreements.
-Third, we assume that both countries behave in a rational and consistent manner according to the model’s structure, whereas in reality decision-making may be influenced by misperceptions, misinformation, or domestic political pressures.
+First, it simplifies real world situations by considering only two interacting countries, because actual arms races often involve multiple states, alliances, and broader geopolitical blocs.
+Second, the model assumes that all parameters remain constant over time.
+This includes levels of trust, hostility, and responsiveness to rival actions, despite the fact that these factors can change significantly due to political events, leadership shifts, or international agreements.
+Third, we assume that both countries behave in a rational and consistent manner according to the model’s structure. 
+In reality decision making may be influenced by misperceptions, misinformation, or domestic political pressures.
 Fourth, the representation of trust and hostility as a constant additive effect is a major simplification, since these relationships evolve dynamically based on historical interactions and ongoing signals between states.
-Finally, although the extended model introduces logistic growth to incorporate resource limitations, this remains a simplified approximation of real economic and structural constraints, which are influenced by a wide range of unpredictable factors such as sanctions, technological development, and economic shocks.
+Finally, although the extended model introduces logistic growth to incorporate resource limitations, this remains a simplified approximation of real economic and structural constraints. 
+They are influenced by a wide range of unpredictable factors such as sanctions, technological development, and economic shocks.
 
 <!-- However, this model has several limitations. 
 It assumes that each country follows a consistent and rational strategy, which may not hold in practice due to changing political leadership, misperceptions, or unexpected external events. 
@@ -700,9 +704,9 @@ It would also be valuable to explore how uncertainty, communication, or policy s
 Further work could refine the representation of resource constraints beyond logistic growth to capture more realistic economic and political factors. 
 Overall, this study demonstrates how incorporating realistic limitations into mathematical models can lead to more accurate and meaningful insights into arms race dynamics. -->
 
-Future research could extend this framework by considering interactions between multiple countries rather than just two. 
-This would allow the model to better reflect real-world alliance structures and the way conflicts can spread between groups of states. 
-In more advanced models, such dynamics have been studied in classical work such as Richardson’s equations @Gold1962, which describe how arms competition can evolve in larger systems of interacting countries.
+Future research could be extended by considering interactions between multiple countries rather than just two. 
+This would allow the model to better reflect realistic world alliances and the way conflicts can spread between groups of states. 
+In more advanced models, such relationships have been studied in classical work such as Richardson’s equations @Gold1962, which describe how arms competition can evolve in larger systems of interacting countries.
 
 \pb
 
