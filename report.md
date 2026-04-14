@@ -753,7 +753,9 @@ euler3=euler(a,b,c,d,r,s,p0=y3[1],g0=y3[2])
 
 png(pngname,width=1000,height=1000)
 plot(grid$p, grid$g, pch = 20, col = "lightgray",
-     cex.main=3,cex.lab=5,main = paste("a=" ,a, ", b=" ,b,", c=" ,c,", d=",d,", r=",r,", s=",s), xlab = "p", ylab = "g")
+     cex.main=3,cex.lab=5,main = paste("a=" ,a, ", b=" ,
+     b,", c=" ,c,", d=",d,", r=",r,", s=",s), 
+     xlab = "p", ylab = "g")
 
 
 points(y1[1],y1[2],col="black",cex=2,pch=16)
@@ -772,7 +774,8 @@ arrows(grid$p, grid$g,
        length = 0.8, col = "blue",lwd=4)
 
 legend("topleft",
-       legend = c("Instantaneous change", "Simulation start point", "Simulation"),
+       legend = c("Instantaneous change", 
+       "Simulation start point", "Simulation"),
        col = c("blue", "black", "red"),
        lty = c(1, NA, 1),
        pch = c(NA, 16, NA),
@@ -781,9 +784,12 @@ legend("topleft",
 dev.off()
 }
 
-vplot("Vecplot1_disarm.png",a=0.4,b=0.8,c=0.3,d=0.2,r=0,s=0,y1=c(0.3,1.4),y2=c(1.4,0.2),y3=c(1.6,0.5))
-vplot("Vecplot2_race.png",a=0.4,b=0.8,c=0.3,d=0.2,r=0,s=0,y1=c(0.3,1.4),y2=c(1.4,0.2),y3=c(1.6,0.5))
-vplot("Vecplot3_stable.png",a=0.4,b=0.8,c=0.3,d=0.2,r=0,s=0,y1=c(0.3,1.4),y2=c(1.4,0.2),y3=c(1.6,0.5))
+vplot("Vecplot1_disarm.png",a=0.4,b=0.8,c=0.3,d=0.2,r=0,
+s=0,y1=c(0.3,1.4),y2=c(1.4,0.2),y3=c(1.6,0.5))
+vplot("Vecplot2_race.png",a=0.4,b=0.8,c=0.3,d=0.2,r=0,
+s=0,y1=c(0.3,1.4),y2=c(1.4,0.2),y3=c(1.6,0.5))
+vplot("Vecplot3_stable.png",a=0.4,b=0.8,c=0.3,d=0.2,r=0,
+s=0,y1=c(0.3,1.4),y2=c(1.4,0.2),y3=c(1.6,0.5))
 ```
 
 ## Trust/Hostility
@@ -840,7 +846,8 @@ vplot_no_trust = function(pngname, a, b, c, d, r, s,
   euler3 = euler_no_trust(a, b, c, d, r, s, p0=y3[1], g0=y3[2])
   
   main_title <- if (!is.null(title)) title else
-    paste("a=",a,", b=",b,", c=",c,", d=",d,", r=",r,", s=",s,", Kp=",Kp,", Kg=",Kg)
+    paste("a=",a,", b=",b,", c=",c,", 
+    d=",d,", r=",r,", s=",s,", Kp=",Kp,", Kg=",Kg)
   
   png(pngname, width=1000, height=1000)
   par(cex=1.1, mar=c(5, 6, 4, 2), cex.main=2)
@@ -1003,7 +1010,8 @@ dev.off()
 
 ```{r}
 #sensitivity a, 
-ArmsRace = euler_logistic(a=0.5,b=0.2,c=0.25,d=0.2,r=0,s=0,p0=0.8,g0=0.4,Kp=1,Kg=1)
+ArmsRace = euler_logistic(a=0.5,b=0.2,
+c=0.25,d=0.2,r=0,s=0,p0=0.8,g0=0.4,Kp=1,Kg=1)
 png("sensitivity_a.png", width=1000, height=1000) # Saves plot as a png
 par(cex=3.5)
 plot(ArmsRace[1,], ArmsRace[2,], type = "l",col="blue",
@@ -1017,13 +1025,16 @@ lines(ArmsRace[1,],ArmsRace[3,],col="red",lwd=10)
 ArmsRace=euler_logistic(a=0.25,b=0.2,c=0.25,d=0.2,r=0,s=0,p0=0.8,g0=0.4,Kp=1,Kg=1)
 lines(ArmsRace[1,],ArmsRace[2,],lty=3,col="blue",lwd=10)
 lines(ArmsRace[1,],ArmsRace[3,],lty=3,col="red",lwd=10)
-legend("topright",legend=c("Nation P (a=0.5)","Nation G (a=0.5)","Nation P (a=0.25)","Nation G (a=0.25)"),col=c("blue","red"),lwd=10,lty=c(1,1,3,3),bg = "transparent")
+legend("topright",legend=c("Nation P (a=0.5)",
+"Nation G (a=0.5)","Nation P (a=0.25)",
+"Nation G (a=0.25)"),col=c("blue","red"),lwd=10,lty=c(1,1,3,3),bg = "transparent")
 dev.off()
 
 
 
 #sensitivity b, 
-ArmsRace = euler_logistic(a=0.25,b=0.4,c=0.25,d=0.2,r=0,s=0,p0=0.8,g0=0.4,Kp=1,Kg=1)
+ArmsRace = euler_logistic(a=0.25,b=0.4,c=0.25,d=0.2,r=0,
+s=0,p0=0.8,g0=0.4,Kp=1,Kg=1)
 png("sensitivity_b.png", width=1000, height=1000) # Saves plot as a png
 par(cex=3.5)
 plot(ArmsRace[1,], ArmsRace[2,], type = "l",col="blue",
@@ -1037,7 +1048,9 @@ lines(ArmsRace[1,],ArmsRace[3,],col="red",lwd=10)
 ArmsRace=euler_logistic(a=0.25,b=0.2,c=0.25,d=0.2,r=0,s=0,p0=0.8,g0=0.4,Kp=1,Kg=1)
 lines(ArmsRace[1,],ArmsRace[2,],lty=3,col="blue",lwd=10)
 lines(ArmsRace[1,],ArmsRace[3,],lty=3,col="red",lwd=10)
-legend("topright",legend=c("Nation P (b=0.4)","Nation G (b=0.4)","Nation P (b=0.2)","Nation G (b=0.2)"),col=c("blue","red"),lwd=10,lty=c(1,1,3,3),bg = "transparent")
+legend("topright",legend=c("Nation P (b=0.4)",
+"Nation G (b=0.4)","Nation P (b=0.2)","Nation G (b=0.2)"),
+col=c("blue","red"),lwd=10,lty=c(1,1,3,3),bg = "transparent")
 dev.off()
 
 
@@ -1053,10 +1066,12 @@ cex.main=1,
 #ylim=range(c(ArmsRace[2,],ArmsRace[3,])),
 lwd=10)
 lines(ArmsRace[1,],ArmsRace[3,],col="red",lwd=10)
-ArmsRace=euler_logistic(a=0.25,b=0.2,c=0.25,d=0.2,r=0,s=0,p0=0.8,g0=0.4,Kp=1,Kg=1)
+ArmsRace=euler_logistic(a=0.25,b=0.2,c=0.25,d=0.2,r=0,
+s=0,p0=0.8,g0=0.4,Kp=1,Kg=1)
 lines(ArmsRace[1,],ArmsRace[2,],lty=3,col="blue",lwd=10)
 lines(ArmsRace[1,],ArmsRace[3,],lty=3,col="red",lwd=10)
-legend("topright",legend=c("Nation P (r=0.1)","Nation G (r=0.1)","Nation P (r=0)","Nation G (r=0)"),col=c("blue","red"),lwd=10,lty=c(1,1,3,3),bg = "transparent")
+legend("topright",legend=c("Nation P (r=0.1)",
+"Nation G (r=0.1)","Nation P (r=0)","Nation G (r=0)"),col=c("blue","red"),lwd=10,lty=c(1,1,3,3),bg = "transparent")
 dev.off()
 ```
 
@@ -1064,7 +1079,8 @@ dev.off()
 
 ```{r}
 #USIRAN function changes value of r and a midday past certain t
-euler_logistic_USIRAN = function(a, b, c, d, r, s, Kp, Kg, p0 = 0.5, g0 = 1,a_new,r_new) {
+euler_logistic_USIRAN = function(a, b, c, d, r, s, Kp, 
+Kg, p0 = 0.5, g0 = 1,a_new,r_new) {
   # Matrix: row 1 = time, row 2 = p, row 3 = g
   ArmsRace = matrix(0, nrow = 3, ncol = steps + 1)
   ArmsRace[1, 1] = 0
@@ -1105,7 +1121,9 @@ euler_logistic_USIRAN = function(a, b, c, d, r, s, Kp, Kg, p0 = 0.5, g0 = 1,a_ne
 
 
 #US vs IRAN illustration 
-ArmsRace = euler_logistic_USIRAN(a=0.2,b=0.3,c=0.2,d=0.3,r=0,s=0,p0=0.2,g0=0.1,Kp=1,Kg=1,a_new=0.8,r_new=0.05)
+ArmsRace = euler_logistic_USIRAN(a=0.2,b=0.3,c=0.2,
+d=0.3,r=0,s=0,p0=0.2,g0=0.1,
+Kp=1,Kg=1,a_new=0.8,r_new=0.05)
 png("US_Vs_IRAN.png", width=1000, height=1000) # Saves plot as a png
 par(cex=3.5)
 plot(ArmsRace[1,], ArmsRace[2,], type = "l",col="blue",
@@ -1117,8 +1135,13 @@ cex.main=1,
 lwd=10)
 lines(ArmsRace[1,],ArmsRace[3,],col="red",lwd=10)
 
-legend("topright",legend=c("US","IRAN"),col=c("blue","red"),lwd=10,lty=c(1,1),bg = "transparent")
+legend("topright",legend=c("US","IRAN"),
+col=c("blue","red"),
+lwd=10,lty=c(1,1),
+bg = "transparent")
 dev.off()
 ```
+
+\pb
 
 # References
