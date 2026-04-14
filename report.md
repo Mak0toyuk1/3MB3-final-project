@@ -736,6 +736,35 @@ In more advanced models, such dynamics have been studied in classical work such 
 ## Base model
 
 ```{r}
+#Simulation variables
+t = 50
+dt=0.1
+steps=t/dt
+
+euler = function(a,b,c,d,r,s,p0=0.5,g0=1) {
+  #Matrix and initial
+  ArmsRace = matrix(0,nrow=3,ncol=steps+1) #3 rows are for t,p,g, n+1 columns for including both endpoints of time (start at 0)
+  ArmsRace[1,1]=0
+  ArmsRace[2,1]=p0 #p initial condition
+  ArmsRace[3,1]=g0 #g initial condition
+
+
+#Euler Method
+for (i in 1:steps) {
+  t_i=ArmsRace[1,i]
+  p_i=ArmsRace[2,i]
+  g_i=ArmsRace[3,i]
+  
+  dp=a*g_i-b*p_i+r
+  dg=c*p_i-d*g_i+s
+  
+  ArmsRace[1,i+1]=t_i+dt
+  ArmsRace[2,i+1]=max(p_i+dt*dp,0)
+  ArmsRace[3,i+1]=max(g_i+dt*dg,0)
+}
+  return(ArmsRace)
+}
+
 vplot = function(pngname,a,b,c,d,r,s,y1,y2,y3){
 
 p_vals <- seq(0, 2, length.out = 10)
