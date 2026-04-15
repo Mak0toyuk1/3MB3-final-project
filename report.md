@@ -706,7 +706,7 @@ Overall, this study demonstrates how incorporating realistic limitations into ma
 
 Future research could be extended by considering interactions between multiple countries rather than just two. 
 This would allow the model to better reflect realistic world alliances and the way conflicts can spread between groups of states. 
-In more advanced models, such relationships have been studied in classical work such as Richardson’s equations @Gold1962, which describe how arms competition can evolve in larger systems of interacting countries.
+In more advanced models, such relationships have been studied in classical work such as Richardson’s N Nation model @Schrodt1978, which describe how arms competition can evolve in larger systems of interacting countries.
 
 \pb
 
